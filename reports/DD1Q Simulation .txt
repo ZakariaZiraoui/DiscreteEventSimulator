@@ -1,0 +1,47 @@
+End Of The Simulation
+Number of Client Served : 10000001
+Arrival Time : 6.00 s   Service Time : 5.00 s
+The Mean Response Time : 4.64 
+The Mean Waiting  Time : 0.00 
+Throughput : 0.15
+Event List [ (0,68815192.00)  ]
+Queue [  ]
+Process returned 0 (0x0)   execution time : 2707.868 s
+
+
+End Of The Simulation at T= 60005.00 s
+Arrival Time : 6.00 s   Service Time : 5.00 s
+Number of Clients Served : 10001
+The Mean Response Time : 5.00 s
+The Mean Waiting  Time : 0.00 s
+Throughput : 0.17
+Process returned 0 (0x0)   execution time : 20.216 s
+
+
+End Of The Simulation at T= 605.00 s
+Arrival Time : 6.00 s   Service Time : 5.00 s
+Number of Clients Served : 101
+The Mean Response Time : 5.00 s
+The Mean Waiting  Time : 0.00 s
+Throughput : 0.17
+Process returned 0 (0x0)   execution time : 0.866 s
+
+
+End Of The Simulation at T= 505.00 s
+Arrival Time : 5.00 s   Service Time : 5.00 s
+Number of Clients Served : 101
+The Mean Response Time : 5.00 s
+The Mean Waiting  Time : 0.00 s
+Throughput : 0.20
+Process returned 0 (0x0)   execution time : 0.398 s
+
+
+End Of The Simulation at T= 505.00 s
+Arrival Time : 4.00 s   Service Time : 5.00 s
+Number of Clients Served : 101
+The Mean Response Time : 55.00 s
+The Mean Waiting  Time : 50.00 s
+Throughput : 0.20
+Event List [  ]
+Queue [ Not Empty  ]
+Process returned 0 (0x0)   execution time : 0.610 s

@@ -1,0 +1,35 @@
+# depslib dependency file v1.0
+1619228381 source:c:\users\zakaria\desktop\simulator\simulator\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+
+1619230486 source:c:\users\zakaria\desktop\simulator\simulator\include\init.c
+	"init.h"
+	<stdio.h>
+	<stdlib.h>
+
+1619225288 c:\users\zakaria\desktop\simulator\simulator\include\init.h
+
+1616168352 source:c:\users\zakaria\desktop\simulator\simulator\include\lcgrand.c
+
+1619233608 source:c:\users\zakaria\desktop\simulator\simulator\mm1q.c
+	<stdio.h>
+	<math.h>
+	<stdlib.h>
+	"include/lcgrand.h"
+
+1616168352 c:\users\zakaria\desktop\simulator\simulator\include\lcgrand.h
+
+1619586726 source:c:\users\zakaria\desktop\simulator\simulator\mm1q lab.c
+	<stdio.h>
+	<math.h>
+	<stdbool.h>
+	<stdlib.h>
+
+1619588122 source:c:\users\zakaria\desktop\simulator\simulator\dd1q lab.c
+	<stdio.h>
+	<stdbool.h>
+	<stdlib.h>
+
