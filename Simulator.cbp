@@ -31,6 +31,24 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="DD1Q Lab.c">
+			<Option compilerVar="CC" />
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="Event.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Event.h" />
+		<Unit filename="Mesh 1D.c">
+			<Option compilerVar="CC" />
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="Message.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Message.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
