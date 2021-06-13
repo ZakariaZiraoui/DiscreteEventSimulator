@@ -25,5 +25,6 @@ void AddEvent(EventQueue *EL, int type,float time,Location location,int Input,in
 void DisplayEventList(EventQueue *EL);
 bool isEmpty(EventQueue *EL);
 int length(EventQueue *EL);
+void DisplayEventInfo(Event event);
 
 #endif // EVENT_H_INCLUDED
