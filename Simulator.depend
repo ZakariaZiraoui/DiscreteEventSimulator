@@ -1,9 +1,10 @@
 # depslib dependency file v1.0
-1623549637 source:c:\users\zakaria\desktop\simulator\simulator\main.c
+1625778731 source:c:\users\zakaria\desktop\simulator\simulator\main.c
 	<stdio.h>
 	<stdbool.h>
 	<stdlib.h>
 	<math.h>
+	<string.h>
 	<time.h>
 	"Node.h"
 	"Event.h"
@@ -39,18 +40,19 @@
 
 1623279542 source:c:\users\zakaria\desktop\simulator\simulator\node.c
 
-1623545879 source:c:\users\zakaria\desktop\simulator\simulator\message.c
+1623604701 source:c:\users\zakaria\desktop\simulator\simulator\message.c
 	<stdlib.h>
+	<stdio.h>
 	"Message.h"
 
-1623544267 c:\users\zakaria\desktop\simulator\simulator\message.h
+1623604103 c:\users\zakaria\desktop\simulator\simulator\message.h
 	<stdbool.h>
 	"Node.h"
 
 1623280708 c:\users\zakaria\desktop\simulator\simulator\node.h
 	"Message.h"
 
-1623544528 source:c:\users\zakaria\desktop\simulator\simulator\event.c
+1625778805 source:c:\users\zakaria\desktop\simulator\simulator\event.c
 	<stdlib.h>
 	<stdio.h>
 	<string.h>
