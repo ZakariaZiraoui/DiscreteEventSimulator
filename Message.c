@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 #include "Message.h"
 
 
@@ -38,8 +39,8 @@ Message DeQueue(MessageQueue *Q){
     Message *tmp,clt;
     clt.ID = Q->head->ID;
     clt.TArrival = Q->head->TArrival;
-    clt.TServiceTime = Q->head->TServiceTime;
-    clt.TStartService = Q->head->TStartService;
+    clt.TResponse = Q->head->TResponse;
+    clt.TWait = Q->head->TWait;
     clt.DestX = Q->head->DestX;
     clt.DestY = Q->head->DestY;
     tmp = Q->head;
@@ -54,7 +55,7 @@ void DisplayQueue(MessageQueue *Q) {
    Message *ptr = Q->head;
    printf("\nQueue [ ");
    while(ptr != NULL) {
-      printf("(%d,%.2f,%.2f,%.2f) ",ptr->ID,ptr->TArrival,ptr->TStartService,ptr->TServiceTime);
+      printf("(%d,%.2f,%.2f,%.2f) ",ptr->ID,ptr->TArrival,ptr->TResponse,ptr->TWait);
       ptr = ptr->next;
    }
    printf(" ]");

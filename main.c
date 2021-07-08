@@ -3,6 +3,7 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include <math.h>
+#include <string.h>
 #include <time.h>
 #include "Node.h"
 #include "Event.h"
@@ -38,7 +39,7 @@ float lambda;
 // Statistical counters
 float MeanResponseTime, MeanWatingTime,Throughput;
 int ClientServed,MessageID;
-int TR=96;
+int TR=10;
 
 void Init ( void );
 void Arrival ( int x ,int y );
@@ -65,7 +66,7 @@ int main ( ) {
     Init();
     DisplayEventList(EL);
 
-    while ( ClientServed <=100 ) {//  EL->count 00000
+    while ( ClientServed <100 ) {//  EL->count 00000
       Event event = GetEvent(EL);
       DisplayEventInfo(event);
 
@@ -85,9 +86,13 @@ int main ( ) {
     //while(!isQueueEmpty(Q)) DeQueue(Q);
     //DisplayQueue(Q); free(Q);
     DisplayEventList(EL);
-
     free(EL);
     FreeQueues();
+    int x;
+     do {
+        printf("\n\nPress q to exit the Program: ");
+        x = getchar();
+    } while (x != EOF && x != 'q');
    return 0;
 }
 
@@ -171,15 +176,15 @@ void Arrival ( int x,int y ) {
     msg = malloc(sizeof(Message));
     msg->ID = MessageID;
     msg->TArrival = Tnow;
-    msg->TServiceTime = ServiceTime;
-    msg->TStartService = 0;
+    msg->TResponse = 0;
+    msg->TWait = 0;
     Location loc=RandDest();
     while (loc.x==x&&loc.y==y)loc=RandDest();
     msg->DestX=loc.x;
     msg->DestY=loc.y;
     msg->next = NULL;
 
-    printf("\n Msg[%d] is in [%d][%d] PEQ",msg->ID,x,y);
+    printf("\n Msg[%d] Arrives in [%d][%d]->[%d][%d] PEQ",msg->ID,x,y,loc.x,loc.y);
     Enqueue(Mat[x][y].PEQ,msg);
 
     if(isHeadOfQueue(Mat[x][y].PEQ,msg)) {
@@ -188,9 +193,6 @@ void Arrival ( int x,int y ) {
        AddEvent(EL,PDecideRoute,Tnow,loc,PE,NONE);
     }
 
-    //if(ServerStatus == IDLE)    AddEvent (EL,StartService,Tnow);
-    //AddEvent(EL,Arrival,Tnow+ exponentialDistribution( meanInterarrival ));
-
     float r = ((float) rand() / (RAND_MAX));
     AddEvent(EL,PArrival,Tnow-(lambda*log(1-r)),loc,PE,NONE);
 
@@ -198,29 +200,34 @@ void Arrival ( int x,int y ) {
 
 
 void DecideRoute ( int nodex ,int nodey,int input ) {
-
-
-    int Destx,Desty;
+    char in[3];
+    Message msg;
+    int Destx,Desty,MsgID;
 
     if(input==PE){
-        Destx=GetQueueHead(Mat[nodex][nodey].PEQ).DestX;
-        Desty=GetQueueHead(Mat[nodex][nodey].PEQ).DestY;
+        msg=GetQueueHead(Mat[nodex][nodey].PEQ);
+        Destx=msg.DestX;        Desty=msg.DestY;
+        MsgID=msg.ID;           strncpy(in, "PE", 3);
     }
     if(input==X1){
-        Destx=GetQueueHead(Mat[nodex][nodey].XQ1).DestX;
-        Desty=GetQueueHead(Mat[nodex][nodey].XQ1).DestY;
+        msg=GetQueueHead(Mat[nodex][nodey].XQ1);
+        Destx=msg.DestX;        Desty=msg.DestY;
+        MsgID=msg.ID;           strncpy(in, "X1", 3);
     }
     if(input==X2){
-        Destx=GetQueueHead(Mat[nodex][nodey].XQ2).DestX;
-        Desty=GetQueueHead(Mat[nodex][nodey].XQ2).DestY;
+        msg=GetQueueHead(Mat[nodex][nodey].XQ2);
+        Destx=msg.DestX;        Desty=msg.DestY;
+        MsgID=msg.ID;           strncpy(in, "X2", 3);
     }
     if(input==Y1){
-        Destx=GetQueueHead(Mat[nodex][nodey].YQ1).DestX;
-        Desty=GetQueueHead(Mat[nodex][nodey].YQ1).DestY;
+        msg=GetQueueHead(Mat[nodex][nodey].YQ1);
+        Destx=msg.DestX;        Desty=msg.DestY;
+        MsgID=msg.ID;           strncpy(in, "Y1", 3);
     }
     if(input==Y2){
-        Destx=GetQueueHead(Mat[nodex][nodey].YQ2).DestX;
-        Desty=GetQueueHead(Mat[nodex][nodey].XQ2).DestY;
+        msg=GetQueueHead(Mat[nodex][nodey].YQ2);
+        Destx=msg.DestX;        Desty=msg.DestY;
+        MsgID=msg.ID;           strncpy(in, "Y2", 3);
     }
     Location loc;
     loc.x=nodex; loc.y=nodey;
@@ -255,6 +262,7 @@ void DecideRoute ( int nodex ,int nodey,int input ) {
                         else
                             Mat[nodex][nodey].Y2Req[input]=1;
                      }
+        printf("\n Msg[%d] is in [%d][%d]%s -> [%d][%d] ",MsgID,nodex,nodey,in,Destx,Desty);
         printf("\n End DecideRoute( %0.2f s) [%d][%d] -> [%d][%d] ",Tnow,nodex,nodey,Destx,Desty);
 }
 
@@ -324,6 +332,8 @@ void EndTransmit(int nodex,int nodey,int input, int output){
                     if(!isQueueEmpty(Mat[nodex][nodey].XQ1)) //TODO Verify Condition
                          AddEvent(EL,PDecideRoute,Tnow,loc,X1,NONE);
                     MeanResponseTime+=(Tnow-CurrentMsg.TArrival);
+                    printf("\n Response Time Msg[%d] : %0.2f ns",CurrentMsg.ID,Tnow-CurrentMsg.TArrival);
+                    printf("\n Mean Response Time After Msg[%d] : %0.2f ns",CurrentMsg.ID,MeanResponseTime/(ClientServed+1));
                 break;
                 case X2:
                     CurrentMsg=DeQueue(Mat[nodex][nodey].XQ2);
@@ -331,6 +341,8 @@ void EndTransmit(int nodex,int nodey,int input, int output){
                     if(!isQueueEmpty(Mat[nodex][nodey].XQ2)) //TODO Verify Condition
                          AddEvent(EL,PDecideRoute,Tnow,loc,X2,NONE);
                     MeanResponseTime+=(Tnow-CurrentMsg.TArrival);
+                    printf("\n Response Time Msg[%d] : %0.2f ns",CurrentMsg.ID,Tnow-CurrentMsg.TArrival);
+                    printf("\n Mean Response Time After Msg[%d] : %0.2f ns",CurrentMsg.ID,MeanResponseTime);
                 break;
                 case Y1:
                     CurrentMsg=DeQueue(Mat[nodex][nodey].YQ1);
@@ -338,6 +350,8 @@ void EndTransmit(int nodex,int nodey,int input, int output){
                     if(!isQueueEmpty(Mat[nodex][nodey].YQ1)) //TODO Verify Condition
                          AddEvent(EL,PDecideRoute,Tnow,loc,Y1,NONE);
                     MeanResponseTime+=(Tnow-CurrentMsg.TArrival);
+                    printf("\n Response Time Msg[%d] : %0.2f ns",CurrentMsg.ID,Tnow-CurrentMsg.TArrival);
+                    printf("\n Mean Response Time After Msg[%d] : %0.2f ns",CurrentMsg.ID,MeanResponseTime);
                 break;
                 case Y2:
                     CurrentMsg=DeQueue(Mat[nodex][nodey].YQ2);
@@ -345,6 +359,8 @@ void EndTransmit(int nodex,int nodey,int input, int output){
                     if(!isQueueEmpty(Mat[nodex][nodey].YQ2)) //TODO Verify Condition
                          AddEvent(EL,PDecideRoute,Tnow,loc,Y2,NONE);
                     MeanResponseTime+=(Tnow-CurrentMsg.TArrival);
+                    printf("\n Response Time Msg[%d] : %0.2f ns",CurrentMsg.ID,Tnow-CurrentMsg.TArrival);
+                    printf("\n Mean Response Time After Msg[%d] : %0.2f ns",CurrentMsg.ID,MeanResponseTime);
                 break;
              }
              ClientServed++;
@@ -371,8 +387,8 @@ void EndTransmit(int nodex,int nodey,int input, int output){
                      msg = malloc(sizeof(Message));
                      msg->ID = CurrentMsg.ID;
                      msg->TArrival = CurrentMsg.TArrival;
-                     msg->TServiceTime = CurrentMsg.TServiceTime;
-                     msg->TStartService = CurrentMsg.TStartService;
+                     msg->TResponse = CurrentMsg.TResponse;
+                     msg->TWait = CurrentMsg.TWait;
                      msg->DestX=CurrentMsg.DestX;
                      msg->DestY=CurrentMsg.DestY;
                      msg->next = NULL;
@@ -389,8 +405,8 @@ void EndTransmit(int nodex,int nodey,int input, int output){
                      msg = malloc(sizeof(Message));
                      msg->ID = CurrentMsg.ID;
                      msg->TArrival = CurrentMsg.TArrival;
-                     msg->TServiceTime = CurrentMsg.TServiceTime;
-                     msg->TStartService = CurrentMsg.TStartService;
+                     msg->TResponse = CurrentMsg.TResponse;
+                     msg->TWait = CurrentMsg.TWait;
                      msg->DestX=CurrentMsg.DestX;
                      msg->DestY=CurrentMsg.DestY;
                      msg->next = NULL;
@@ -421,8 +437,8 @@ void EndTransmit(int nodex,int nodey,int input, int output){
                      msg = malloc(sizeof(Message));
                      msg->ID = CurrentMsg.ID;
                      msg->TArrival = CurrentMsg.TArrival;
-                     msg->TServiceTime = CurrentMsg.TServiceTime;
-                     msg->TStartService = CurrentMsg.TStartService;
+                     msg->TResponse = CurrentMsg.TResponse;
+                     msg->TWait = CurrentMsg.TWait;
                      msg->DestX=CurrentMsg.DestX;
                      msg->DestY=CurrentMsg.DestY;
                      msg->next = NULL;
@@ -439,8 +455,8 @@ void EndTransmit(int nodex,int nodey,int input, int output){
                      msg = malloc(sizeof(Message));
                      msg->ID = CurrentMsg.ID;
                      msg->TArrival = CurrentMsg.TArrival;
-                     msg->TServiceTime = CurrentMsg.TServiceTime;
-                     msg->TStartService = CurrentMsg.TStartService;
+                     msg->TResponse = CurrentMsg.TResponse;
+                     msg->TWait = CurrentMsg.TWait;
                      msg->DestX=CurrentMsg.DestX;
                      msg->DestY=CurrentMsg.DestY;
                      msg->next = NULL;
@@ -471,8 +487,8 @@ void EndTransmit(int nodex,int nodey,int input, int output){
                      msg = malloc(sizeof(Message));
                      msg->ID = CurrentMsg.ID;
                      msg->TArrival = CurrentMsg.TArrival;
-                     msg->TServiceTime = CurrentMsg.TServiceTime;
-                     msg->TStartService = CurrentMsg.TStartService;
+                     msg->TResponse = CurrentMsg.TResponse;
+                     msg->TWait = CurrentMsg.TWait;
                      msg->DestX=CurrentMsg.DestX;
                      msg->DestY=CurrentMsg.DestY;
                      msg->next = NULL;
@@ -489,8 +505,8 @@ void EndTransmit(int nodex,int nodey,int input, int output){
                      msg = malloc(sizeof(Message));
                      msg->ID = CurrentMsg.ID;
                      msg->TArrival = CurrentMsg.TArrival;
-                     msg->TServiceTime = CurrentMsg.TServiceTime;
-                     msg->TStartService = CurrentMsg.TStartService;
+                     msg->TResponse = CurrentMsg.TResponse;
+                     msg->TWait = CurrentMsg.TWait;
                      msg->DestX=CurrentMsg.DestX;
                      msg->DestY=CurrentMsg.DestY;
                      msg->next = NULL;
@@ -507,8 +523,8 @@ void EndTransmit(int nodex,int nodey,int input, int output){
                     msg = malloc(sizeof(Message));
                      msg->ID = CurrentMsg.ID;
                      msg->TArrival = CurrentMsg.TArrival;
-                     msg->TServiceTime = CurrentMsg.TServiceTime;
-                     msg->TStartService = CurrentMsg.TStartService;
+                     msg->TResponse = CurrentMsg.TResponse;
+                     msg->TWait = CurrentMsg.TWait;
                      msg->DestX=CurrentMsg.DestX;
                      msg->DestY=CurrentMsg.DestY;
                      msg->next = NULL;
@@ -525,8 +541,8 @@ void EndTransmit(int nodex,int nodey,int input, int output){
                      msg = malloc(sizeof(Message));
                      msg->ID = CurrentMsg.ID;
                      msg->TArrival = CurrentMsg.TArrival;
-                     msg->TServiceTime = CurrentMsg.TServiceTime;
-                     msg->TStartService = CurrentMsg.TStartService;
+                     msg->TResponse = CurrentMsg.TResponse;
+                     msg->TWait = CurrentMsg.TWait;
                      msg->DestX=CurrentMsg.DestX;
                      msg->DestY=CurrentMsg.DestY;
                      msg->next = NULL;
@@ -563,8 +579,8 @@ void EndTransmit(int nodex,int nodey,int input, int output){
                      msg = malloc(sizeof(Message));
                      msg->ID = CurrentMsg.ID;
                      msg->TArrival = CurrentMsg.TArrival;
-                     msg->TServiceTime = CurrentMsg.TServiceTime;
-                     msg->TStartService = CurrentMsg.TStartService;
+                     msg->TResponse = CurrentMsg.TResponse;
+                     msg->TWait = CurrentMsg.TWait;
                      msg->DestX=CurrentMsg.DestX;
                      msg->DestY=CurrentMsg.DestY;
                      msg->next = NULL;
@@ -581,8 +597,8 @@ void EndTransmit(int nodex,int nodey,int input, int output){
                     msg = malloc(sizeof(Message));
                      msg->ID = CurrentMsg.ID;
                      msg->TArrival = CurrentMsg.TArrival;
-                     msg->TServiceTime = CurrentMsg.TServiceTime;
-                     msg->TStartService = CurrentMsg.TStartService;
+                     msg->TResponse = CurrentMsg.TResponse;
+                     msg->TWait = CurrentMsg.TWait;
                      msg->DestX=CurrentMsg.DestX;
                      msg->DestY=CurrentMsg.DestY;
                      msg->next = NULL;
@@ -599,8 +615,8 @@ void EndTransmit(int nodex,int nodey,int input, int output){
                      msg = malloc(sizeof(Message));
                      msg->ID = CurrentMsg.ID;
                      msg->TArrival = CurrentMsg.TArrival;
-                     msg->TServiceTime = CurrentMsg.TServiceTime;
-                     msg->TStartService = CurrentMsg.TStartService;
+                     msg->TResponse = CurrentMsg.TResponse;
+                     msg->TWait = CurrentMsg.TWait;
                      msg->DestX=CurrentMsg.DestX;
                      msg->DestY=CurrentMsg.DestY;
                      msg->next = NULL;
@@ -609,6 +625,7 @@ void EndTransmit(int nodex,int nodey,int input, int output){
                      printf("\n Msg[%d] is in [%d][%d] X2->Y2",CurrentMsg.ID,nodex,nodey-1);
                      if(isHeadOfQueue(Mat[nodex][nodey-1].YQ2,msg))
                          AddEvent(EL,PDecideRoute,Tnow,loc1,Y2,NONE);
+                     else DisplayQueue(Mat[nodex][nodey-1].YQ2);
                     if(!isQueueEmpty(Mat[nodex][nodey].XQ2)) //TODO Verify Condition
                          AddEvent(EL,PDecideRoute,Tnow,loc,X2,NONE);
                 break;
@@ -617,8 +634,8 @@ void EndTransmit(int nodex,int nodey,int input, int output){
                      msg = malloc(sizeof(Message));
                      msg->ID = CurrentMsg.ID;
                      msg->TArrival = CurrentMsg.TArrival;
-                     msg->TServiceTime = CurrentMsg.TServiceTime;
-                     msg->TStartService = CurrentMsg.TStartService;
+                     msg->TResponse = CurrentMsg.TResponse;
+                     msg->TWait = CurrentMsg.TWait;
                      msg->DestX=CurrentMsg.DestX;
                      msg->DestY=CurrentMsg.DestY;
                      msg->next = NULL;
@@ -657,12 +674,12 @@ void EndTransmit(int nodex,int nodey,int input, int output){
 
 
 void ReportStatistics ( void ) {
-  // printf("\n\nEnd Of The Simulation at T= %0.2f s",Tnow);
-   //printf("\nArrival Time : %0.2f s   Service Time : %0.2f s",ArrivalTime,ServiceTime);
-   //printf("\nNumber of Clients Served : %d",ClientServed);
-   //printf("\nThe Mean Response Time : %0.2f s",MeanResponseTime/ClientServed);
-   //printf("\nThe Mean Waiting  Time : %0.2f s",MeanWatingTime/ClientServed);
-   //printf("\nThroughput : %0.2f ",ClientServed/Tnow);
+    printf("\n\nEnd Of The Simulation at T= %0.2f ns",Tnow);
+    printf("\nInjection Rate : %f",lambda);
+    printf("\nNumber of Clients Served : %d",ClientServed);
+    printf("\nThe Mean Response Time : %0.2f ns",MeanResponseTime/ClientServed);
+    printf("\nThe Mean Waiting  Time : %0.2f ns",MeanWatingTime/ClientServed);
+    printf("\nThroughput : %0.2f ",ClientServed/Tnow);
 }
 
 

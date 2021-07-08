@@ -6,7 +6,7 @@
 
 typedef struct Message {
    int  ID;
-   float TArrival,TStartService,TServiceTime;
+   float TArrival,TResponse,TWait;
    int DestX,DestY;
    struct Message *next;
 } Message;
