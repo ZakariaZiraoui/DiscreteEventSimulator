@@ -23,7 +23,7 @@ Message DeQueue(MessageQueue *Q);
 bool isHeadOfQueue(MessageQueue *Q, Message *msg);
 Message GetQueueHead(MessageQueue *Q);
 void Enqueue(MessageQueue *Q, Message *clt);
-void DisplayQueue(MessageQueue *Q);
+void DisplayQueue(MessageQueue *Q,FILE *report);
 bool isQueueEmpty(MessageQueue *Q);
 int Queuelength(MessageQueue *Q);
 
