@@ -22,9 +22,9 @@ typedef struct EventQueue EventQueue;
 void InitEventList(EventQueue *EL);
 Event GetEvent(EventQueue *EL);
 void AddEvent(EventQueue *EL, int type,float time,Location location,int Input,int Output);
-void DisplayEventList(EventQueue *EL);
+void DisplayEventList(EventQueue *EL,FILE *report);
 bool isEmpty(EventQueue *EL);
 int length(EventQueue *EL);
-void DisplayEventInfo(Event event);
+void DisplayEventInfo(Event event,FILE *report);
 
 #endif // EVENT_H_INCLUDED

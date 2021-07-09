@@ -1,0 +1,17 @@
+Simulation Starting Time Fri Jul 09 01:42:35 2021
+Welcome to Network-On-Chip 2D Mesh Simulator 
+This simulator was designed based on Discrete Event Simulation.
+It's a final year project to obtain the Master Degree
+Student developer : Ziraoui Zakaria 
+Supervisor: Prof. Mohamed Ould-Khaoua
+
+Network Simulation Parameters :
+
+Topology : 2 x 2 Mesh 
+Number of Nodes  : 4 
+Routing : Dimension-ordered (DOR)
+Traffic : Uniform Random
+Injection Rate : 4000
+Transmission Time : 10 ns
+
+Please wait, Simulation has been started.

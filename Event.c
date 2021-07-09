@@ -52,15 +52,19 @@ Event GetEvent(EventQueue *EL){
     return(ev);
 }
 
-void DisplayEventList(EventQueue *EL) {
+void DisplayEventList(EventQueue *EL,FILE *report) {
    Event *ptr = EL->head;
    printf("\nEvent List [ ");
+   fprintf(report,"\nEvent List [ ");
    while(ptr != NULL) {
       printf("(%d,%.2f)[%d][%d] ",ptr->Type,ptr->Time,
+                            ptr->Location.x,ptr->Location.y);
+      fprintf(report,"(%d,%.2f)[%d][%d] ",ptr->Type,ptr->Time,
                             ptr->Location.x,ptr->Location.y);
       ptr = ptr->next;
    }
    printf(" ]");
+   fprintf(report," ]");
 }
 
 bool isEmpty(EventQueue *EL) {
@@ -76,7 +80,7 @@ int length(EventQueue *EL) {
    return length;
 }
 
-void DisplayEventInfo(Event event){
+void DisplayEventInfo(Event event,FILE *report){
     char input[3],output[3];
     switch(event.Input){
         case 0: strncpy(input, "X1", 3);break;
@@ -98,17 +102,25 @@ void DisplayEventInfo(Event event){
         case 0:
             printf("\nEvent Arrival ( %.2f ns) [%d][%d] %s -> %s :",
                 event.Time,event.Location.x,event.Location.y,input,output);
+            fprintf(report,"\nEvent Arrival ( %.2f ns) [%d][%d] %s -> %s :",
+                event.Time,event.Location.x,event.Location.y,input,output);
         break;
         case 1:
             printf("\nEvent DecideRoute ( %.2f ns) [%d][%d] %s -> %s :",
+                event.Time,event.Location.x,event.Location.y,input,output);
+            fprintf(report,"\nEvent DecideRoute ( %.2f ns) [%d][%d] %s -> %s :",
                 event.Time,event.Location.x,event.Location.y,input,output);
         break;
         case 2:
             printf("\nEvent StartTransmit ( %.2f ns) [%d][%d] %s -> %s :",
                 event.Time,event.Location.x,event.Location.y,input,output);
+            fprintf(report,"\nEvent StartTransmit ( %.2f ns) [%d][%d] %s -> %s :",
+                event.Time,event.Location.x,event.Location.y,input,output);
         break;
         case 3:
             printf("\nEvent EndTransmit ( %.2f ns) [%d][%d] %s -> %s :",
+                event.Time,event.Location.x,event.Location.y,input,output);
+            fprintf(report,"\nEvent EndTransmit ( %.2f ns) [%d][%d] %s -> %s :",
                 event.Time,event.Location.x,event.Location.y,input,output);
         break;
 

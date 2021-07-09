@@ -51,14 +51,17 @@ Message DeQueue(MessageQueue *Q){
     return(clt);
 }
 
-void DisplayQueue(MessageQueue *Q) {
+void DisplayQueue(MessageQueue *Q,FILE *report) {
    Message *ptr = Q->head;
    printf("\nQueue [ ");
+   fprintf(report,"\nQueue [ ");
    while(ptr != NULL) {
-      printf("(%d,%.2f,%.2f,%.2f) ",ptr->ID,ptr->TArrival,ptr->TResponse,ptr->TWait);
+      printf("(Msg[%d],TAr:%.2f,Dest:[%d][%d])",ptr->ID,ptr->TArrival,ptr->DestX,ptr->DestY);
+      fprintf(report,"(Msg[%d],TAr:%.2f,Dest:[%d][%d])",ptr->ID,ptr->TArrival,ptr->DestX,ptr->DestY);
       ptr = ptr->next;
    }
    printf(" ]");
+   fprintf(report," ]");
 }
 
 bool isQueueEmpty(MessageQueue *Q) {
