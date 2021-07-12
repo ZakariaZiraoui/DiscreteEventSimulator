@@ -100,25 +100,25 @@ void DisplayEventInfo(Event event,FILE *report){
     }
     switch(event.Type){
         case 0:
-            printf("\nEvent Arrival ( %.2f ns) [%d][%d] %s -> %s :",
+            printf("\nEvent Arrival (%.2f ns) [%d][%d] %s -> %s :",
                 event.Time,event.Location.x,event.Location.y,input,output);
-            fprintf(report,"\nEvent Arrival ( %.2f ns) [%d][%d] %s -> %s :",
+            fprintf(report,"\nEvent Arrival (%.2f ns) [%d][%d] %s -> %s :",
                 event.Time,event.Location.x,event.Location.y,input,output);
         break;
         case 1:
-            printf("\nEvent DecideRoute ( %.2f ns) [%d][%d] %s -> %s :",
+            printf("\nEvent DecideRoute (%.2f ns) [%d][%d] %s -> %s :",
                 event.Time,event.Location.x,event.Location.y,input,output);
-            fprintf(report,"\nEvent DecideRoute ( %.2f ns) [%d][%d] %s -> %s :",
+            fprintf(report,"\nEvent DecideRoute (%.2f ns) [%d][%d] %s -> %s :",
                 event.Time,event.Location.x,event.Location.y,input,output);
         break;
         case 2:
-            printf("\nEvent StartTransmit ( %.2f ns) [%d][%d] %s -> %s :",
+            printf("\nEvent StartTransmit (%.2f ns) [%d][%d] %s -> %s :",
                 event.Time,event.Location.x,event.Location.y,input,output);
-            fprintf(report,"\nEvent StartTransmit ( %.2f ns) [%d][%d] %s -> %s :",
+            fprintf(report,"\nEvent StartTransmit (%.2f ns) [%d][%d] %s -> %s :",
                 event.Time,event.Location.x,event.Location.y,input,output);
         break;
         case 3:
-            printf("\nEvent EndTransmit ( %.2f ns) [%d][%d] %s -> %s :",
+            printf("\nEvent EndTransmit (%.2f ns) [%d][%d] %s -> %s :",
                 event.Time,event.Location.x,event.Location.y,input,output);
             fprintf(report,"\nEvent EndTransmit ( %.2f ns) [%d][%d] %s -> %s :",
                 event.Time,event.Location.x,event.Location.y,input,output);
