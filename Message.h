@@ -2,6 +2,7 @@
 #define MESSAGE_H_INCLUDED
 
 #include <stdbool.h>
+#include <stdio.h>
 #include "Node.h"
 
 typedef struct Message {
