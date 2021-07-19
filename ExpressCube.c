@@ -15,7 +15,7 @@ void ExpressCube (){
     StartingMsgExpress();
     InitEx();
     //DisplayEventList(EL);
-    while ( ClientServed <10 ) {
+    while ( ClientServed <1000 ) {
       Event event = GetEvent(EL);
       //DisplayEventInfo(event,report);
       Tnow=event.Time;
