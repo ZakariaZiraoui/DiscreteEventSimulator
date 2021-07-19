@@ -35,6 +35,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Event.h" />
+		<Unit filename="ExpressCube.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="ExpressCube.h" />
 		<Unit filename="Mesh.c">
 			<Option compilerVar="CC" />
 		</Unit>

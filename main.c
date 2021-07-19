@@ -1,14 +1,12 @@
 #include <stdio.h>
-#include <stdbool.h>
 #include <stdlib.h>
-#include <math.h>
 #include <string.h>
 #include <time.h>
-#include "Node.h"
 #include "Event.h"
 #include "Message.h"
 #include "Utils.h"
 #include "Mesh.h"
+#include "ExpressCube.h"
 
 // Simulation clock
 float Tnow;
@@ -16,10 +14,11 @@ float Tnow;
 // State variables
 
 //WorkLoad variables
-float lambda=200;
+float lambda=400;
 
 //Simulation Parameters
-int TR=32;
+int TR=32;  //Transmission Time Normal Links
+int TRE=32; //Transmission Time Express Links
 
 // Statistical counters
 float MeanResponseTime, MeanWatingTime,Throughput;
@@ -32,7 +31,7 @@ EventQueue *EL;
 Message CurrentMsg;
 
 FILE *report;
-char destreport[55],timeStr[24];
+char destreport[52],timeStr[21];
 
 
 int main ( ){
@@ -43,7 +42,8 @@ int main ( ){
     EL = malloc(sizeof(EventQueue));
     InitEventList(EL);
 
-    Mesh();
+    //Mesh();
+    ExpressCube();
 
     ReportStatistics();
 
@@ -63,17 +63,17 @@ int main ( ){
 }
 
 void ReportStatistics ( void ) {
-    printf("\n\nEnd Of The Simulation at T= %0.2f ns",Tnow);
+    printf("\n\nEnd Of The Simulation at T= %0.2f cycles",Tnow);
     printf("\nInjection Rate : %0.0f",lambda);
     printf("\nNumber of Clients Served : %d",ClientServed);
-    printf("\nThe Mean Response Time : %0.2f ns",MeanResponseTime/ClientServed);
+    printf("\nThe Mean Response Time : %0.2f cycles",MeanResponseTime/ClientServed);
     //printf("\nThe Mean Waiting  Time : %0.2f ns",MeanWatingTime/ClientServed);
     printf("\nThroughput : %0.3f ",ClientServed/Tnow);
 
-    fprintf(report,"\n\nEnd Of The Simulation at T= %0.2f ns",Tnow);
+    fprintf(report,"\n\nEnd Of The Simulation at T= %0.2f cycles",Tnow);
     fprintf(report,"\nInjection Rate : %0.0f",lambda);
     fprintf(report,"\nNumber of Clients Served : %d",ClientServed);
-    fprintf(report,"\nThe Mean Response Time : %0.2f ns",MeanResponseTime/ClientServed);
+    fprintf(report,"\nThe Mean Response Time : %0.2f cycles",MeanResponseTime/ClientServed);
     //fprintf(report,"\nThe Mean Waiting  Time : %0.2f ns",MeanWatingTime/ClientServed);
     fprintf(report,"\nThroughput : %0.3f ",ClientServed/Tnow);
 }
@@ -84,9 +84,10 @@ void Reporting (){
     time_t t = time(NULL);
     struct tm *tm = localtime(&t);
 
-    strncpy(timeStr,asctime(tm),24);
+    //strncpy(timeStr,asctime(tm),19);
+    strftime (timeStr,21,"%Y-%m-%d %H:%M:%S",tm);
     replacechar(timeStr,':','-');
-    strncat (destreport,timeStr,24);
+    strncat (destreport,timeStr,21);
     strcat (destreport," .log");
 
     report = fopen(destreport, "w");
@@ -95,41 +96,6 @@ void Reporting (){
         printf("\nCould not report, please check the path !");
         exit(0);
     }
-}
-
-void StartingMsg(){
-
-	replacechar(timeStr,'-',':');
-	printf("Simulation Starting Time %.24s\n",timeStr);
-	printf("Welcome to Network-On-Chip 2D Mesh Simulator \n");
-	printf("This simulator was designed based on The Discrete Event Simulation.\n");
-	printf("It's a final year project to obtain the Master Degree\n");
-	printf("Student developer : Ziraoui Zakaria \n");
-	printf("Supervisor: Prof. Mohamed Ould-Khaoua\n");
-	printf("\nNetwork Simulation Parameters :\n");
-    printf("\nTopology : %d x %d Mesh ",N,M);
-    printf("\nNumber of Nodes  : %d ",N*M);
-    printf("\nRouting : Dimension-ordered (DOR)");
-    printf("\nTraffic : Uniform Random");
-    printf("\nInjection Rate : %0.0f",lambda);
-    printf("\nTransmission Time : %d ns",TR);
-	printf("\n\nPlease wait, Simulation has been started.\n");
-
-	fprintf(report,"Simulation Starting Time %.24s\n",timeStr);
-	fprintf(report,"Welcome to Network-On-Chip 2D Mesh Simulator \n");
-	fprintf(report,"This simulator was designed based on The Discrete Event Simulation.\n");
-	fprintf(report,"It's a final year project to obtain the Master Degree\n");
-	fprintf(report,"Student developer : Ziraoui Zakaria \n");
-	fprintf(report,"Supervisor: Prof. Mohamed Ould-Khaoua\n");
-	fprintf(report,"\nNetwork Simulation Parameters :\n");
-    fprintf(report,"\nTopology : %d x %d Mesh ",N,M);
-    fprintf(report,"\nNumber of Nodes  : %d ",N*M);
-    fprintf(report,"\nRouting : Dimension-ordered (DOR)");
-    fprintf(report,"\nTraffic : Uniform Random");
-    fprintf(report,"\nInjection Rate : %0.0f",lambda);
-    fprintf(report,"\nTransmission Time : %d ns",TR);
-	fprintf(report,"\n\nPlease wait, Simulation has been started.\n");
-
 }
 
 
