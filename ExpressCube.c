@@ -724,7 +724,7 @@ void EndTransmitEx(int nodex,int nodey,int input, int output){
         case Y2:{
              MatEx[nodex][nodey].Y2State=IDLE;
              switch(input){
-                case PE:
+                case PE:{
                      CurrentMsg=DeQueue(MatEx[nodex][nodey].PEQ);
                      msg = malloc(sizeof(Message));
                      msg->ID = CurrentMsg.ID;
@@ -742,8 +742,8 @@ void EndTransmitEx(int nodex,int nodey,int input, int output){
                          AddEvent(EL,PDecideRoute,Tnow,loc1,Y2,NONE);
                      if(!isQueueEmpty(MatEx[nodex][nodey].PEQ)) //TODO Verify Condition
                          AddEvent(EL,PDecideRoute,Tnow,loc,PE,NONE);
-                break;
-                case X1:
+                break;}
+                case X1:{
                     CurrentMsg=DeQueue(MatEx[nodex][nodey].XQ1);
                      msg = malloc(sizeof(Message));
                      msg->ID = CurrentMsg.ID;
@@ -761,8 +761,8 @@ void EndTransmitEx(int nodex,int nodey,int input, int output){
                          AddEvent(EL,PDecideRoute,Tnow,loc1,Y2,NONE);
                     if(!isQueueEmpty(MatEx[nodex][nodey].XQ1)) //TODO Verify Condition
                          AddEvent(EL,PDecideRoute,Tnow,loc,X1,NONE);
-                break;
-                case X2:
+                break;}
+                case X2:{
                     CurrentMsg=DeQueue(MatEx[nodex][nodey].XQ2);
                      msg = malloc(sizeof(Message));
                      msg->ID = CurrentMsg.ID;
@@ -781,8 +781,8 @@ void EndTransmitEx(int nodex,int nodey,int input, int output){
                      else DisplayQueue(MatEx[nodex][nodey-1].YQ2,report);
                     if(!isQueueEmpty(MatEx[nodex][nodey].XQ2)) //TODO Verify Condition
                          AddEvent(EL,PDecideRoute,Tnow,loc,X2,NONE);
-                break;
-                case Y2:
+                break;}
+                case Y2:{
                     CurrentMsg=DeQueue(MatEx[nodex][nodey].YQ2);
                      msg = malloc(sizeof(Message));
                      msg->ID = CurrentMsg.ID;
@@ -800,8 +800,8 @@ void EndTransmitEx(int nodex,int nodey,int input, int output){
                          AddEvent(EL,PDecideRoute,Tnow,loc1,Y2,NONE);
                      if(!isQueueEmpty(MatEx[nodex][nodey].YQ2)) //TODO Verify Condition
                          AddEvent(EL,PDecideRoute,Tnow,loc,Y2,NONE);
-                break;
-                case E1://Through X Axis Only
+                break;}
+                case E1:{//Through X Axis Only
                     CurrentMsg=DeQueue(MatEx[nodex][nodey].E1Q);
                      msg = malloc(sizeof(Message));
                      msg->ID = CurrentMsg.ID;
@@ -812,15 +812,15 @@ void EndTransmitEx(int nodex,int nodey,int input, int output){
                      msg->DestY=CurrentMsg.DestY;
                      msg->next = NULL;
                      loc1.x=nodex; loc1.y=nodey-1;
-                     Enqueue(MatEx[nodex][nodey-1].YQ1,msg);
-                     printf("\n ( %7.2f ) Msg[%d] Ends Trans E1Q[%d][%d] -> [%d][%d]Y1Q",Tnow,CurrentMsg.ID,nodex,nodey-1,CurrentMsg.DestX,CurrentMsg.DestY);
-                     fprintf(report,"\n ( %7.2f ) Msg[%d] Ends Trans E1Q[%d][%d] -> [%d][%d]Y1Q",Tnow,CurrentMsg.ID,nodex,nodey-1,CurrentMsg.DestX,CurrentMsg.DestY);
-                     if(isHeadOfQueue(MatEx[nodex][nodey-1].YQ1,msg))
-                         AddEvent(EL,PDecideRoute,Tnow,loc1,Y1,NONE);
+                     Enqueue(MatEx[nodex][nodey-1].YQ2,msg);
+                     printf("\n ( %7.2f ) Msg[%d] Ends Trans E1Q[%d][%d] -> [%d][%d]Y2Q",Tnow,CurrentMsg.ID,nodex,nodey-1,CurrentMsg.DestX,CurrentMsg.DestY);
+                     fprintf(report,"\n ( %7.2f ) Msg[%d] Ends Trans E1Q[%d][%d] -> [%d][%d]Y2Q",Tnow,CurrentMsg.ID,nodex,nodey-1,CurrentMsg.DestX,CurrentMsg.DestY);
+                     if(isHeadOfQueue(MatEx[nodex][nodey-1].YQ2,msg))
+                         AddEvent(EL,PDecideRoute,Tnow,loc1,Y2,NONE);
                      if(!isQueueEmpty(MatEx[nodex][nodey].E1Q))
                          AddEvent(EL,PDecideRoute,Tnow,loc,E1,NONE);
-                break;
-                case E2:
+                break;}
+                case E2:{
                     CurrentMsg=DeQueue(MatEx[nodex][nodey].E2Q);
                      msg = malloc(sizeof(Message));
                      msg->ID = CurrentMsg.ID;
@@ -831,14 +831,14 @@ void EndTransmitEx(int nodex,int nodey,int input, int output){
                      msg->DestY=CurrentMsg.DestY;
                      msg->next = NULL;
                      loc1.x=nodex; loc1.y=nodey-1;
-                     Enqueue(MatEx[nodex][nodey-1].YQ1,msg);
-                     printf("\n ( %7.2f ) Msg[%d] Ends Trans E2Q[%d][%d] -> [%d][%d]Y1Q",Tnow,CurrentMsg.ID,nodex,nodey-1,CurrentMsg.DestX,CurrentMsg.DestY);
-                     fprintf(report,"\n ( %7.2f ) Msg[%d] Ends Trans E2Q[%d][%d] -> [%d][%d]Y1Q",Tnow,CurrentMsg.ID,nodex,nodey-1,CurrentMsg.DestX,CurrentMsg.DestY);
-                     if(isHeadOfQueue(MatEx[nodex][nodey-1].YQ1,msg))
-                         AddEvent(EL,PDecideRoute,Tnow,loc1,Y1,NONE);
+                     Enqueue(MatEx[nodex][nodey-1].YQ2,msg);
+                     printf("\n ( %7.2f ) Msg[%d] Ends Trans E2Q[%d][%d] -> [%d][%d]Y2Q",Tnow,CurrentMsg.ID,nodex,nodey-1,CurrentMsg.DestX,CurrentMsg.DestY);
+                     fprintf(report,"\n ( %7.2f ) Msg[%d] Ends Trans E2Q[%d][%d] -> [%d][%d]Y2Q",Tnow,CurrentMsg.ID,nodex,nodey-1,CurrentMsg.DestX,CurrentMsg.DestY);
+                     if(isHeadOfQueue(MatEx[nodex][nodey-1].YQ2,msg))
+                         AddEvent(EL,PDecideRoute,Tnow,loc1,Y2,NONE);
                      if(!isQueueEmpty(MatEx[nodex][nodey].E2Q))
                          AddEvent(EL,PDecideRoute,Tnow,loc,E2,NONE);
-                break;
+                break;}
              }
              boolean=0;
              if((MatEx[nodex][nodey].Y2Req[PE]==1)){
