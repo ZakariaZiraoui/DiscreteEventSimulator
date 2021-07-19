@@ -30,9 +30,11 @@ extern int TR;
 extern EventQueue *EL;
 extern float MeanResponseTime, MeanWatingTime,Throughput;
 extern Message CurrentMsg;
+extern char timeStr[21];
 extern FILE *report;
 
 void Mesh ( void );
+void StartingMsgMesh();
 void Init ( void );
 void Arrival ( int x ,int y );
 void DecideRoute ( int x,int y,int Input);

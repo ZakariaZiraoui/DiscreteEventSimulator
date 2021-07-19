@@ -12,6 +12,7 @@
 
 void Mesh (){
 
+    StartingMsgMesh();
     Init();
     //DisplayEventList(EL);
     while ( ClientServed <10 ) {
@@ -33,7 +34,6 @@ void Mesh (){
 void Init( void ) {
     Tnow  = 0.0;
     MessageID = 0;
-    StartingMsg();
     int i, j;
     for(i=0; i<N; i++) {
           for(j=0;j<M;j++) {
@@ -42,7 +42,7 @@ void Init( void ) {
             Mat[i][j].XQ2=malloc(sizeof(MessageQueue));    InitQueue(Mat[i][j].XQ2);
             Mat[i][j].YQ1=malloc(sizeof(MessageQueue));    InitQueue(Mat[i][j].YQ1);
             Mat[i][j].YQ2=malloc(sizeof(MessageQueue));    InitQueue(Mat[i][j].YQ2);
-            for(int k=0;k<10;k++) {
+            for(int k=0;k<7;k++) {
                 Mat[i][j].PEReq[k]=IDLE;
                 Mat[i][j].X1Req[k]=IDLE;
                 Mat[i][j].X2Req[k]=IDLE;
@@ -89,8 +89,8 @@ void Arrival ( int x,int y ) {
     msg->DestY=loc.y;
     msg->next = NULL;
 
-    printf("\n (%7.2f ns) Msg[%d] Arrives in PEQ[%d][%d] -> [%d][%d] ",Tnow,msg->ID,x,y,loc.x,loc.y);
-    fprintf(report,"\n (%7.2f ns) Msg[%d] Arrives in PEQ[%d][%d] -> [%d][%d] ",Tnow,msg->ID,x,y,loc.x,loc.y);
+    printf("\n ( %7.2f ) Msg[%d] Arrives in PEQ[%d][%d] -> [%d][%d] ",Tnow,msg->ID,x,y,loc.x,loc.y);
+    fprintf(report,"\n ( %7.2f ) Msg[%d] Arrives in PEQ[%d][%d] -> [%d][%d] ",Tnow,msg->ID,x,y,loc.x,loc.y);
     Enqueue(Mat[x][y].PEQ,msg);
 
     if(isHeadOfQueue(Mat[x][y].PEQ,msg)) {
@@ -99,8 +99,8 @@ void Arrival ( int x,int y ) {
        AddEvent(EL,PDecideRoute,Tnow,loc,PE,NONE);
     }else
     {
-        printf(        "\n (%7.2f ns) Msg[%d] Not Head Of Queue in PEQ[%d][%d] -> [%d][%d] ",Tnow,msg->ID,x,y,loc.x,loc.y);
-        fprintf(report,"\n (%7.2f ns) Msg[%d] Not Head Of Queue in PEQ[%d][%d] -> [%d][%d] ",Tnow,msg->ID,x,y,loc.x,loc.y);
+        printf(        "\n ( %7.2f ) Msg[%d] Not Head Of Queue in PEQ[%d][%d] -> [%d][%d] ",Tnow,msg->ID,x,y,loc.x,loc.y);
+        fprintf(report,"\n ( %7.2f ) Msg[%d] Not Head Of Queue in PEQ[%d][%d] -> [%d][%d] ",Tnow,msg->ID,x,y,loc.x,loc.y);
     }
 
     float r = ((float) rand() / (RAND_MAX));
@@ -171,8 +171,8 @@ void DecideRoute ( int nodex ,int nodey,int input ) {
                        } else
                             Mat[nodex][nodey].Y2Req[input]=1;
                      }
-        printf("\n (%7.2f ns) Msg[%d] Decides in %sQ[%d][%d] -> [%d][%d]%sQ ",Tnow,MsgID,in,nodex,nodey,Destx,Desty,out);
-        fprintf(report,"\n (%7.2f ns) Msg[%d] Decides in %sQ[%d][%d] -> [%d][%d]%sQ ",Tnow,MsgID,in,nodex,nodey,Destx,Desty,out);
+        printf("\n ( %7.2f ) Msg[%d] Decides in %sQ[%d][%d] -> [%d][%d]%sQ ",Tnow,MsgID,in,nodex,nodey,Destx,Desty,out);
+        fprintf(report,"\n ( %7.2f ) Msg[%d] Decides in %sQ[%d][%d] -> [%d][%d]%sQ ",Tnow,MsgID,in,nodex,nodey,Destx,Desty,out);
 
         //printf("\n Msg[%d] is in [%d][%d]%s -> [%d][%d] ",MsgID,nodex,nodey,in,Destx,Desty);
         //fprintf(report,"\n Msg[%d] is in [%d][%d]%s -> [%d][%d] ",MsgID,nodex,nodey,in,Destx,Desty);
@@ -229,12 +229,12 @@ void StartTransmit(int nodex,int nodey,int input,int output){
         case 2: strncpy(in, "Y1", 3);break;        case 3: strncpy(in, "Y2", 3);break;
         case 4: strncpy(in, "PE", 3);break;        default: strncpy(in, "NN",3);break;
     }
-    printf("\n (%7.2f ns) Start Transmit from  %sQ[%d][%d] -> [%d][%d]%sQ ",Tnow,in,nodex,nodey,nextDest.x,nextDest.y,out);
-    fprintf(report,"\n (%7.2f ns) Start Transmit from  %sQ[%d][%d] -> [%d][%d]%sQ ",Tnow,in,nodex,nodey,nextDest.x,nextDest.y,out);
+    printf("\n ( %7.2f ) Start Transmit from  %sQ[%d][%d] -> [%d][%d]%sQ ",Tnow,in,nodex,nodey,nextDest.x,nextDest.y,out);
+    fprintf(report,"\n ( %7.2f ) Start Transmit from  %sQ[%d][%d] -> [%d][%d]%sQ ",Tnow,in,nodex,nodey,nextDest.x,nextDest.y,out);
 }
 
 void EndTransmit(int nodex,int nodey,int input, int output){
-    //25 Cases in Total, 9 Cases won't be happened so you will find the 16 remain cases handled below
+    //25 Cases in Total, 9 Cases won't happened so you will find the 16 remain cases handled below
 
     Message *msg;
     int boolean=0;
@@ -247,51 +247,51 @@ void EndTransmit(int nodex,int nodey,int input, int output){
              switch(input){
                 case X1:
                     CurrentMsg=DeQueue(Mat[nodex][nodey].XQ1);
-                    printf("\n (%7.2f ns) Msg[%d] Ends Trans X1Q[%d][%d] -> [%d][%d]PEQ ",Tnow,CurrentMsg.ID,nodex,nodey,CurrentMsg.DestX,CurrentMsg.DestY);
-                    fprintf(report,"\n (%7.2f ns) Msg[%d] Ends Trans X1Q[%d][%d] -> [%d][%d]PEQ ",Tnow,CurrentMsg.ID,nodex,nodey,CurrentMsg.DestX,CurrentMsg.DestY);
+                    printf("\n ( %7.2f ) Msg[%d] Ends Trans X1Q[%d][%d] -> [%d][%d]PEQ ",Tnow,CurrentMsg.ID,nodex,nodey,CurrentMsg.DestX,CurrentMsg.DestY);
+                    fprintf(report,"\n ( %7.2f ) Msg[%d] Ends Trans X1Q[%d][%d] -> [%d][%d]PEQ ",Tnow,CurrentMsg.ID,nodex,nodey,CurrentMsg.DestX,CurrentMsg.DestY);
                     if(!isQueueEmpty(Mat[nodex][nodey].XQ1)) //TODO Verify Condition
                          AddEvent(EL,PDecideRoute,Tnow,loc,X1,NONE);
                     MeanResponseTime+=(Tnow-CurrentMsg.TArrival);
-                    printf("\n               Msg[%d] Response Time : %0.2f ns   Mean Response Time : %0.2f ns",
+                    printf("\n               Msg[%d] Response Time : %0.2f cycles   Mean Response Time : %0.2f cycles",
                             CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1));
-                    fprintf(report,"\n               Msg[%d] Response Time : %0.2f ns   Mean Response Time : %0.2f ns",
+                    fprintf(report,"\n               Msg[%d] Response Time : %0.2f cycles   Mean Response Time : %0.2f cycles",
                             CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1));
 
                 break;
                 case X2:
                     CurrentMsg=DeQueue(Mat[nodex][nodey].XQ2);
-                    printf("\n (%7.2f ns) Msg[%d] Ends Trans X2Q[%d][%d] -> [%d][%d]PEQ ",Tnow,CurrentMsg.ID,nodex,nodey,CurrentMsg.DestX,CurrentMsg.DestY);
-                    fprintf(report,"\n (%7.2f ns) Msg[%d] Ends Trans X2Q[%d][%d] -> [%d][%d]PEQ ",Tnow,CurrentMsg.ID,nodex,nodey,CurrentMsg.DestX,CurrentMsg.DestY);
+                    printf("\n ( %7.2f ) Msg[%d] Ends Trans X2Q[%d][%d] -> [%d][%d]PEQ ",Tnow,CurrentMsg.ID,nodex,nodey,CurrentMsg.DestX,CurrentMsg.DestY);
+                    fprintf(report,"\n ( %7.2f ) Msg[%d] Ends Trans X2Q[%d][%d] -> [%d][%d]PEQ ",Tnow,CurrentMsg.ID,nodex,nodey,CurrentMsg.DestX,CurrentMsg.DestY);
                     if(!isQueueEmpty(Mat[nodex][nodey].XQ2)) //TODO Verify Condition
                          AddEvent(EL,PDecideRoute,Tnow,loc,X2,NONE);
                     MeanResponseTime+=(Tnow-CurrentMsg.TArrival);
-                    printf("\n               Msg[%d] Response Time : %0.2f ns   Mean Response Time : %0.2f ns",
+                    printf("\n               Msg[%d] Response Time : %0.2f cycles   Mean Response Time : %0.2f cycles",
                             CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1));
-                    fprintf(report,"\n               Msg[%d] Response Time : %0.2f ns   Mean Response Time : %0.2f ns",
+                    fprintf(report,"\n               Msg[%d] Response Time : %0.2f cycles   Mean Response Time : %0.2f cycles",
                             CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1));
                     break;
                 case Y1:
                     CurrentMsg=DeQueue(Mat[nodex][nodey].YQ1);
-                    printf("\n (%7.2f ns) Msg[%d] Ends Trans Y1Q[%d][%d] -> [%d][%d]PEQ ",Tnow,CurrentMsg.ID,nodex,nodey,CurrentMsg.DestX,CurrentMsg.DestY);
-                    fprintf(report,"\n (%7.2f ns) Msg[%d] Ends Trans Y1Q[%d][%d] -> [%d][%d]PEQ ",Tnow,CurrentMsg.ID,nodex,nodey,CurrentMsg.DestX,CurrentMsg.DestY);
+                    printf("\n ( %7.2f ) Msg[%d] Ends Trans Y1Q[%d][%d] -> [%d][%d]PEQ ",Tnow,CurrentMsg.ID,nodex,nodey,CurrentMsg.DestX,CurrentMsg.DestY);
+                    fprintf(report,"\n ( %7.2f ) Msg[%d] Ends Trans Y1Q[%d][%d] -> [%d][%d]PEQ ",Tnow,CurrentMsg.ID,nodex,nodey,CurrentMsg.DestX,CurrentMsg.DestY);
                     if(!isQueueEmpty(Mat[nodex][nodey].YQ1)) //TODO Verify Condition
                          AddEvent(EL,PDecideRoute,Tnow,loc,Y1,NONE);
                     MeanResponseTime+=(Tnow-CurrentMsg.TArrival);
-                    printf("\n               Msg[%d] Response Time : %0.2f ns   Mean Response Time : %0.2f ns",
+                    printf("\n               Msg[%d] Response Time : %0.2f cycles   Mean Response Time : %0.2f cycles",
                             CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1));
-                    fprintf(report,"\n               Msg[%d] Response Time : %0.2f ns   Mean Response Time : %0.2f ns",
+                    fprintf(report,"\n               Msg[%d] Response Time : %0.2f cycles   Mean Response Time : %0.2f cycles",
                             CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1));
                 break;
                 case Y2:
                     CurrentMsg=DeQueue(Mat[nodex][nodey].YQ2);
-                    printf("\n (%7.2f ns) Msg[%d] Ends Trans Y2Q[%d][%d] -> [%d][%d]PEQ ",Tnow,CurrentMsg.ID,nodex,nodey,CurrentMsg.DestX,CurrentMsg.DestY);
-                    fprintf(report,"\n (%7.2f ns) Msg[%d] Ends Trans Y2Q[%d][%d] -> [%d][%d]PEQ ",Tnow,CurrentMsg.ID,nodex,nodey,CurrentMsg.DestX,CurrentMsg.DestY);
+                    printf("\n ( %7.2f ) Msg[%d] Ends Trans Y2Q[%d][%d] -> [%d][%d]PEQ ",Tnow,CurrentMsg.ID,nodex,nodey,CurrentMsg.DestX,CurrentMsg.DestY);
+                    fprintf(report,"\n ( %7.2f ) Msg[%d] Ends Trans Y2Q[%d][%d] -> [%d][%d]PEQ ",Tnow,CurrentMsg.ID,nodex,nodey,CurrentMsg.DestX,CurrentMsg.DestY);
                     if(!isQueueEmpty(Mat[nodex][nodey].YQ2)) //TODO Verify Condition
                          AddEvent(EL,PDecideRoute,Tnow,loc,Y2,NONE);
                     MeanResponseTime+=(Tnow-CurrentMsg.TArrival);
-                    printf("\n               Msg[%d] Response Time : %0.2f ns   Mean Response Time : %0.2f ns",
+                    printf("\n               Msg[%d] Response Time : %0.2f cycles   Mean Response Time : %0.2f cycles",
                             CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1));
-                    fprintf(report,"\n               Msg[%d] Response Time : %0.2f ns   Mean Response Time : %0.2f ns",
+                    fprintf(report,"\n               Msg[%d] Response Time : %0.2f cycles   Mean Response Time : %0.2f cycles",
                             CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1));
                 break;
              }
@@ -326,8 +326,8 @@ void EndTransmit(int nodex,int nodey,int input, int output){
                      msg->next = NULL;
                      loc1.x=nodex+1; loc1.y=nodey;
                      Enqueue(Mat[nodex+1][nodey].XQ1,msg);
-                     printf("\n (%7.2f ns) Msg[%d] Ends Trans PEQ[%d][%d] -> [%d][%d]X1Q",Tnow,CurrentMsg.ID,nodex+1,nodey,CurrentMsg.DestX,CurrentMsg.DestY);
-                     fprintf(report,"\n (%7.2f ns) Msg[%d] Ends Trans PEQ[%d][%d] -> [%d][%d]X1Q",Tnow,CurrentMsg.ID,nodex+1,nodey,CurrentMsg.DestX,CurrentMsg.DestY);
+                     printf("\n ( %7.2f ) Msg[%d] Ends Trans PEQ[%d][%d] -> [%d][%d]X1Q",Tnow,CurrentMsg.ID,nodex+1,nodey,CurrentMsg.DestX,CurrentMsg.DestY);
+                     fprintf(report,"\n ( %7.2f ) Msg[%d] Ends Trans PEQ[%d][%d] -> [%d][%d]X1Q",Tnow,CurrentMsg.ID,nodex+1,nodey,CurrentMsg.DestX,CurrentMsg.DestY);
                      if(isHeadOfQueue(Mat[nodex+1][nodey].XQ1,msg))
                          AddEvent(EL,PDecideRoute,Tnow,loc1,X1,NONE);
                     if(!isQueueEmpty(Mat[nodex][nodey].PEQ)) //TODO Verify Condition
@@ -345,8 +345,8 @@ void EndTransmit(int nodex,int nodey,int input, int output){
                      msg->next = NULL;
                      loc1.x=nodex+1; loc1.y=nodey;
                      Enqueue(Mat[nodex+1][nodey].XQ1,msg);
-                     printf("\n (%7.2f ns) Msg[%d] Ends Trans X1Q[%d][%d] -> [%d][%d]X1Q",Tnow,CurrentMsg.ID,nodex+1,nodey,CurrentMsg.DestX,CurrentMsg.DestY);
-                     fprintf(report,"\n (%7.2f ns) Msg[%d] Ends Trans X1Q[%d][%d] -> [%d][%d]X1Q",Tnow,CurrentMsg.ID,nodex+1,nodey,CurrentMsg.DestX,CurrentMsg.DestY);
+                     printf("\n ( %7.2f ) Msg[%d] Ends Trans X1Q[%d][%d] -> [%d][%d]X1Q",Tnow,CurrentMsg.ID,nodex+1,nodey,CurrentMsg.DestX,CurrentMsg.DestY);
+                     fprintf(report,"\n ( %7.2f ) Msg[%d] Ends Trans X1Q[%d][%d] -> [%d][%d]X1Q",Tnow,CurrentMsg.ID,nodex+1,nodey,CurrentMsg.DestX,CurrentMsg.DestY);
                      if(isHeadOfQueue(Mat[nodex+1][nodey].XQ1,msg))
                          AddEvent(EL,PDecideRoute,Tnow,loc1,X1,NONE);
                     if(!isQueueEmpty(Mat[nodex][nodey].XQ1)) //TODO Verify Condition
@@ -377,8 +377,8 @@ void EndTransmit(int nodex,int nodey,int input, int output){
                      msg->next = NULL;
                      loc1.x=nodex-1; loc1.y=nodey;
                      Enqueue(Mat[nodex-1][nodey].XQ2,msg);
-                     printf("\n (%7.2f ns) Msg[%d] Ends Trans PEQ[%d][%d] -> [%d][%d]X2Q",Tnow,CurrentMsg.ID,nodex-1,nodey,CurrentMsg.DestX,CurrentMsg.DestY);
-                     fprintf(report,"\n (%7.2f ns) Msg[%d] Ends Trans PEQ[%d][%d] -> [%d][%d]X2Q",Tnow,CurrentMsg.ID,nodex-1,nodey,CurrentMsg.DestX,CurrentMsg.DestY);
+                     printf("\n ( %7.2f ) Msg[%d] Ends Trans PEQ[%d][%d] -> [%d][%d]X2Q",Tnow,CurrentMsg.ID,nodex-1,nodey,CurrentMsg.DestX,CurrentMsg.DestY);
+                     fprintf(report,"\n ( %7.2f ) Msg[%d] Ends Trans PEQ[%d][%d] -> [%d][%d]X2Q",Tnow,CurrentMsg.ID,nodex-1,nodey,CurrentMsg.DestX,CurrentMsg.DestY);
                      if(isHeadOfQueue(Mat[nodex-1][nodey].XQ2,msg))
                          AddEvent(EL,PDecideRoute,Tnow,loc1,X2,NONE);
                      if(!isQueueEmpty(Mat[nodex][nodey].PEQ)) //TODO Verify Condition
@@ -396,8 +396,8 @@ void EndTransmit(int nodex,int nodey,int input, int output){
                      msg->next = NULL;
                      loc1.x=nodex-1; loc1.y=nodey;
                      Enqueue(Mat[nodex-1][nodey].XQ2,msg);
-                     printf("\n (%7.2f ns) Msg[%d] Ends Trans X2Q[%d][%d] -> [%d][%d]X2Q",Tnow,CurrentMsg.ID,nodex-1,nodey,CurrentMsg.DestX,CurrentMsg.DestY);
-                     fprintf(report,"\n (%7.2f ns) Msg[%d] Ends Trans X2Q[%d][%d] -> [%d][%d]X2Q",Tnow,CurrentMsg.ID,nodex-1,nodey,CurrentMsg.DestX,CurrentMsg.DestY);
+                     printf("\n ( %7.2f ) Msg[%d] Ends Trans X2Q[%d][%d] -> [%d][%d]X2Q",Tnow,CurrentMsg.ID,nodex-1,nodey,CurrentMsg.DestX,CurrentMsg.DestY);
+                     fprintf(report,"\n ( %7.2f ) Msg[%d] Ends Trans X2Q[%d][%d] -> [%d][%d]X2Q",Tnow,CurrentMsg.ID,nodex-1,nodey,CurrentMsg.DestX,CurrentMsg.DestY);
                      if(isHeadOfQueue(Mat[nodex-1][nodey].XQ2,msg))
                          AddEvent(EL,PDecideRoute,Tnow,loc1,X2,NONE);
                      if(!isQueueEmpty(Mat[nodex][nodey].XQ2)) //TODO Verify Condition
@@ -428,8 +428,8 @@ void EndTransmit(int nodex,int nodey,int input, int output){
                      msg->next = NULL;
                      loc1.x=nodex; loc1.y=nodey+1;
                      Enqueue(Mat[nodex][nodey+1].YQ1,msg);
-                     printf("\n (%7.2f ns) Msg[%d] Ends Trans PEQ[%d][%d] -> [%d][%d]Y1Q",Tnow,CurrentMsg.ID,nodex,nodey+1,CurrentMsg.DestX,CurrentMsg.DestY);
-                     fprintf(report,"\n (%7.2f ns) Msg[%d] Ends Trans PEQ[%d][%d] -> [%d][%d]Y1Q",Tnow,CurrentMsg.ID,nodex,nodey+1,CurrentMsg.DestX,CurrentMsg.DestY);
+                     printf("\n ( %7.2f ) Msg[%d] Ends Trans PEQ[%d][%d] -> [%d][%d]Y1Q",Tnow,CurrentMsg.ID,nodex,nodey+1,CurrentMsg.DestX,CurrentMsg.DestY);
+                     fprintf(report,"\n ( %7.2f ) Msg[%d] Ends Trans PEQ[%d][%d] -> [%d][%d]Y1Q",Tnow,CurrentMsg.ID,nodex,nodey+1,CurrentMsg.DestX,CurrentMsg.DestY);
                      if(isHeadOfQueue(Mat[nodex][nodey+1].YQ1,msg))
                          AddEvent(EL,PDecideRoute,Tnow,loc1,Y1,NONE);
                     if(!isQueueEmpty(Mat[nodex][nodey].PEQ)) //TODO Verify Condition
@@ -447,8 +447,8 @@ void EndTransmit(int nodex,int nodey,int input, int output){
                      msg->next = NULL;
                      loc1.x=nodex; loc1.y=nodey+1;
                      Enqueue(Mat[nodex][nodey+1].YQ1,msg);
-                     printf("\n (%7.2f ns) Msg[%d] Ends Trans X1Q[%d][%d] -> [%d][%d]Y1Q",Tnow,CurrentMsg.ID,nodex,nodey+1,CurrentMsg.DestX,CurrentMsg.DestY);
-                     fprintf(report,"\n (%7.2f ns) Msg[%d] Ends Trans X1Q[%d][%d] -> [%d][%d]Y1Q",Tnow,CurrentMsg.ID,nodex,nodey+1,CurrentMsg.DestX,CurrentMsg.DestY);
+                     printf("\n ( %7.2f ) Msg[%d] Ends Trans X1Q[%d][%d] -> [%d][%d]Y1Q",Tnow,CurrentMsg.ID,nodex,nodey+1,CurrentMsg.DestX,CurrentMsg.DestY);
+                     fprintf(report,"\n ( %7.2f ) Msg[%d] Ends Trans X1Q[%d][%d] -> [%d][%d]Y1Q",Tnow,CurrentMsg.ID,nodex,nodey+1,CurrentMsg.DestX,CurrentMsg.DestY);
                      if(isHeadOfQueue(Mat[nodex][nodey+1].YQ1,msg))
                          AddEvent(EL,PDecideRoute,Tnow,loc1,Y1,NONE);
                      if(!isQueueEmpty(Mat[nodex][nodey].XQ1)) //TODO Verify Condition
@@ -466,8 +466,8 @@ void EndTransmit(int nodex,int nodey,int input, int output){
                      msg->next = NULL;
                      loc1.x=nodex; loc1.y=nodey+1;
                      Enqueue(Mat[nodex][nodey+1].YQ1,msg);
-                     printf("\n (%7.2f ns) Msg[%d] Ends Trans X2Q[%d][%d] -> [%d][%d]Y1Q",Tnow,CurrentMsg.ID,nodex,nodey+1,CurrentMsg.DestX,CurrentMsg.DestY);
-                     fprintf(report,"\n (%7.2f ns) Msg[%d] Ends Trans X2Q[%d][%d] -> [%d][%d]Y1Q",Tnow,CurrentMsg.ID,nodex,nodey+1,CurrentMsg.DestX,CurrentMsg.DestY);
+                     printf("\n ( %7.2f ) Msg[%d] Ends Trans X2Q[%d][%d] -> [%d][%d]Y1Q",Tnow,CurrentMsg.ID,nodex,nodey+1,CurrentMsg.DestX,CurrentMsg.DestY);
+                     fprintf(report,"\n ( %7.2f ) Msg[%d] Ends Trans X2Q[%d][%d] -> [%d][%d]Y1Q",Tnow,CurrentMsg.ID,nodex,nodey+1,CurrentMsg.DestX,CurrentMsg.DestY);
                      if(isHeadOfQueue(Mat[nodex][nodey+1].YQ1,msg))
                          AddEvent(EL,PDecideRoute,Tnow,loc1,Y1,NONE);
                     if(!isQueueEmpty(Mat[nodex][nodey].XQ2)) //TODO Verify Condition
@@ -485,8 +485,8 @@ void EndTransmit(int nodex,int nodey,int input, int output){
                      msg->next = NULL;
                      loc1.x=nodex; loc1.y=nodey+1;
                      Enqueue(Mat[nodex][nodey+1].YQ1,msg);
-                     printf("\n (%7.2f ns) Msg[%d] Ends Trans Y1Q[%d][%d] -> [%d][%d]Y1Q",Tnow,CurrentMsg.ID,nodex,nodey+1,CurrentMsg.DestX,CurrentMsg.DestY);
-                     fprintf(report,"\n (%7.2f ns) Msg[%d] Ends Trans Y1Q[%d][%d] -> [%d][%d]Y1Q",Tnow,CurrentMsg.ID,nodex,nodey+1,CurrentMsg.DestX,CurrentMsg.DestY);
+                     printf("\n ( %7.2f ) Msg[%d] Ends Trans Y1Q[%d][%d] -> [%d][%d]Y1Q",Tnow,CurrentMsg.ID,nodex,nodey+1,CurrentMsg.DestX,CurrentMsg.DestY);
+                     fprintf(report,"\n ( %7.2f ) Msg[%d] Ends Trans Y1Q[%d][%d] -> [%d][%d]Y1Q",Tnow,CurrentMsg.ID,nodex,nodey+1,CurrentMsg.DestX,CurrentMsg.DestY);
                      if(isHeadOfQueue(Mat[nodex][nodey+1].YQ1,msg))
                          AddEvent(EL,PDecideRoute,Tnow,loc1,Y1,NONE);
                     if(!isQueueEmpty(Mat[nodex][nodey].YQ1)) //TODO Verify Condition
@@ -523,8 +523,8 @@ void EndTransmit(int nodex,int nodey,int input, int output){
                      msg->next = NULL;
                      loc1.x=nodex; loc1.y=nodey-1;
                      Enqueue(Mat[nodex][nodey-1].YQ2,msg);
-                     printf("\n (%7.2f ns) Msg[%d] Ends Trans PEQ[%d][%d] -> [%d][%d]Y2Q",Tnow,CurrentMsg.ID,nodex,nodey-1,CurrentMsg.DestX,CurrentMsg.DestY);
-                     fprintf(report,"\n (%7.2f ns) Msg[%d] Ends Trans PEQ[%d][%d] -> [%d][%d]Y2Q",Tnow,CurrentMsg.ID,nodex,nodey-1,CurrentMsg.DestX,CurrentMsg.DestY);
+                     printf("\n ( %7.2f ) Msg[%d] Ends Trans PEQ[%d][%d] -> [%d][%d]Y2Q",Tnow,CurrentMsg.ID,nodex,nodey-1,CurrentMsg.DestX,CurrentMsg.DestY);
+                     fprintf(report,"\n ( %7.2f ) Msg[%d] Ends Trans PEQ[%d][%d] -> [%d][%d]Y2Q",Tnow,CurrentMsg.ID,nodex,nodey-1,CurrentMsg.DestX,CurrentMsg.DestY);
                      if(isHeadOfQueue(Mat[nodex][nodey-1].YQ2,msg))
                          AddEvent(EL,PDecideRoute,Tnow,loc1,Y2,NONE);
                      if(!isQueueEmpty(Mat[nodex][nodey].PEQ)) //TODO Verify Condition
@@ -542,8 +542,8 @@ void EndTransmit(int nodex,int nodey,int input, int output){
                      msg->next = NULL;
                      loc1.x=nodex; loc1.y=nodey-1;
                      Enqueue(Mat[nodex][nodey-1].YQ2,msg);
-                     printf("\n (%7.2f ns) Msg[%d] Ends Trans X1Q[%d][%d] -> [%d][%d]Y2Q",Tnow,CurrentMsg.ID,nodex,nodey-1,CurrentMsg.DestX,CurrentMsg.DestY);
-                     fprintf(report,"\n (%7.2f ns) Msg[%d] Ends Trans X1Q[%d][%d] -> [%d][%d]Y2Q",Tnow,CurrentMsg.ID,nodex,nodey-1,CurrentMsg.DestX,CurrentMsg.DestY);
+                     printf("\n ( %7.2f ) Msg[%d] Ends Trans X1Q[%d][%d] -> [%d][%d]Y2Q",Tnow,CurrentMsg.ID,nodex,nodey-1,CurrentMsg.DestX,CurrentMsg.DestY);
+                     fprintf(report,"\n ( %7.2f ) Msg[%d] Ends Trans X1Q[%d][%d] -> [%d][%d]Y2Q",Tnow,CurrentMsg.ID,nodex,nodey-1,CurrentMsg.DestX,CurrentMsg.DestY);
                      if(isHeadOfQueue(Mat[nodex][nodey-1].YQ2,msg))
                          AddEvent(EL,PDecideRoute,Tnow,loc1,Y2,NONE);
                     if(!isQueueEmpty(Mat[nodex][nodey].XQ1)) //TODO Verify Condition
@@ -561,8 +561,8 @@ void EndTransmit(int nodex,int nodey,int input, int output){
                      msg->next = NULL;
                      loc1.x=nodex; loc1.y=nodey-1;
                      Enqueue(Mat[nodex][nodey-1].YQ2,msg);
-                     printf("\n (%7.2f ns) Msg[%d] Ends Trans X2Q[%d][%d] -> [%d][%d]Y2Q",Tnow,CurrentMsg.ID,nodex,nodey-1,CurrentMsg.DestX,CurrentMsg.DestY);
-                     fprintf(report,"\n (%7.2f ns) Msg[%d] Ends Trans X2Q[%d][%d] -> [%d][%d]Y2Q",Tnow,CurrentMsg.ID,nodex,nodey-1,CurrentMsg.DestX,CurrentMsg.DestY);
+                     printf("\n ( %7.2f ) Msg[%d] Ends Trans X2Q[%d][%d] -> [%d][%d]Y2Q",Tnow,CurrentMsg.ID,nodex,nodey-1,CurrentMsg.DestX,CurrentMsg.DestY);
+                     fprintf(report,"\n ( %7.2f ) Msg[%d] Ends Trans X2Q[%d][%d] -> [%d][%d]Y2Q",Tnow,CurrentMsg.ID,nodex,nodey-1,CurrentMsg.DestX,CurrentMsg.DestY);
                      if(isHeadOfQueue(Mat[nodex][nodey-1].YQ2,msg))
                          AddEvent(EL,PDecideRoute,Tnow,loc1,Y2,NONE);
                      else DisplayQueue(Mat[nodex][nodey-1].YQ2,report);
@@ -581,8 +581,8 @@ void EndTransmit(int nodex,int nodey,int input, int output){
                      msg->next = NULL;
                      loc1.x=nodex; loc1.y=nodey-1;
                      Enqueue(Mat[nodex][nodey-1].YQ2,msg);
-                     printf("\n (%7.2f ns) Msg[%d] Ends Trans Y2Q[%d][%d] -> [%d][%d]Y2Q",Tnow,CurrentMsg.ID,nodex,nodey-1,CurrentMsg.DestX,CurrentMsg.DestY);
-                     fprintf(report,"\n (%7.2f ns) Msg[%d] Ends Trans Y2Q[%d][%d] -> [%d][%d]Y2Q",Tnow,CurrentMsg.ID,nodex,nodey-1,CurrentMsg.DestX,CurrentMsg.DestY);
+                     printf("\n ( %7.2f ) Msg[%d] Ends Trans Y2Q[%d][%d] -> [%d][%d]Y2Q",Tnow,CurrentMsg.ID,nodex,nodey-1,CurrentMsg.DestX,CurrentMsg.DestY);
+                     fprintf(report,"\n ( %7.2f ) Msg[%d] Ends Trans Y2Q[%d][%d] -> [%d][%d]Y2Q",Tnow,CurrentMsg.ID,nodex,nodey-1,CurrentMsg.DestX,CurrentMsg.DestY);
                      if(isHeadOfQueue(Mat[nodex][nodey-1].YQ2,msg))
                          AddEvent(EL,PDecideRoute,Tnow,loc1,Y2,NONE);
                      if(!isQueueEmpty(Mat[nodex][nodey].YQ2)) //TODO Verify Condition
@@ -621,6 +621,42 @@ void FreeQueues( void ) {
             while(!isQueueEmpty(Mat[i][j].YQ2)) DeQueue(Mat[i][j].YQ2); free(Mat[i][j].YQ2);
           }
     }
+}
+
+void StartingMsgMesh(){
+
+	replacechar(timeStr,'-',':');
+	printf("Simulation Starting Time %.24s\n",timeStr);
+	printf("Welcome to Network-On-Chip 2D Mesh Simulator \n");
+	printf("This simulator was designed based on The Discrete Event Simulation.\n");
+	printf("It's a final year project to obtain the Master Degree\n");
+	printf("Student developer : Ziraoui Zakaria \n");
+	printf("Supervisor: Prof. Mohamed Ould-Khaoua\n");
+	printf("\nNetwork Simulation Parameters :\n");
+    printf("\nTopology : %d x %d Mesh ",N,M);
+    printf("\nNumber of Nodes  : %d ",N*M);
+    printf("\nRouting : Dimension-ordered (DOR)");
+    printf("\nTraffic : Uniform Random");
+    printf("\nMessage length : 32 phits");
+    printf("\nInjection Rate : %0.0f",lambda);
+    printf("\nTransmission Time : %d Cycles",TR);
+	printf("\n\nPlease wait, Simulation has been started.\n");
+
+	fprintf(report,"Simulation Starting Time %.24s\n",timeStr);
+	fprintf(report,"Welcome to Network-On-Chip 2D Mesh Simulator \n");
+	fprintf(report,"This simulator was designed based on The Discrete Event Simulation.\n");
+	fprintf(report,"It's a final year project to obtain the Master Degree\n");
+	fprintf(report,"Student developer : Ziraoui Zakaria \n");
+	fprintf(report,"Supervisor: Prof. Mohamed Ould-Khaoua\n");
+	fprintf(report,"\nNetwork Simulation Parameters :\n");
+    fprintf(report,"\nTopology : %d x %d Mesh ",N,M);
+    fprintf(report,"\nNumber of Nodes  : %d ",N*M);
+    fprintf(report,"\nRouting : Dimension-ordered (DOR)");
+    fprintf(report,"\nTraffic : Uniform Random");
+    fprintf(report,"\nMessage length : 32 phits");
+    fprintf(report,"\nInjection Rate : %0.0f",lambda);
+    fprintf(report,"\nTransmission Time : %d Cycles",TR);
+	fprintf(report,"\n\nPlease wait, Simulation has been started.\n");
 }
 
 
