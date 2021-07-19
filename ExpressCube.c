@@ -875,8 +875,8 @@ void EndTransmitEx(int nodex,int nodey,int input, int output){
                      msg->DestX=CurrentMsg.DestX;
                      msg->DestY=CurrentMsg.DestY;
                      msg->next = NULL;
-                     if(MatEx[nodex][nodey].HasExpressX1)  loc1.x=nodex+Hops; loc1.y=nodey;
-                     if(MatEx[nodex][nodey].HasExpressY1)  loc1.x=nodex; loc1.y=nodey+Hops;
+                     if(MatEx[nodex][nodey].HasExpressX1){ loc1.x=nodex+Hops; loc1.y=nodey;}
+                     if(MatEx[nodex][nodey].HasExpressY1){ loc1.x=nodex; loc1.y=nodey+Hops;}
                      Enqueue(MatEx[loc1.x][loc1.y].E1Q,msg);
                      printf("\n ( %7.2f ) Msg[%d] Ends Trans PEQ[%d][%d] -> [%d][%d]E1Q",Tnow,CurrentMsg.ID,loc1.x,loc1.y,CurrentMsg.DestX,CurrentMsg.DestY);
                      fprintf(report,"\n ( %7.2f ) Msg[%d] Ends Trans PEQ[%d][%d] -> [%d][%d]E1Q",Tnow,CurrentMsg.ID,loc1.x,loc1.y,CurrentMsg.DestX,CurrentMsg.DestY);
@@ -895,8 +895,8 @@ void EndTransmitEx(int nodex,int nodey,int input, int output){
                      msg->DestX=CurrentMsg.DestX;
                      msg->DestY=CurrentMsg.DestY;
                      msg->next = NULL;
-                     if(MatEx[nodex][nodey].HasExpressX1)  loc1.x=nodex+Hops; loc1.y=nodey;
-                     if(MatEx[nodex][nodey].HasExpressY1)  loc1.x=nodex; loc1.y=nodey+Hops;
+                     if(MatEx[nodex][nodey].HasExpressX1){ loc1.x=nodex+Hops; loc1.y=nodey;}
+                     if(MatEx[nodex][nodey].HasExpressY1){ loc1.x=nodex; loc1.y=nodey+Hops;}
                      Enqueue(MatEx[loc1.x][loc1.y].E1Q,msg);
                      printf("\n ( %7.2f ) Msg[%d] Ends Trans X1Q[%d][%d] -> [%d][%d]E1Q",Tnow,CurrentMsg.ID,loc1.x,loc1.y,CurrentMsg.DestX,CurrentMsg.DestY);
                      fprintf(report,"\n ( %7.2f ) Msg[%d] Ends Trans X1Q[%d][%d] -> [%d][%d]E1Q",Tnow,CurrentMsg.ID,loc1.x,loc1.y,CurrentMsg.DestX,CurrentMsg.DestY);
@@ -915,8 +915,8 @@ void EndTransmitEx(int nodex,int nodey,int input, int output){
                      msg->DestX=CurrentMsg.DestX;
                      msg->DestY=CurrentMsg.DestY;
                      msg->next = NULL;
-                     //if(MatEx[nodex][nodey].HasExpressX1)  loc1.x=nodex+Hops; loc1.y=nodey;
-                     if(MatEx[nodex][nodey].HasExpressY1)  loc1.x=nodex; loc1.y=nodey+Hops;
+                     //if(MatEx[nodex][nodey].HasExpressX1) { loc1.x=nodex+Hops; loc1.y=nodey;}
+                     if(MatEx[nodex][nodey].HasExpressY1) { loc1.x=nodex; loc1.y=nodey+Hops;}
                      Enqueue(MatEx[loc1.x][loc1.y].E1Q,msg);
                      printf("\n ( %7.2f ) Msg[%d] Ends Trans X2Q[%d][%d] -> [%d][%d]E1Q",Tnow,CurrentMsg.ID,loc1.x,loc1.y,CurrentMsg.DestX,CurrentMsg.DestY);
                      fprintf(report,"\n ( %7.2f ) Msg[%d] Ends Trans X2Q[%d][%d] -> [%d][%d]E1Q",Tnow,CurrentMsg.ID,loc1.x,loc1.y,CurrentMsg.DestX,CurrentMsg.DestY);
@@ -935,8 +935,8 @@ void EndTransmitEx(int nodex,int nodey,int input, int output){
                      msg->DestX=CurrentMsg.DestX;
                      msg->DestY=CurrentMsg.DestY;
                      msg->next = NULL;
-                     //if(MatEx[nodex][nodey].HasExpressX1)  loc1.x=nodex+Hops; loc1.y=nodey;
-                     if(MatEx[nodex][nodey].HasExpressY1)  loc1.x=nodex; loc1.y=nodey+Hops;
+                     //if(MatEx[nodex][nodey].HasExpressX1){ loc1.x=nodex+Hops; loc1.y=nodey;}
+                     if(MatEx[nodex][nodey].HasExpressY1) {loc1.x=nodex; loc1.y=nodey+Hops; }
                      Enqueue(MatEx[loc1.x][loc1.y].E1Q,msg);
                      printf("\n ( %7.2f ) Msg[%d] Ends Trans Y1Q[%d][%d] -> [%d][%d]E1Q",Tnow,CurrentMsg.ID,loc1.x,loc1.y,CurrentMsg.DestX,CurrentMsg.DestY);
                      fprintf(report,"\n ( %7.2f ) Msg[%d] Ends Trans Y1Q[%d][%d] -> [%d][%d]E1Q",Tnow,CurrentMsg.ID,loc1.x,loc1.y,CurrentMsg.DestX,CurrentMsg.DestY);
@@ -955,8 +955,8 @@ void EndTransmitEx(int nodex,int nodey,int input, int output){
                      msg->DestX=CurrentMsg.DestX;
                      msg->DestY=CurrentMsg.DestY;
                      msg->next = NULL;
-                     if(MatEx[nodex][nodey].HasExpressX1)  loc1.x=nodex+Hops; loc1.y=nodey;
-                     if(MatEx[nodex][nodey].HasExpressY1)  loc1.x=nodex; loc1.y=nodey+Hops;
+                     if(MatEx[nodex][nodey].HasExpressX1){ loc1.x=nodex+Hops; loc1.y=nodey; }
+                     if(MatEx[nodex][nodey].HasExpressY1) { loc1.x=nodex; loc1.y=nodey+Hops; }
                      Enqueue(MatEx[loc1.x][loc1.y].E1Q,msg);
                      printf("\n ( %7.2f ) Msg[%d] Ends Trans E1Q[%d][%d] -> [%d][%d]E1Q",Tnow,CurrentMsg.ID,loc1.x,loc1.y,CurrentMsg.DestX,CurrentMsg.DestY);
                      fprintf(report,"\n ( %7.2f ) Msg[%d] Ends Trans E1Q[%d][%d] -> [%d][%d]E1Q",Tnow,CurrentMsg.ID,loc1.x,loc1.y,CurrentMsg.DestX,CurrentMsg.DestY);
@@ -997,8 +997,8 @@ void EndTransmitEx(int nodex,int nodey,int input, int output){
                      msg->DestX=CurrentMsg.DestX;
                      msg->DestY=CurrentMsg.DestY;
                      msg->next = NULL;
-                     if(MatEx[nodex][nodey].HasExpressX2)  loc1.x=nodex-Hops; loc1.y=nodey;
-                     if(MatEx[nodex][nodey].HasExpressY2)  loc1.x=nodex; loc1.y=nodey-Hops;
+                     if(MatEx[nodex][nodey].HasExpressX2)  {loc1.x=nodex-Hops; loc1.y=nodey;}
+                     if(MatEx[nodex][nodey].HasExpressY2)  {loc1.x=nodex; loc1.y=nodey-Hops;}
                      Enqueue(MatEx[loc1.x][loc1.y].E2Q,msg);
                      printf("\n ( %7.2f ) Msg[%d] Ends Trans PEQ[%d][%d] -> [%d][%d]E2Q",Tnow,CurrentMsg.ID,loc1.x,loc1.y,CurrentMsg.DestX,CurrentMsg.DestY);
                      fprintf(report,"\n ( %7.2f ) Msg[%d] Ends Trans PEQ[%d][%d] -> [%d][%d]E2Q",Tnow,CurrentMsg.ID,loc1.x,loc1.y,CurrentMsg.DestX,CurrentMsg.DestY);
@@ -1017,8 +1017,8 @@ void EndTransmitEx(int nodex,int nodey,int input, int output){
                      msg->DestX=CurrentMsg.DestX;
                      msg->DestY=CurrentMsg.DestY;
                      msg->next = NULL;
-                     //if(MatEx[nodex][nodey].HasExpressX2)  loc1.x=nodex-Hops; loc1.y=nodey;
-                     if(MatEx[nodex][nodey].HasExpressY2)  loc1.x=nodex; loc1.y=nodey-Hops;
+                     //if(MatEx[nodex][nodey].HasExpressX2){ loc1.x=nodex-Hops; loc1.y=nodey;}
+                     if(MatEx[nodex][nodey].HasExpressY2)  {loc1.x=nodex; loc1.y=nodey-Hops;}
                      Enqueue(MatEx[loc1.x][loc1.y].E2Q,msg);
                      printf("\n ( %7.2f ) Msg[%d] Ends Trans X1Q[%d][%d] -> [%d][%d]E2Q",Tnow,CurrentMsg.ID,loc1.x,loc1.y,CurrentMsg.DestX,CurrentMsg.DestY);
                      fprintf(report,"\n ( %7.2f ) Msg[%d] Ends Trans X1Q[%d][%d] -> [%d][%d]E2Q",Tnow,CurrentMsg.ID,loc1.x,loc1.y,CurrentMsg.DestX,CurrentMsg.DestY);
@@ -1037,8 +1037,8 @@ void EndTransmitEx(int nodex,int nodey,int input, int output){
                      msg->DestX=CurrentMsg.DestX;
                      msg->DestY=CurrentMsg.DestY;
                      msg->next = NULL;
-                     if(MatEx[nodex][nodey].HasExpressX2)  loc1.x=nodex-Hops; loc1.y=nodey;
-                     if(MatEx[nodex][nodey].HasExpressY2)  loc1.x=nodex; loc1.y=nodey-Hops;
+                     if(MatEx[nodex][nodey].HasExpressX2) {loc1.x=nodex-Hops; loc1.y=nodey;}
+                     if(MatEx[nodex][nodey].HasExpressY2) {loc1.x=nodex; loc1.y=nodey-Hops;}
                      Enqueue(MatEx[loc1.x][loc1.y].E2Q,msg);
                      printf("\n ( %7.2f ) Msg[%d] Ends Trans X2Q[%d][%d] -> [%d][%d]E2Q",Tnow,CurrentMsg.ID,loc1.x,loc1.y,CurrentMsg.DestX,CurrentMsg.DestY);
                      fprintf(report,"\n ( %7.2f ) Msg[%d] Ends Trans X2Q[%d][%d] -> [%d][%d]E2Q",Tnow,CurrentMsg.ID,loc1.x,loc1.y,CurrentMsg.DestX,CurrentMsg.DestY);
@@ -1057,8 +1057,8 @@ void EndTransmitEx(int nodex,int nodey,int input, int output){
                      msg->DestX=CurrentMsg.DestX;
                      msg->DestY=CurrentMsg.DestY;
                      msg->next = NULL;
-                     //if(MatEx[nodex][nodey].HasExpressX2)  loc1.x=nodex-Hops; loc1.y=nodey;
-                     if(MatEx[nodex][nodey].HasExpressY2)  loc1.x=nodex; loc1.y=nodey-Hops;
+                     //if(MatEx[nodex][nodey].HasExpressX2) { loc1.x=nodex-Hops; loc1.y=nodey;}
+                     if(MatEx[nodex][nodey].HasExpressY2)  {loc1.x=nodex; loc1.y=nodey-Hops;}
                      Enqueue(MatEx[loc1.x][loc1.y].E2Q,msg);
                      printf("\n ( %7.2f ) Msg[%d] Ends Trans Y2Q[%d][%d] -> [%d][%d]E2Q",Tnow,CurrentMsg.ID,loc1.x,loc1.y,CurrentMsg.DestX,CurrentMsg.DestY);
                      fprintf(report,"\n ( %7.2f ) Msg[%d] Ends Trans Y2Q[%d][%d] -> [%d][%d]E2Q",Tnow,CurrentMsg.ID,loc1.x,loc1.y,CurrentMsg.DestX,CurrentMsg.DestY);
@@ -1077,8 +1077,8 @@ void EndTransmitEx(int nodex,int nodey,int input, int output){
                      msg->DestX=CurrentMsg.DestX;
                      msg->DestY=CurrentMsg.DestY;
                      msg->next = NULL;
-                     if(MatEx[nodex][nodey].HasExpressX2)  loc1.x=nodex-Hops; loc1.y=nodey;
-                     if(MatEx[nodex][nodey].HasExpressY2)  loc1.x=nodex; loc1.y=nodey-Hops;
+                     if(MatEx[nodex][nodey].HasExpressX2) { loc1.x=nodex-Hops; loc1.y=nodey;}
+                     if(MatEx[nodex][nodey].HasExpressY2) {loc1.x=nodex; loc1.y=nodey-Hops; }
                      Enqueue(MatEx[loc1.x][loc1.y].E2Q,msg);
                      printf("\n ( %7.2f ) Msg[%d] Ends Trans E2Q[%d][%d] -> [%d][%d]E2Q",Tnow,CurrentMsg.ID,loc1.x,loc1.y,CurrentMsg.DestX,CurrentMsg.DestY);
                      fprintf(report,"\n ( %7.2f ) Msg[%d] Ends Trans E2Q[%d][%d] -> [%d][%d]E2Q",Tnow,CurrentMsg.ID,loc1.x,loc1.y,CurrentMsg.DestX,CurrentMsg.DestY);
