@@ -3,7 +3,8 @@
 
 #include <stdbool.h>
 #include <stdio.h>
-#include "Node.h"
+#include <stdlib.h>
+#include <string.h>
 
 typedef struct Message {
    int  ID;
@@ -18,13 +19,12 @@ typedef struct MessageQueue{
      Message *head;
 } MessageQueue;
 
-
 void InitQueue (MessageQueue *Q);
 Message DeQueue(MessageQueue *Q);
 bool isHeadOfQueue(MessageQueue *Q, Message *msg);
 Message GetQueueHead(MessageQueue *Q);
 void Enqueue(MessageQueue *Q, Message *clt);
-void DisplayQueue(MessageQueue *Q,FILE *report);
+void DisplayQueue(MessageQueue *Q,int input,int x ,int y,FILE *report);
 bool isQueueEmpty(MessageQueue *Q);
 int Queuelength(MessageQueue *Q);
 
