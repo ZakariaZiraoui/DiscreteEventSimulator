@@ -1,7 +1,4 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include "Message.h"
-
 
 void InitQueue(MessageQueue *Q){
     Q->count = 0;
@@ -28,7 +25,7 @@ bool isHeadOfQueue(MessageQueue *Q, Message *msg){
 }
 
 Message GetQueueHead(MessageQueue *Q) {
-    if (Q->head == NULL) return ;
+    if (Q->head == NULL) return;
     Message *tmp;
     tmp = Q->head;
     return *tmp;
@@ -51,10 +48,22 @@ Message DeQueue(MessageQueue *Q){
     return(clt);
 }
 
-void DisplayQueue(MessageQueue *Q,FILE *report) {
+void DisplayQueue(MessageQueue *Q,int in,int x ,int y ,FILE *report) {
    Message *ptr = Q->head;
-   printf("\nQueue [ ");
-   fprintf(report,"\nQueue [ ");
+   char input[3];
+    switch(in){
+        case 0: strncpy(input, "X1", 3);break;
+        case 1: strncpy(input, "X2", 3);break;
+        case 2: strncpy(input, "Y1", 3);break;
+        case 3: strncpy(input, "Y2", 3);break;
+        case 4: strncpy(input, "PE", 3);break;
+        case 5: strncpy(input, "E1", 3);break;
+        case 6: strncpy(input, "E2", 3);break;
+        case -1: strncpy(input, "NN", 3);break;
+    }
+
+   printf("\n %sQ[%d][%d] [ ",input,x,y);
+   fprintf(report,"\n %sQ[%d][%d] [ ",input,x,y);
    while(ptr != NULL) {
       printf("(Msg[%d],TAr:%.2f,Dest:[%d][%d])",ptr->ID,ptr->TArrival,ptr->DestX,ptr->DestY);
       fprintf(report,"(Msg[%d],TAr:%.2f,Dest:[%d][%d])",ptr->ID,ptr->TArrival,ptr->DestX,ptr->DestY);

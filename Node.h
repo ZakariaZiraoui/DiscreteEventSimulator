@@ -3,11 +3,9 @@
 
 #include "Message.h"
 
-
 typedef struct Location {
    int  x,y;
 }Location;
-
 
 typedef struct Node {
    struct MessageQueue *XQ1,*XQ2,*YQ1,*YQ2,*PEQ;

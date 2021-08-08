@@ -1,6 +1,4 @@
 #include "Utils.h"
-#include <string.h>
-#include <math.h>
 
 
 Location RandDest(){

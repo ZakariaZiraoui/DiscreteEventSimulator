@@ -1,6 +1,9 @@
 #ifndef EVENT_H_INCLUDED
 #define EVENT_H_INCLUDED
 
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 #include "Node.h"
 
 struct Event {

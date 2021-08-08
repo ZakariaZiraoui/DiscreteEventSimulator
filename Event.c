@@ -1,6 +1,3 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
 #include "Event.h"
 
 
@@ -88,6 +85,8 @@ void DisplayEventInfo(Event event,FILE *report){
         case 2: strncpy(input, "Y1", 3);break;
         case 3: strncpy(input, "Y2", 3);break;
         case 4: strncpy(input, "PE", 3);break;
+        case 5: strncpy(input, "E1", 3);break;
+        case 6: strncpy(input, "E2", 3);break;
         case -1: strncpy(input, "NN", 3);break;
     }
     switch(event.Output){
@@ -96,6 +95,8 @@ void DisplayEventInfo(Event event,FILE *report){
         case 2: strncpy(output, "Y1", 3);break;
         case 3: strncpy(output, "Y2", 3);break;
         case 4: strncpy(output, "PE", 3);break;
+        case 5: strncpy(output, "E1", 3);break;
+        case 6: strncpy(output, "E2", 3);break;
         case -1: strncpy(output, "NN", 3);break;
     }
     switch(event.Type){
@@ -123,10 +124,5 @@ void DisplayEventInfo(Event event,FILE *report){
             fprintf(report,"\nEvent EndTransmit ( %.2f ) [%d][%d] %s -> %s :",
                 event.Time,event.Location.x,event.Location.y,input,output);
         break;
-
-
     }
-
-
-
 }
