@@ -19,8 +19,10 @@
 //#define Lambda 80 //Injection Rate
 
 //Simulation Parameters
-#define Max 1000//Max Number of Delivered Messages
+#define Max 100             //Max Number of Delivered Messages
 #define BatchMeansMethod 0  //Use The Batch Means Method
+#define Logging false       //Log  the LifeCycles of Messages
+#define Summary true       //Generate summary for excel output
 
 
 //Implementation Configuration
