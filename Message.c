@@ -24,10 +24,11 @@ bool isHeadOfQueue(MessageQueue *Q, Message *msg){
     return false;
 }
 
-Message GetQueueHead(MessageQueue *Q) {
+Message GetQueueHead(MessageQueue *Q,float Tnow) {
     if (Q->head == NULL) return;
     Message *tmp;
     tmp = Q->head;
+    Q->head->TWait+=Tnow-Q->head->TQueing;
     return *tmp;
 }
 
@@ -38,6 +39,7 @@ Message DeQueue(MessageQueue *Q){
     clt.TArrival = Q->head->TArrival;
     clt.TResponse = Q->head->TResponse;
     clt.TWait = Q->head->TWait;
+    clt.TQueing = Q->head->TQueing;
     clt.DestX = Q->head->DestX;
     clt.DestY = Q->head->DestY;
     tmp = Q->head;

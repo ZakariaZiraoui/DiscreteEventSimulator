@@ -9,8 +9,8 @@
 
 NodeEx MatEx[N][M];
 
-extern float Tnow;
-extern int ClientServed,MessageID;
+extern float Tnow,rp;
+extern int ClientServed,MessageID,Lambda;
 extern EventQueue *EL;
 extern float MeanResponseTime, MeanWatingTime,Throughput;
 extern Message CurrentMsg;
