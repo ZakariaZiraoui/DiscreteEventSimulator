@@ -12,61 +12,64 @@ int ClientServed,MessageID;
 
 void Reporting ();
 void ReportStatistics ( void );
+void SummarizeResults (void) ;
 
 EventQueue *EL;
 Message CurrentMsg;
 
-FILE *report;
+FILE *report,*summary;
 char destreport[52],timeStr[21];
 
 int main ( ){
+    int cpt;
     int LTab [17]= {32000,10500,9200,1000,400,350,
                     300,250,200,180,160,150,100,90,80,70,50};
 
-    int cpt;
+    if(Summary)SummarizeResults ();
     for(cpt=0; cpt<17; cpt++){
-    Lambda =LTab[cpt];
+        Lambda =LTab[cpt];
 
-    Reporting ();
+        Reporting ();
 
-    srand(time(NULL));
-    EL = malloc(sizeof(EventQueue));
-    InitEventList(EL);
+        srand(time(NULL));
+        EL = malloc(sizeof(EventQueue));
+        InitEventList(EL);
 
-    if (BatchMeansMethod){
-     int counter;
-        for(counter=1; counter<=10; counter++) {
+        if (BatchMeansMethod){
+         int counter;
+            for(counter=1; counter<=10; counter++) {
+               switch(Topo){
+                case MESH:    Mesh();        break;
+                case EXPRESS: ExpressCube(); break;
+                default :
+                    printf("\nTopology Not Defined !"); exit(0); break;
+                }
+                ReportStatistics();
+            }
+        }else {
            switch(Topo){
-            case MESH:    Mesh();        break;
-            case EXPRESS: ExpressCube(); break;
-            default :
-                printf("\nTopology Not Defined !"); exit(0); break;
-            }
-            ReportStatistics();
+                case MESH:    Mesh();        break;
+                case EXPRESS: ExpressCube(); break;
+                default :
+                    printf("\nTopology Not Defined !"); exit(0); break;
+                }
+                ReportStatistics();
         }
-    }else {
-       switch(Topo){
-            case MESH:    Mesh();        break;
-            case EXPRESS: ExpressCube(); break;
-            default :
-                printf("\nTopology Not Defined !"); exit(0); break;
-            }
-            ReportStatistics();
-    }
 
-    while(!isEmpty(EL)) GetEvent(EL);// To Free All The Allocated Memory
-    //DisplayEventList(EL);
+        while(!isEmpty(EL)) GetEvent(EL);// To Free All The Allocated Memory
+        //DisplayEventList(EL);
 
-    free(EL);
-    fclose(report);
-    /*int x;
-     do {
-        printf("\n\nPress q to exit the Program: ");
-        x = getchar();
-    } while (x != EOF && x != 'q');*/
+        free(EL);
+        fclose(report);
+        /*int x;
+         do {
+            printf("\n\nPress q to exit the Program: ");
+            x = getchar();
+        } while (x != EOF && x != 'q');*/
 
 
-    }
+        }
+    fclose(summary);
    return 0;
 }
 
@@ -84,6 +87,9 @@ void ReportStatistics ( void ) {
     fprintf(report,"\nThe Mean Response Time : %0.2f cycles",MeanResponseTime/ClientServed);
     fprintf(report,"\nThe Mean Waiting  Time : %0.2f cycles",MeanWatingTime/ClientServed);
     fprintf(report,"\nThroughput : %0.3f ",ClientServed/Tnow);
+
+    if(Summary)
+        fprintf(summary,"%d\t%0.2f\t%0.2f\t%0.3f\n",Lambda,MeanResponseTime/ClientServed,MeanWatingTime/ClientServed,ClientServed/Tnow);
 }
 
 void Reporting (){
@@ -106,4 +112,23 @@ void Reporting (){
     }
 }
 
+void SummarizeResults (){
+
+    strcpy (destreport, "reports/Simulation Result ");
+    time_t t = time(NULL);
+    struct tm *tm = localtime(&t);
+
+    //strncpy(timeStr,asctime(tm),19);
+    strftime (timeStr,21,"%Y-%m-%d %H:%M:%S",tm);
+    replacechar(timeStr,':','-');
+    strncat (destreport,timeStr,21);
+    strcat (destreport," .log");
+
+    summary = fopen(destreport, "w");
+
+    if(summary==NULL)  {
+        printf("\nCould not Summarize, please check the path !");
+        exit(0);
+    }
+}
 
