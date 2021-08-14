@@ -4,6 +4,7 @@
 
 // Simulation clock
 float Tnow;
+int Lambda;
 
 // Statistical counters
 float MeanResponseTime, MeanWatingTime,Throughput;
@@ -19,6 +20,12 @@ FILE *report;
 char destreport[52],timeStr[21];
 
 int main ( ){
+    int LTab [17]= {32000,10500,9200,1000,400,350,
+                    300,250,200,180,160,150,100,90,80,70,50};
+
+    int cpt;
+    for(cpt=0; cpt<17; cpt++){
+    Lambda =LTab[cpt];
 
     Reporting ();
 
@@ -58,6 +65,8 @@ int main ( ){
         x = getchar();
     } while (x != EOF && x != 'q');*/
 
+
+    }
    return 0;
 }
 
@@ -66,14 +75,14 @@ void ReportStatistics ( void ) {
     printf("\nInjection Rate : %d",Lambda);
     printf("\nNumber of Clients Served : %d",ClientServed);
     printf("\nThe Mean Response Time : %0.2f cycles",MeanResponseTime/ClientServed);
-    //printf("\nThe Mean Waiting  Time : %0.2f ns",MeanWatingTime/ClientServed);
+    printf("\nThe Mean Waiting  Time : %0.2f cycles",MeanWatingTime/ClientServed);
     printf("\nThroughput : %0.3f ",ClientServed/Tnow);
 
     fprintf(report,"\n\nEnd Of The Simulation at T= %0.2f cycles",Tnow);
     fprintf(report,"\nInjection Rate : %d",Lambda);
     fprintf(report,"\nNumber of Clients Served : %d",ClientServed);
     fprintf(report,"\nThe Mean Response Time : %0.2f cycles",MeanResponseTime/ClientServed);
-    //fprintf(report,"\nThe Mean Waiting  Time : %0.2f ns",MeanWatingTime/ClientServed);
+    fprintf(report,"\nThe Mean Waiting  Time : %0.2f cycles",MeanWatingTime/ClientServed);
     fprintf(report,"\nThroughput : %0.3f ",ClientServed/Tnow);
 }
 
