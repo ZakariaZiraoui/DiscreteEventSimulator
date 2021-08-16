@@ -3,8 +3,10 @@
 
 void ExpressCube (){
 
-    StartingMsgExpress();
-    InitEx();
+    if(!BatchMeansMethod||Batch==1){
+        StartingMsgExpress();
+        InitEx();
+    }
     //DisplayEventList(EL);
     while ( ClientServed <Max ) {
       Event event = GetEvent(EL);
@@ -18,7 +20,7 @@ void ExpressCube (){
          default : break;
       }
    }
-   FreeQueuesEx();
+   if(!BatchMeansMethod||Batch==Batches) FreeQueuesEx();
 }
 
 void InitEx( void ) {
@@ -90,7 +92,7 @@ void InitEx( void ) {
 
     //Initialization of Statistic Vars
     MeanResponseTime=0.0;
-    MeanWatingTime=0.0;
+    MeanWaitingTime=0.0;
     Throughput=0.0;
     ClientServed=0;
 
@@ -271,7 +273,7 @@ void StartTransmitEx(int nodex,int nodey,int input,int output){
         case PE:
              MatEx[nodex][nodey].PEState=BUSY;
              MatEx[nodex][nodey].PEReq[input]=0;
-             AddEvent(EL,PEndTransmit,Tnow+TR,loc,input,output);
+             AddEvent(EL,PEndTransmit,Tnow,loc,input,output);
              strncpy(out, "PE", 3);nextDest.x=nodex; nextDest.y=nodey;
           break;
 
@@ -352,11 +354,11 @@ void EndTransmitEx(int nodex,int nodey,int input, int output){
                     if(!isQueueEmpty(MatEx[nodex][nodey].XQ1))
                          AddEvent(EL,PDecideRoute,Tnow,loc,X1,NONE);
                     MeanResponseTime+=(Tnow-CurrentMsg.TArrival);
-                    MeanWatingTime+=CurrentMsg.TWait;
+                    MeanWaitingTime+=CurrentMsg.TWait;
                     if(Logging)printf("\n               Msg[%d] Response Time : %0.2f cycles   Mean Response Time : %0.2f cycles\n               Msg[%d] Waiting  Time : %0.2f cycles   Mean Waiting  Time : %0.2f cycles",
-                            CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1),CurrentMsg.ID,CurrentMsg.TWait,MeanWatingTime/(ClientServed+1));
+                            CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1),CurrentMsg.ID,CurrentMsg.TWait,MeanWaitingTime/(ClientServed+1));
                     if(Logging)fprintf(report,"\n               Msg[%d] Response Time : %0.2f cycles   Mean Response Time : %0.2f cycles\n               Msg[%d] Waiting  Time : %0.2f cycles   Mean Waiting  Time : %0.2f cycles",
-                            CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1),CurrentMsg.ID,CurrentMsg.TWait,MeanWatingTime/(ClientServed+1));
+                            CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1),CurrentMsg.ID,CurrentMsg.TWait,MeanWaitingTime/(ClientServed+1));
                 break;
                 case X2:
                     CurrentMsg=DeQueue(MatEx[nodex][nodey].XQ2);
@@ -365,11 +367,11 @@ void EndTransmitEx(int nodex,int nodey,int input, int output){
                     if(!isQueueEmpty(MatEx[nodex][nodey].XQ2))
                          AddEvent(EL,PDecideRoute,Tnow,loc,X2,NONE);
                     MeanResponseTime+=(Tnow-CurrentMsg.TArrival);
-                    MeanWatingTime+=CurrentMsg.TWait;
+                    MeanWaitingTime+=CurrentMsg.TWait;
                     if(Logging)printf("\n               Msg[%d] Response Time : %0.2f cycles   Mean Response Time : %0.2f cycles\n               Msg[%d] Waiting  Time : %0.2f cycles   Mean Waiting  Time : %0.2f cycles",
-                            CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1),CurrentMsg.ID,CurrentMsg.TWait,MeanWatingTime/(ClientServed+1));
+                            CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1),CurrentMsg.ID,CurrentMsg.TWait,MeanWaitingTime/(ClientServed+1));
                     if(Logging)fprintf(report,"\n               Msg[%d] Response Time : %0.2f cycles   Mean Response Time : %0.2f cycles\n               Msg[%d] Waiting  Time : %0.2f cycles   Mean Waiting  Time : %0.2f cycles",
-                            CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1),CurrentMsg.ID,CurrentMsg.TWait,MeanWatingTime/(ClientServed+1));
+                            CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1),CurrentMsg.ID,CurrentMsg.TWait,MeanWaitingTime/(ClientServed+1));
                     break;
                 case Y1:
                     CurrentMsg=DeQueue(MatEx[nodex][nodey].YQ1);
@@ -378,11 +380,11 @@ void EndTransmitEx(int nodex,int nodey,int input, int output){
                     if(!isQueueEmpty(MatEx[nodex][nodey].YQ1))
                          AddEvent(EL,PDecideRoute,Tnow,loc,Y1,NONE);
                     MeanResponseTime+=(Tnow-CurrentMsg.TArrival);
-                    MeanWatingTime+=CurrentMsg.TWait;
+                    MeanWaitingTime+=CurrentMsg.TWait;
                     if(Logging)printf("\n               Msg[%d] Response Time : %0.2f cycles   Mean Response Time : %0.2f cycles\n               Msg[%d] Waiting  Time : %0.2f cycles   Mean Waiting  Time : %0.2f cycles",
-                            CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1),CurrentMsg.ID,CurrentMsg.TWait,MeanWatingTime/(ClientServed+1));
+                            CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1),CurrentMsg.ID,CurrentMsg.TWait,MeanWaitingTime/(ClientServed+1));
                     if(Logging)fprintf(report,"\n               Msg[%d] Response Time : %0.2f cycles   Mean Response Time : %0.2f cycles\n               Msg[%d] Waiting  Time : %0.2f cycles   Mean Waiting  Time : %0.2f cycles",
-                            CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1),CurrentMsg.ID,CurrentMsg.TWait,MeanWatingTime/(ClientServed+1));
+                            CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1),CurrentMsg.ID,CurrentMsg.TWait,MeanWaitingTime/(ClientServed+1));
                 break;
                 case Y2:
                     CurrentMsg=DeQueue(MatEx[nodex][nodey].YQ2);
@@ -391,11 +393,11 @@ void EndTransmitEx(int nodex,int nodey,int input, int output){
                     if(!isQueueEmpty(MatEx[nodex][nodey].YQ2))
                          AddEvent(EL,PDecideRoute,Tnow,loc,Y2,NONE);
                     MeanResponseTime+=(Tnow-CurrentMsg.TArrival);
-                    MeanWatingTime+=CurrentMsg.TWait;
+                    MeanWaitingTime+=CurrentMsg.TWait;
                     if(Logging)printf("\n               Msg[%d] Response Time : %0.2f cycles   Mean Response Time : %0.2f cycles\n               Msg[%d] Waiting  Time : %0.2f cycles   Mean Waiting  Time : %0.2f cycles",
-                            CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1),CurrentMsg.ID,CurrentMsg.TWait,MeanWatingTime/(ClientServed+1));
+                            CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1),CurrentMsg.ID,CurrentMsg.TWait,MeanWaitingTime/(ClientServed+1));
                     if(Logging)fprintf(report,"\n               Msg[%d] Response Time : %0.2f cycles   Mean Response Time : %0.2f cycles\n               Msg[%d] Waiting  Time : %0.2f cycles   Mean Waiting  Time : %0.2f cycles",
-                            CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1),CurrentMsg.ID,CurrentMsg.TWait,MeanWatingTime/(ClientServed+1));
+                            CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1),CurrentMsg.ID,CurrentMsg.TWait,MeanWaitingTime/(ClientServed+1));
                 break;
                 case E1:
                     CurrentMsg=DeQueue(MatEx[nodex][nodey].E1Q);
@@ -404,11 +406,11 @@ void EndTransmitEx(int nodex,int nodey,int input, int output){
                     if(!isQueueEmpty(MatEx[nodex][nodey].E1Q))
                          AddEvent(EL,PDecideRoute,Tnow,loc,E1,NONE);
                     MeanResponseTime+=(Tnow-CurrentMsg.TArrival);
-                    MeanWatingTime+=CurrentMsg.TWait;
+                    MeanWaitingTime+=CurrentMsg.TWait;
                     if(Logging)printf("\n               Msg[%d] Response Time : %0.2f cycles   Mean Response Time : %0.2f cycles\n               Msg[%d] Waiting  Time : %0.2f cycles   Mean Waiting  Time : %0.2f cycles",
-                            CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1),CurrentMsg.ID,CurrentMsg.TWait,MeanWatingTime/(ClientServed+1));
+                            CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1),CurrentMsg.ID,CurrentMsg.TWait,MeanWaitingTime/(ClientServed+1));
                     if(Logging)fprintf(report,"\n               Msg[%d] Response Time : %0.2f cycles   Mean Response Time : %0.2f cycles\n               Msg[%d] Waiting  Time : %0.2f cycles   Mean Waiting  Time : %0.2f cycles",
-                            CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1),CurrentMsg.ID,CurrentMsg.TWait,MeanWatingTime/(ClientServed+1));
+                            CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1),CurrentMsg.ID,CurrentMsg.TWait,MeanWaitingTime/(ClientServed+1));
 
                 break;
                 case E2:
@@ -418,11 +420,11 @@ void EndTransmitEx(int nodex,int nodey,int input, int output){
                     if(!isQueueEmpty(MatEx[nodex][nodey].E2Q))
                          AddEvent(EL,PDecideRoute,Tnow,loc,E2,NONE);
                     MeanResponseTime+=(Tnow-CurrentMsg.TArrival);
-                    MeanWatingTime+=CurrentMsg.TWait;
+                    MeanWaitingTime+=CurrentMsg.TWait;
                     if(Logging)printf("\n               Msg[%d] Response Time : %0.2f cycles   Mean Response Time : %0.2f cycles\n               Msg[%d] Waiting  Time : %0.2f cycles   Mean Waiting  Time : %0.2f cycles",
-                            CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1),CurrentMsg.ID,CurrentMsg.TWait,MeanWatingTime/(ClientServed+1));
+                            CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1),CurrentMsg.ID,CurrentMsg.TWait,MeanWaitingTime/(ClientServed+1));
                     if(Logging)fprintf(report,"\n               Msg[%d] Response Time : %0.2f cycles   Mean Response Time : %0.2f cycles\n               Msg[%d] Waiting  Time : %0.2f cycles   Mean Waiting  Time : %0.2f cycles",
-                            CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1),CurrentMsg.ID,CurrentMsg.TWait,MeanWatingTime/(ClientServed+1));
+                            CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1),CurrentMsg.ID,CurrentMsg.TWait,MeanWaitingTime/(ClientServed+1));
 
                 break;
              }
@@ -1189,7 +1191,9 @@ void StartingMsgExpress(){
     printf("\nInjection Rate : %d",Lambda);
     printf("\nTransmission Time Normal  Links : %d Cycles",TR);
     printf("\nTransmission Time Express Links : %d Cycles",TRE);
-	printf("\n\nPlease wait, Simulation has been started.\n");
+    if(BatchMeansMethod)printf("\nBatch Means Method : Yes");
+    else printf("\nBatch Means Method : No");
+	printf("\n\nPlease wait, Simulation has been started...\n");
 
 	fprintf(report,"Simulation Starting Time %.24s\n",timeStr);
 	fprintf(report,"Welcome to Network-On-Chip ExpressCube Simulator \n");
@@ -1207,7 +1211,9 @@ void StartingMsgExpress(){
     fprintf(report,"\nInjection Rate : %d",Lambda);
     fprintf(report,"\nTransmission Time Normal  Links : %d Cycles",TR);
     fprintf(report,"\nTransmission Time Express Links : %d Cycles",TRE);
-	fprintf(report,"\n\nPlease wait, Simulation has been started.\n");
+    if(BatchMeansMethod)fprintf(report,"\nBatch Means Method : Yes");
+    else fprintf(report,"\nBatch Means Method : No");
+	fprintf(report,"\n\nPlease wait, Simulation has been started...\n");
 }
 
 

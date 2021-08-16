@@ -14,13 +14,16 @@
 #define HotX N/2
 #define HotY M/2
 
-
 //WorkLoad variables
 //#define Lambda 80 //Injection Rate
 
 //Simulation Parameters
-#define Max 100             //Max Number of Delivered Messages
-#define BatchMeansMethod 0  //Use The Batch Means Method
+#define Max 10000         //Max Number of Delivered Messages
+
+#define BatchMeansMethod 1  //1 Use The Batch Means Method
+#define Batches 10          //Number of Batches Used
+        //Note That Batch Size is equal to Max
+
 #define Logging false       //Log  the LifeCycles of Messages
 #define Summary true       //Generate summary for excel output
 

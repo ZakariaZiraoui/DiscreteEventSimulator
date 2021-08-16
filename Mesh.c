@@ -3,8 +3,10 @@
 
 void Mesh (){
 
-    StartingMsgMesh();
-    Init();
+    if(!BatchMeansMethod||Batch==1){
+        StartingMsgMesh();
+        Init();
+    }
     //DisplayEventList(EL);
     while ( ClientServed <Max ) {
       Event event = GetEvent(EL);
@@ -18,7 +20,7 @@ void Mesh (){
          default : break;
       }
    }
-   FreeQueues();
+   if(!BatchMeansMethod||Batch==Batches) FreeQueues();
 }
 
 void Init( void ) {
@@ -51,7 +53,7 @@ void Init( void ) {
 
     //Statistic Vars
     MeanResponseTime=0.0;
-    MeanWatingTime=0.0;
+    MeanWaitingTime=0.0;
     Throughput=0.0;
     ClientServed=0;
 
@@ -197,7 +199,7 @@ void StartTransmit(int nodex,int nodey,int input,int output){
         case PE:
              Mat[nodex][nodey].PEState=BUSY;
              Mat[nodex][nodey].PEReq[input]=0;
-             AddEvent(EL,PEndTransmit,Tnow+TR,loc,input,output);
+             AddEvent(EL,PEndTransmit,Tnow,loc,input,output);
              strncpy(out, "PE", 3);nextDest.x=nodex; nextDest.y=nodey;
           break;
 
@@ -259,11 +261,11 @@ void EndTransmit(int nodex,int nodey,int input, int output){
                     if(!isQueueEmpty(Mat[nodex][nodey].XQ1))
                          AddEvent(EL,PDecideRoute,Tnow,loc,X1,NONE);
                     MeanResponseTime+=(Tnow-CurrentMsg.TArrival);
-                    MeanWatingTime+=CurrentMsg.TWait;
+                    MeanWaitingTime+=CurrentMsg.TWait;
                     if(Logging)printf("\n               Msg[%d] Response Time : %0.2f cycles   Mean Response Time : %0.2f cycles\n               Msg[%d] Waiting  Time : %0.2f cycles   Mean Waiting  Time : %0.2f cycles",
-                            CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1),CurrentMsg.ID,CurrentMsg.TWait,MeanWatingTime/(ClientServed+1));
+                            CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1),CurrentMsg.ID,CurrentMsg.TWait,MeanWaitingTime/(ClientServed+1));
                     if(Logging)fprintf(report,"\n               Msg[%d] Response Time : %0.2f cycles   Mean Response Time : %0.2f cycles\n               Msg[%d] Waiting  Time : %0.2f cycles   Mean Waiting  Time : %0.2f cycles",
-                            CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1),CurrentMsg.ID,CurrentMsg.TWait,MeanWatingTime/(ClientServed+1));
+                            CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1),CurrentMsg.ID,CurrentMsg.TWait,MeanWaitingTime/(ClientServed+1));
 
                 break;
                 case X2:
@@ -273,11 +275,11 @@ void EndTransmit(int nodex,int nodey,int input, int output){
                     if(!isQueueEmpty(Mat[nodex][nodey].XQ2))
                          AddEvent(EL,PDecideRoute,Tnow,loc,X2,NONE);
                     MeanResponseTime+=(Tnow-CurrentMsg.TArrival);
-                    MeanWatingTime+=CurrentMsg.TWait;
+                    MeanWaitingTime+=CurrentMsg.TWait;
                     if(Logging)printf("\n               Msg[%d] Response Time : %0.2f cycles   Mean Response Time : %0.2f cycles\n               Msg[%d] Waiting  Time : %0.2f cycles   Mean Waiting  Time : %0.2f cycles",
-                            CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1),CurrentMsg.ID,CurrentMsg.TWait,MeanWatingTime/(ClientServed+1));
+                            CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1),CurrentMsg.ID,CurrentMsg.TWait,MeanWaitingTime/(ClientServed+1));
                     if(Logging)fprintf(report,"\n               Msg[%d] Response Time : %0.2f cycles   Mean Response Time : %0.2f cycles\n               Msg[%d] Waiting  Time : %0.2f cycles   Mean Waiting  Time : %0.2f cycles",
-                            CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1),CurrentMsg.ID,CurrentMsg.TWait,MeanWatingTime/(ClientServed+1));
+                            CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1),CurrentMsg.ID,CurrentMsg.TWait,MeanWaitingTime/(ClientServed+1));
                 break;
                 case Y1:
                     CurrentMsg=DeQueue(Mat[nodex][nodey].YQ1);
@@ -286,11 +288,11 @@ void EndTransmit(int nodex,int nodey,int input, int output){
                     if(!isQueueEmpty(Mat[nodex][nodey].YQ1))
                          AddEvent(EL,PDecideRoute,Tnow,loc,Y1,NONE);
                     MeanResponseTime+=(Tnow-CurrentMsg.TArrival);
-                    MeanWatingTime+=CurrentMsg.TWait;
+                    MeanWaitingTime+=CurrentMsg.TWait;
                     if(Logging)printf("\n               Msg[%d] Response Time : %0.2f cycles   Mean Response Time : %0.2f cycles\n               Msg[%d] Waiting  Time : %0.2f cycles   Mean Waiting  Time : %0.2f cycles",
-                            CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1),CurrentMsg.ID,CurrentMsg.TWait,MeanWatingTime/(ClientServed+1));
+                            CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1),CurrentMsg.ID,CurrentMsg.TWait,MeanWaitingTime/(ClientServed+1));
                     if(Logging)fprintf(report,"\n               Msg[%d] Response Time : %0.2f cycles   Mean Response Time : %0.2f cycles\n               Msg[%d] Waiting  Time : %0.2f cycles   Mean Waiting  Time : %0.2f cycles",
-                            CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1),CurrentMsg.ID,CurrentMsg.TWait,MeanWatingTime/(ClientServed+1));
+                            CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1),CurrentMsg.ID,CurrentMsg.TWait,MeanWaitingTime/(ClientServed+1));
                 break;
                 case Y2:
                     CurrentMsg=DeQueue(Mat[nodex][nodey].YQ2);
@@ -299,11 +301,11 @@ void EndTransmit(int nodex,int nodey,int input, int output){
                     if(!isQueueEmpty(Mat[nodex][nodey].YQ2))
                          AddEvent(EL,PDecideRoute,Tnow,loc,Y2,NONE);
                     MeanResponseTime+=(Tnow-CurrentMsg.TArrival);
-                    MeanWatingTime+=CurrentMsg.TWait;
+                    MeanWaitingTime+=CurrentMsg.TWait;
                     if(Logging)printf("\n               Msg[%d] Response Time : %0.2f cycles   Mean Response Time : %0.2f cycles\n               Msg[%d] Waiting  Time : %0.2f cycles   Mean Waiting  Time : %0.2f cycles",
-                            CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1),CurrentMsg.ID,CurrentMsg.TWait,MeanWatingTime/(ClientServed+1));
+                            CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1),CurrentMsg.ID,CurrentMsg.TWait,MeanWaitingTime/(ClientServed+1));
                     if(Logging)fprintf(report,"\n               Msg[%d] Response Time : %0.2f cycles   Mean Response Time : %0.2f cycles\n               Msg[%d] Waiting  Time : %0.2f cycles   Mean Waiting  Time : %0.2f cycles",
-                            CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1),CurrentMsg.ID,CurrentMsg.TWait,MeanWatingTime/(ClientServed+1));
+                            CurrentMsg.ID,Tnow-CurrentMsg.TArrival,MeanResponseTime/(ClientServed+1),CurrentMsg.ID,CurrentMsg.TWait,MeanWaitingTime/(ClientServed+1));
                 break;
              }
              ClientServed++;
@@ -664,7 +666,9 @@ void StartingMsgMesh(){
     printf("\nMessage length : 32 phits");
     printf("\nInjection Rate : %d",Lambda);
     printf("\nTransmission Time : %d Cycles",TR);
-	printf("\n\nPlease wait, Simulation has been started.\n");
+    if(BatchMeansMethod)printf("\nBatch Means Method : Yes");
+    else printf("\nBatch Means Method : No");
+	printf("\n\nPlease wait, Simulation has been started...\n");
 
 	fprintf(report,"Simulation Starting Time %.24s\n",timeStr);
 	fprintf(report,"Welcome to Network-On-Chip 2D Mesh Simulator \n");
@@ -681,7 +685,9 @@ void StartingMsgMesh(){
     fprintf(report,"\nMessage length : 32 phits");
     fprintf(report,"\nInjection Rate : %d",Lambda);
     fprintf(report,"\nTransmission Time : %d Cycles",TR);
-	fprintf(report,"\n\nPlease wait, Simulation has been started.\n");
+    if(BatchMeansMethod)fprintf(report,"\nBatch Means Method : Yes");
+    else fprintf(report,"\nBatch Means Method : No");
+	fprintf(report,"\n\nPlease wait, Simulation has been started...\n");
 }
 
 
