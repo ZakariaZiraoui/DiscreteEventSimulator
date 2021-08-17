@@ -2,10 +2,10 @@
 #define CONFIG_H_INCLUDED
 
 //Simulator Parameters
-#define Topo 0  // 0 For Mesh 1 For ExpressCube
+#define Topo 1  // 0 For Mesh 1 For ExpressCube
 #define N 8     //Number of Nodes in X Dimension
 #define M 8     //Number of Nodes in Y Dimension
-#define Hops 2  //Number of Hops Only For ExpressCube
+#define Hops 4  //Number of Hops Only For ExpressCube
 #define TR 32   //Transmission Time Normal Links
 #define TRE 32  //Transmission Time Express Links
 
@@ -20,7 +20,7 @@
 //Simulation Parameters
 #define Max 10000           //Max Number of Delivered Messages
 #define BatchMeansMethod 1  //1 Use The Batch Means Method
-#define Batches 16          //Number of Batches To be Used
+#define Batches 36          //Number of Batches To be Used
         //Note That Batch Size is equal to Max
 
 #define Logging false       //Log  the LifeCycles of Messages
