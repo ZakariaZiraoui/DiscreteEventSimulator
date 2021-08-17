@@ -3,25 +3,24 @@
 
 //Simulator Parameters
 #define Topo 0  // 0 For Mesh 1 For ExpressCube
-#define N 8    //Number of Nodes in X Dimension
-#define M 8    //Number of Nodes in Y Dimension
+#define N 8     //Number of Nodes in X Dimension
+#define M 8     //Number of Nodes in Y Dimension
 #define Hops 2  //Number of Hops Only For ExpressCube
 #define TR 32   //Transmission Time Normal Links
 #define TRE 32  //Transmission Time Express Links
 
 #define Traffic 0 // 0 For UNIFORM 1 For HOTSPOT
 #define P 0.1   //Probability of sending to The Hotspot
-#define HotX N/2
-#define HotY M/2
+#define HotX N/2 //Place of the Hotspot Node
+#define HotY M/2 //Place of the Hotspot Node
 
 //WorkLoad variables
 //#define Lambda 80 //Injection Rate
 
 //Simulation Parameters
-#define Max 10000         //Max Number of Delivered Messages
-
+#define Max 10000           //Max Number of Delivered Messages
 #define BatchMeansMethod 1  //1 Use The Batch Means Method
-#define Batches 10          //Number of Batches Used
+#define Batches 16          //Number of Batches To be Used
         //Note That Batch Size is equal to Max
 
 #define Logging false       //Log  the LifeCycles of Messages
