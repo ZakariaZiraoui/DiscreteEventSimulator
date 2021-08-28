@@ -1,0 +1,218 @@
+Simulation Starting Time Fri Jul 09 02:14:49 2021
+Welcome to Network-On-Chip 2D Mesh Simulator 
+This simulator was designed based on Discrete Event Simulation.
+It's a final year project to obtain the Master Degree
+Student developer : Ziraoui Zakaria 
+Supervisor: Prof. Mohamed Ould-Khaoua
+
+Network Simulation Parameters :
+
+Topology : 2 x 2 Mesh 
+Number of Nodes  : 4 
+Routing : Dimension-ordered (DOR)
+Traffic : Uniform Random
+Injection Rate : 4000
+Transmission Time : 10 ns
+
+Please wait, Simulation has been started.
+
+Event Arrival ( 0.00 ns) [1][1] PE -> NN :
+ Msg[1] Arrives in [1][1]PEQ -> [1][0] 
+Event DecideRoute ( 0.00 ns) [1][1] PE -> NN :
+ Msg[1] is in [1][1]PE -> [1][0] 
+ End DecideRoute( 0.00 s) [1][1] -> [1][0] 
+Event StartTransmit ( 0.00 ns) [1][1] PE -> Y2 :
+Event Arrival ( 0.00 ns) [1][0] PE -> NN :
+ Msg[2] Arrives in [1][0]PEQ -> [1][1] 
+Event DecideRoute ( 0.00 ns) [1][0] PE -> NN :
+ Msg[2] is in [1][0]PE -> [1][1] 
+ End DecideRoute( 0.00 s) [1][0] -> [1][1] 
+Event StartTransmit ( 0.00 ns) [1][0] PE -> Y1 :
+Event Arrival ( 0.00 ns) [0][1] PE -> NN :
+ Msg[3] Arrives in [0][1]PEQ -> [1][1] 
+Event DecideRoute ( 0.00 ns) [0][1] PE -> NN :
+ Msg[3] is in [0][1]PE -> [1][1] 
+ End DecideRoute( 0.00 s) [0][1] -> [1][1] 
+Event StartTransmit ( 0.00 ns) [0][1] PE -> X1 :
+Event Arrival ( 0.00 ns) [0][0] PE -> NN :
+ Msg[4] Arrives in [0][0]PEQ -> [0][1] 
+Event DecideRoute ( 0.00 ns) [0][0] PE -> NN :
+ Msg[4] is in [0][0]PE -> [0][1] 
+ End DecideRoute( 0.00 s) [0][0] -> [0][1] 
+Event StartTransmit ( 0.00 ns) [0][0] PE -> Y1 :
+Event EndTransmit ( 10.00 ns) [0][0] PE -> Y1 :
+ Msg[4] is in [0][1] PE->Y1
+ End EndTransmit( 10.00 s) [0][0] 
+Event DecideRoute ( 10.00 ns) [0][1] Y1 -> NN :
+ Msg[4] is in [0][1]Y1 -> [0][1] 
+ End DecideRoute( 10.00 s) [0][1] -> [0][1] 
+Event StartTransmit ( 10.00 ns) [0][1] Y1 -> PE :
+Event EndTransmit ( 10.00 ns) [1][1] PE -> Y2 :
+ Msg[1] is in [1][0] PE->Y2
+ End EndTransmit( 10.00 s) [1][1] 
+Event DecideRoute ( 10.00 ns) [1][0] Y2 -> NN :
+ Msg[1] is in [1][0]Y2 -> [1][0] 
+ End DecideRoute( 10.00 s) [1][0] -> [1][0] 
+Event StartTransmit ( 10.00 ns) [1][0] Y2 -> PE :
+Event EndTransmit ( 10.00 ns) [1][0] PE -> Y1 :
+ Msg[2] is in [1][1] PE->Y1
+ End EndTransmit( 10.00 s) [1][0] 
+Event DecideRoute ( 10.00 ns) [1][1] Y1 -> NN :
+ Msg[2] is in [1][1]Y1 -> [1][1] 
+ End DecideRoute( 10.00 s) [1][1] -> [1][1] 
+Event StartTransmit ( 10.00 ns) [1][1] Y1 -> PE :
+Event EndTransmit ( 10.00 ns) [0][1] PE -> X1 :
+ Msg[3] is in [1][1] PE->X1
+ End EndTransmit( 10.00 s) [0][1] 
+Event DecideRoute ( 10.00 ns) [1][1] X1 -> NN :
+ Msg[3] is in [1][1]X1 -> [1][1] 
+ End DecideRoute( 10.00 s) [1][1] -> [1][1] 
+Event EndTransmit ( 20.00 ns) [0][1] Y1 -> PE :
+ Msg[4] is in [0][1] Y1->PE
+ Response Time Msg[4] : 20.00 ns
+ Mean Response Time After Msg[4] : 20.00 ns
+ End EndTransmit( 20.00 s) [0][1] 
+Event EndTransmit ( 20.00 ns) [1][0] Y2 -> PE :
+ Msg[1] is in [1][0] Y2->PE
+ Response Time Msg[1] : 20.00 ns
+ Mean Response Time After Msg[1] : 20.00 ns
+ End EndTransmit( 20.00 s) [1][0] 
+Event EndTransmit ( 20.00 ns) [1][1] Y1 -> PE :
+ Msg[2] is in [1][1] Y1->PE
+ Response Time Msg[2] : 20.00 ns
+ Mean Response Time After Msg[2] : 20.00 ns
+ End EndTransmit( 20.00 s) [1][1] 
+Event StartTransmit ( 20.00 ns) [1][1] X1 -> PE :
+Event EndTransmit ( 30.00 ns) [1][1] X1 -> PE :
+ Msg[3] is in [1][1] X1->PE
+ Response Time Msg[3] : 30.00 ns
+ Mean Response Time After Msg[3] : 22.50 ns
+ End EndTransmit( 30.00 s) [1][1] 
+Event Arrival ( 1054.92 ns) [1][1] PE -> NN :
+ Msg[5] Arrives in [1][1]PEQ -> [0][0] 
+Event DecideRoute ( 1054.92 ns) [1][1] PE -> NN :
+ Msg[5] is in [1][1]PE -> [0][0] 
+ End DecideRoute( 1054.92 s) [1][1] -> [0][0] 
+Event StartTransmit ( 1054.92 ns) [1][1] PE -> X2 :
+Event EndTransmit ( 1064.92 ns) [1][1] PE -> X2 :
+ Msg[5] is in [0][1] PE->X2
+ End EndTransmit( 1064.92 s) [1][1] 
+Event DecideRoute ( 1064.92 ns) [0][1] X2 -> NN :
+ Msg[5] is in [0][1]X2 -> [0][0] 
+ End DecideRoute( 1064.92 s) [0][1] -> [0][0] 
+Event StartTransmit ( 1064.92 ns) [0][1] X2 -> Y2 :
+Event EndTransmit ( 1074.92 ns) [0][1] X2 -> Y2 :
+ Msg[5] is in [0][0] X2->Y2
+ End EndTransmit( 1074.92 s) [0][1] 
+Event DecideRoute ( 1074.92 ns) [0][0] Y2 -> NN :
+ Msg[5] is in [0][0]Y2 -> [0][0] 
+ End DecideRoute( 1074.92 s) [0][0] -> [0][0] 
+Event StartTransmit ( 1074.92 ns) [0][0] Y2 -> PE :
+Event EndTransmit ( 1084.92 ns) [0][0] Y2 -> PE :
+ Msg[5] is in [0][0] Y2->PE
+ Response Time Msg[5] : 30.00 ns
+ Mean Response Time After Msg[5] : 24.00 ns
+ End EndTransmit( 1084.92 s) [0][0] 
+Event Arrival ( 2223.54 ns) [1][0] PE -> NN :
+ Msg[6] Arrives in [1][0]PEQ -> [0][1] 
+Event DecideRoute ( 2223.54 ns) [1][0] PE -> NN :
+ Msg[6] is in [1][0]PE -> [0][1] 
+ End DecideRoute( 2223.54 s) [1][0] -> [0][1] 
+Event StartTransmit ( 2223.54 ns) [1][0] PE -> X2 :
+Event EndTransmit ( 2233.54 ns) [1][0] PE -> X2 :
+ Msg[6] is in [0][0] PE->X2
+ End EndTransmit( 2233.54 s) [1][0] 
+Event DecideRoute ( 2233.54 ns) [0][0] X2 -> NN :
+ Msg[6] is in [0][0]X2 -> [0][1] 
+ End DecideRoute( 2233.54 s) [0][0] -> [0][1] 
+Event StartTransmit ( 2233.54 ns) [0][0] X2 -> Y1 :
+Event EndTransmit ( 2243.54 ns) [0][0] X2 -> Y1 :
+ Msg[6] is in [0][1] X2->Y1
+ End EndTransmit( 2243.54 s) [0][0] 
+Event DecideRoute ( 2243.54 ns) [0][1] Y1 -> NN :
+ Msg[6] is in [0][1]Y1 -> [0][1] 
+ End DecideRoute( 2243.54 s) [0][1] -> [0][1] 
+Event StartTransmit ( 2243.54 ns) [0][1] Y1 -> PE :
+Event EndTransmit ( 2253.54 ns) [0][1] Y1 -> PE :
+ Msg[6] is in [0][1] Y1->PE
+ Response Time Msg[6] : 30.00 ns
+ Mean Response Time After Msg[6] : 25.00 ns
+ End EndTransmit( 2253.54 s) [0][1] 
+Event Arrival ( 3555.78 ns) [0][1] PE -> NN :
+ Msg[7] Arrives in [0][1]PEQ -> [0][0] 
+Event DecideRoute ( 3555.78 ns) [0][1] PE -> NN :
+ Msg[7] is in [0][1]PE -> [0][0] 
+ End DecideRoute( 3555.78 s) [0][1] -> [0][0] 
+Event StartTransmit ( 3555.78 ns) [0][1] PE -> Y2 :
+Event EndTransmit ( 3565.78 ns) [0][1] PE -> Y2 :
+ Msg[7] is in [0][0] PE->Y2
+ End EndTransmit( 3565.78 s) [0][1] 
+Event DecideRoute ( 3565.78 ns) [0][0] Y2 -> NN :
+ Msg[7] is in [0][0]Y2 -> [0][0] 
+ End DecideRoute( 3565.78 s) [0][0] -> [0][0] 
+Event StartTransmit ( 3565.78 ns) [0][0] Y2 -> PE :
+Event EndTransmit ( 3575.78 ns) [0][0] Y2 -> PE :
+ Msg[7] is in [0][0] Y2->PE
+ Response Time Msg[7] : 20.00 ns
+ Mean Response Time After Msg[7] : 24.29 ns
+ End EndTransmit( 3575.78 s) [0][0] 
+Event Arrival ( 4284.05 ns) [0][1] PE -> NN :
+ Msg[8] Arrives in [0][1]PEQ -> [1][1] 
+Event DecideRoute ( 4284.05 ns) [0][1] PE -> NN :
+ Msg[8] is in [0][1]PE -> [1][1] 
+ End DecideRoute( 4284.05 s) [0][1] -> [1][1] 
+Event StartTransmit ( 4284.05 ns) [0][1] PE -> X1 :
+Event EndTransmit ( 4294.05 ns) [0][1] PE -> X1 :
+ Msg[8] is in [1][1] PE->X1
+ End EndTransmit( 4294.05 s) [0][1] 
+Event DecideRoute ( 4294.05 ns) [1][1] X1 -> NN :
+ Msg[8] is in [1][1]X1 -> [1][1] 
+ End DecideRoute( 4294.05 s) [1][1] -> [1][1] 
+Event StartTransmit ( 4294.05 ns) [1][1] X1 -> PE :
+Event EndTransmit ( 4304.05 ns) [1][1] X1 -> PE :
+ Msg[8] is in [1][1] X1->PE
+ Response Time Msg[8] : 20.00 ns
+ Mean Response Time After Msg[8] : 23.75 ns
+ End EndTransmit( 4304.05 s) [1][1] 
+Event Arrival ( 5108.41 ns) [0][0] PE -> NN :
+ Msg[9] Arrives in [0][0]PEQ -> [0][1] 
+Event DecideRoute ( 5108.41 ns) [0][0] PE -> NN :
+ Msg[9] is in [0][0]PE -> [0][1] 
+ End DecideRoute( 5108.41 s) [0][0] -> [0][1] 
+Event StartTransmit ( 5108.41 ns) [0][0] PE -> Y1 :
+Event EndTransmit ( 5118.41 ns) [0][0] PE -> Y1 :
+ Msg[9] is in [0][1] PE->Y1
+ End EndTransmit( 5118.41 s) [0][0] 
+Event DecideRoute ( 5118.41 ns) [0][1] Y1 -> NN :
+ Msg[9] is in [0][1]Y1 -> [0][1] 
+ End DecideRoute( 5118.41 s) [0][1] -> [0][1] 
+Event StartTransmit ( 5118.41 ns) [0][1] Y1 -> PE :
+Event EndTransmit ( 5128.41 ns) [0][1] Y1 -> PE :
+ Msg[9] is in [0][1] Y1->PE
+ Response Time Msg[9] : 20.00 ns
+ Mean Response Time After Msg[9] : 23.33 ns
+ End EndTransmit( 5128.41 s) [0][1] 
+Event Arrival ( 5484.58 ns) [0][1] PE -> NN :
+ Msg[10] Arrives in [0][1]PEQ -> [1][1] 
+Event DecideRoute ( 5484.58 ns) [0][1] PE -> NN :
+ Msg[10] is in [0][1]PE -> [1][1] 
+ End DecideRoute( 5484.58 s) [0][1] -> [1][1] 
+Event StartTransmit ( 5484.58 ns) [0][1] PE -> X1 :
+Event EndTransmit ( 5494.58 ns) [0][1] PE -> X1 :
+ Msg[10] is in [1][1] PE->X1
+ End EndTransmit( 5494.58 s) [0][1] 
+Event DecideRoute ( 5494.58 ns) [1][1] X1 -> NN :
+ Msg[10] is in [1][1]X1 -> [1][1] 
+ End DecideRoute( 5494.58 s) [1][1] -> [1][1] 
+Event StartTransmit ( 5494.58 ns) [1][1] X1 -> PE :
+Event EndTransmit ( 5504.58 ns) [1][1] X1 -> PE :
+ Msg[10] is in [1][1] X1->PE
+ Response Time Msg[10] : 20.00 ns
+ Mean Response Time After Msg[10] : 23.00 ns
+ End EndTransmit( 5504.58 s) [1][1] 
+
+End Of The Simulation at T= 5504.58 ns
+Injection Rate : 4000
+Number of Clients Served : 10
+The Mean Response Time : 23.00 ns
+Throughput : 0.00 

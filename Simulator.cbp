@@ -31,6 +31,31 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="Config.h" />
+		<Unit filename="Event.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Event.h" />
+		<Unit filename="ExpressCube.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="ExpressCube.h" />
+		<Unit filename="Mesh.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Mesh.h" />
+		<Unit filename="Message.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Message.h" />
+		<Unit filename="Node.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Node.h" />
+		<Unit filename="Utils.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Utils.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>

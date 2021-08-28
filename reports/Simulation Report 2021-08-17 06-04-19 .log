@@ -1,0 +1,69 @@
+Simulation Starting Time 2021-08-17 06:04:19
+Welcome to Network-On-Chip ExpressCube Simulator 
+This simulator was designed based on The Discrete Event Simulation.
+It's a final year project to obtain the Master Degree
+Student developer : Ziraoui Zakaria 
+Supervisor: Prof. Mohamed Ould-Khaoua
+
+Network Simulation Parameters :
+
+Topology : 8 x 8 Express Cube with 4 Hops
+Number of Nodes  : 64 
+Routing : Dimension-ordered (DOR)
+Traffic : Uniform Random
+Message length : 32 phits
+Injection Rate : 9200
+Transmission Time Normal  Links : 32 Cycles
+Transmission Time Express Links : 32 Cycles
+Batch Means Method : Yes
+
+Please wait, Simulation has been started...
+
+Batch N° 1 : Mean Response Time : 133.70 cycles	Mean Waiting Time : 0.11 cycles	Throughput : 0.007
+Batch N° 2 : Mean Response Time : 134.93 cycles	Mean Waiting Time : 0.08 cycles	Throughput : 0.007
+Batch N° 3 : Mean Response Time : 133.76 cycles	Mean Waiting Time : 0.08 cycles	Throughput : 0.007
+Batch N° 4 : Mean Response Time : 135.22 cycles	Mean Waiting Time : 0.03 cycles	Throughput : 0.007
+Batch N° 5 : Mean Response Time : 134.34 cycles	Mean Waiting Time : 0.06 cycles	Throughput : 0.007
+Batch N° 6 : Mean Response Time : 134.80 cycles	Mean Waiting Time : 0.06 cycles	Throughput : 0.007
+Batch N° 7 : Mean Response Time : 135.43 cycles	Mean Waiting Time : 0.07 cycles	Throughput : 0.007
+Batch N° 8 : Mean Response Time : 134.73 cycles	Mean Waiting Time : 0.05 cycles	Throughput : 0.007
+Batch N° 9 : Mean Response Time : 134.62 cycles	Mean Waiting Time : 0.06 cycles	Throughput : 0.007
+Batch N°10 : Mean Response Time : 135.42 cycles	Mean Waiting Time : 0.05 cycles	Throughput : 0.007
+Batch N°11 : Mean Response Time : 134.37 cycles	Mean Waiting Time : 0.06 cycles	Throughput : 0.007
+Batch N°12 : Mean Response Time : 134.96 cycles	Mean Waiting Time : 0.06 cycles	Throughput : 0.007
+Batch N°13 : Mean Response Time : 135.41 cycles	Mean Waiting Time : 0.05 cycles	Throughput : 0.007
+Batch N°14 : Mean Response Time : 135.30 cycles	Mean Waiting Time : 0.06 cycles	Throughput : 0.007
+Batch N°15 : Mean Response Time : 135.43 cycles	Mean Waiting Time : 0.07 cycles	Throughput : 0.007
+Batch N°16 : Mean Response Time : 134.15 cycles	Mean Waiting Time : 0.07 cycles	Throughput : 0.007
+Batch N°17 : Mean Response Time : 134.07 cycles	Mean Waiting Time : 0.06 cycles	Throughput : 0.007
+Batch N°18 : Mean Response Time : 135.09 cycles	Mean Waiting Time : 0.08 cycles	Throughput : 0.007
+Batch N°19 : Mean Response Time : 135.48 cycles	Mean Waiting Time : 0.08 cycles	Throughput : 0.007
+Batch N°20 : Mean Response Time : 135.93 cycles	Mean Waiting Time : 0.06 cycles	Throughput : 0.007
+Batch N°21 : Mean Response Time : 136.03 cycles	Mean Waiting Time : 0.04 cycles	Throughput : 0.006
+Batch N°22 : Mean Response Time : 134.75 cycles	Mean Waiting Time : 0.07 cycles	Throughput : 0.006
+Batch N°23 : Mean Response Time : 134.63 cycles	Mean Waiting Time : 0.07 cycles	Throughput : 0.006
+Batch N°24 : Mean Response Time : 134.39 cycles	Mean Waiting Time : 0.05 cycles	Throughput : 0.006
+Batch N°25 : Mean Response Time : 134.47 cycles	Mean Waiting Time : 0.05 cycles	Throughput : 0.006
+Batch N°26 : Mean Response Time : 134.78 cycles	Mean Waiting Time : 0.07 cycles	Throughput : 0.006
+Batch N°27 : Mean Response Time : 134.52 cycles	Mean Waiting Time : 0.05 cycles	Throughput : 0.006
+Batch N°28 : Mean Response Time : 134.64 cycles	Mean Waiting Time : 0.04 cycles	Throughput : 0.006
+Batch N°29 : Mean Response Time : 135.47 cycles	Mean Waiting Time : 0.08 cycles	Throughput : 0.006
+Batch N°30 : Mean Response Time : 134.32 cycles	Mean Waiting Time : 0.05 cycles	Throughput : 0.006
+Batch N°31 : Mean Response Time : 135.02 cycles	Mean Waiting Time : 0.07 cycles	Throughput : 0.006
+Batch N°32 : Mean Response Time : 135.05 cycles	Mean Waiting Time : 0.03 cycles	Throughput : 0.006
+Batch N°33 : Mean Response Time : 133.96 cycles	Mean Waiting Time : 0.05 cycles	Throughput : 0.006
+Batch N°34 : Mean Response Time : 133.82 cycles	Mean Waiting Time : 0.07 cycles	Throughput : 0.006
+Batch N°35 : Mean Response Time : 134.62 cycles	Mean Waiting Time : 0.07 cycles	Throughput : 0.006
+Batch N°36 : Mean Response Time : 133.81 cycles	Mean Waiting Time : 0.06 cycles	Throughput : 0.006
+
+End Of The Simulation at T= 54997396.00 cycles
+Injection Rate : 9200
+Batch Size : 10000
+Number of Batches : 36
+Number of Clients Served : 360000
+Overall Response Time : 134.76 cycles
+Overall Waiting  Time : 0.06 cycles
+Overall Throughput : 0.007 
+Standard Deviation Response Time : 0.60617 cycles
+Standard Deviation Waiting  Time : 0.01523 cycles
+Standard Deviation Throughput : 0.000250 

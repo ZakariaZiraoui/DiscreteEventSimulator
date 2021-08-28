@@ -1,0 +1,1342 @@
+Simulation Starting Time 2021-08-25 06:31:28
+Welcome to Network-On-Chip 2D Mesh Simulator 
+This simulator was designed based on The Discrete Event Simulation.
+It's a final year project to obtain the Master Degree
+Student developer : Ziraoui Zakaria 
+Supervisor: Prof. Mohamed Ould-Khaoua
+
+Network Simulation Parameters :
+
+Topology : 4 x 4 Mesh 
+Number of Nodes  : 16 
+Routing : Dimension-ordered (DOR)
+Traffic : Uniform Random
+Message length : 32 phits
+Injection Rate : 300
+Transmission Time : 32 Cycles
+Batch Means Method : No
+
+Please wait, Simulation has been started...
+
+ (    0.00 ) Msg[1] Arrives in PEQ[3][3] -> [2][3] 
+ (    0.00 ) Msg[1] Decides in PEQ[3][3] -> [2][3]X2Q 
+ (    0.00 ) Start Transmit from  PEQ[3][3] -> [2][3]X2Q 
+ (    0.00 ) Msg[2] Arrives in PEQ[3][2] -> [2][0] 
+ (    0.00 ) Msg[2] Decides in PEQ[3][2] -> [2][0]X2Q 
+ (    0.00 ) Start Transmit from  PEQ[3][2] -> [2][2]X2Q 
+ (    0.00 ) Msg[3] Arrives in PEQ[3][1] -> [1][2] 
+ (    0.00 ) Msg[3] Decides in PEQ[3][1] -> [1][2]X2Q 
+ (    0.00 ) Start Transmit from  PEQ[3][1] -> [2][1]X2Q 
+ (    0.00 ) Msg[4] Arrives in PEQ[3][0] -> [1][3] 
+ (    0.00 ) Msg[4] Decides in PEQ[3][0] -> [1][3]X2Q 
+ (    0.00 ) Start Transmit from  PEQ[3][0] -> [2][0]X2Q 
+ (    0.00 ) Msg[5] Arrives in PEQ[2][3] -> [1][2] 
+ (    0.00 ) Msg[5] Decides in PEQ[2][3] -> [1][2]X2Q 
+ (    0.00 ) Start Transmit from  PEQ[2][3] -> [1][3]X2Q 
+ (    0.00 ) Msg[6] Arrives in PEQ[2][2] -> [1][3] 
+ (    0.00 ) Msg[6] Decides in PEQ[2][2] -> [1][3]X2Q 
+ (    0.00 ) Start Transmit from  PEQ[2][2] -> [1][2]X2Q 
+ (    0.00 ) Msg[7] Arrives in PEQ[2][1] -> [2][2] 
+ (    0.00 ) Msg[7] Decides in PEQ[2][1] -> [2][2]Y1Q 
+ (    0.00 ) Start Transmit from  PEQ[2][1] -> [2][2]Y1Q 
+ (    0.00 ) Msg[8] Arrives in PEQ[2][0] -> [2][1] 
+ (    0.00 ) Msg[8] Decides in PEQ[2][0] -> [2][1]Y1Q 
+ (    0.00 ) Start Transmit from  PEQ[2][0] -> [2][1]Y1Q 
+ (    0.00 ) Msg[9] Arrives in PEQ[1][3] -> [2][1] 
+ (    0.00 ) Msg[9] Decides in PEQ[1][3] -> [2][1]X1Q 
+ (    0.00 ) Start Transmit from  PEQ[1][3] -> [2][3]X1Q 
+ (    0.00 ) Msg[10] Arrives in PEQ[1][2] -> [3][2] 
+ (    0.00 ) Msg[10] Decides in PEQ[1][2] -> [3][2]X1Q 
+ (    0.00 ) Start Transmit from  PEQ[1][2] -> [2][2]X1Q 
+ (    0.00 ) Msg[11] Arrives in PEQ[1][1] -> [0][1] 
+ (    0.00 ) Msg[11] Decides in PEQ[1][1] -> [0][1]X2Q 
+ (    0.00 ) Start Transmit from  PEQ[1][1] -> [0][1]X2Q 
+ (    0.00 ) Msg[12] Arrives in PEQ[1][0] -> [2][3] 
+ (    0.00 ) Msg[12] Decides in PEQ[1][0] -> [2][3]X1Q 
+ (    0.00 ) Start Transmit from  PEQ[1][0] -> [2][0]X1Q 
+ (    0.00 ) Msg[13] Arrives in PEQ[0][3] -> [2][1] 
+ (    0.00 ) Msg[13] Decides in PEQ[0][3] -> [2][1]X1Q 
+ (    0.00 ) Start Transmit from  PEQ[0][3] -> [1][3]X1Q 
+ (    0.00 ) Msg[14] Arrives in PEQ[0][2] -> [1][3] 
+ (    0.00 ) Msg[14] Decides in PEQ[0][2] -> [1][3]X1Q 
+ (    0.00 ) Start Transmit from  PEQ[0][2] -> [1][2]X1Q 
+ (    0.00 ) Msg[15] Arrives in PEQ[0][1] -> [1][3] 
+ (    0.00 ) Msg[15] Decides in PEQ[0][1] -> [1][3]X1Q 
+ (    0.00 ) Start Transmit from  PEQ[0][1] -> [1][1]X1Q 
+ (    0.00 ) Msg[16] Arrives in PEQ[0][0] -> [1][2] 
+ (    0.00 ) Msg[16] Decides in PEQ[0][0] -> [1][2]X1Q 
+ (    0.00 ) Start Transmit from  PEQ[0][0] -> [1][0]X1Q 
+ (   32.00 ) Msg[16] Ends Trans PEQ[1][0] -> [1][2]X1Q
+ (   32.00 ) Msg[16] Decides in X1Q[1][0] -> [1][2]Y1Q 
+ (   32.00 ) Start Transmit from  X1Q[1][0] -> [1][1]Y1Q 
+ (   32.00 ) Msg[1] Ends Trans PEQ[2][3] -> [2][3]X2Q
+ (   32.00 ) Msg[1] Decides in X2Q[2][3] -> [2][3]PEQ 
+ (   32.00 ) Start Transmit from  X2Q[2][3] -> [2][3]PEQ 
+ (   32.00 ) Msg[1] Ends Trans X2Q[2][3] -> [2][3]PEQ 
+               Msg[1] Response Time : 32.00 cycles   Mean Response Time : 32.00 cycles
+               Msg[1] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 0.00 cycles
+ (   32.00 ) Msg[2] Ends Trans PEQ[2][2] -> [2][0]X2Q
+ (   32.00 ) Msg[2] Decides in X2Q[2][2] -> [2][0]Y2Q 
+ (   32.00 ) Start Transmit from  X2Q[2][2] -> [2][1]Y2Q 
+ (   32.00 ) Msg[3] Ends Trans PEQ[2][1] -> [1][2]X2Q
+ (   32.00 ) Msg[3] Decides in X2Q[2][1] -> [1][2]X2Q 
+ (   32.00 ) Start Transmit from  X2Q[2][1] -> [1][1]X2Q 
+ (   32.00 ) Msg[4] Ends Trans PEQ[2][0] -> [1][3]X2Q
+ (   32.00 ) Msg[4] Decides in X2Q[2][0] -> [1][3]X2Q 
+ (   32.00 ) Start Transmit from  X2Q[2][0] -> [1][0]X2Q 
+ (   32.00 ) Msg[5] Ends Trans PEQ[1][3] -> [1][2]X2Q
+ (   32.00 ) Msg[5] Decides in X2Q[1][3] -> [1][2]Y2Q 
+ (   32.00 ) Start Transmit from  X2Q[1][3] -> [1][2]Y2Q 
+ (   32.00 ) Msg[6] Ends Trans PEQ[1][2] -> [1][3]X2Q
+ (   32.00 ) Msg[6] Decides in X2Q[1][2] -> [1][3]Y1Q 
+ (   32.00 ) Start Transmit from  X2Q[1][2] -> [1][3]Y1Q 
+ (   32.00 ) Msg[7] Ends Trans PEQ[2][2] -> [2][2]Y1Q
+ (   32.00 ) Msg[7] Decides in Y1Q[2][2] -> [2][2]PEQ 
+ (   32.00 ) Start Transmit from  Y1Q[2][2] -> [2][2]PEQ 
+ (   32.00 ) Msg[7] Ends Trans Y1Q[2][2] -> [2][2]PEQ 
+               Msg[7] Response Time : 32.00 cycles   Mean Response Time : 32.00 cycles
+               Msg[7] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 0.00 cycles
+ (   32.00 ) Msg[8] Ends Trans PEQ[2][1] -> [2][1]Y1Q
+ (   32.00 ) Msg[8] Decides in Y1Q[2][1] -> [2][1]PEQ 
+ (   32.00 ) Start Transmit from  Y1Q[2][1] -> [2][1]PEQ 
+ (   32.00 ) Msg[8] Ends Trans Y1Q[2][1] -> [2][1]PEQ 
+               Msg[8] Response Time : 32.00 cycles   Mean Response Time : 32.00 cycles
+               Msg[8] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 0.00 cycles
+ (   32.00 ) Msg[9] Ends Trans PEQ[2][3] -> [2][1]X1Q
+ (   32.00 ) Msg[9] Decides in X1Q[2][3] -> [2][1]Y2Q 
+ (   32.00 ) Start Transmit from  X1Q[2][3] -> [2][2]Y2Q 
+ (   32.00 ) Msg[10] Ends Trans PEQ[2][2] -> [3][2]X1Q
+ (   32.00 ) Msg[10] Decides in X1Q[2][2] -> [3][2]X1Q 
+ (   32.00 ) Start Transmit from  X1Q[2][2] -> [3][2]X1Q 
+ (   32.00 ) Msg[11] Ends Trans PEQ[0][1] -> [0][1]X2Q
+ (   32.00 ) Msg[11] Decides in X2Q[0][1] -> [0][1]PEQ 
+ (   32.00 ) Start Transmit from  X2Q[0][1] -> [0][1]PEQ 
+ (   32.00 ) Msg[11] Ends Trans X2Q[0][1] -> [0][1]PEQ 
+               Msg[11] Response Time : 32.00 cycles   Mean Response Time : 32.00 cycles
+               Msg[11] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 0.00 cycles
+ (   32.00 ) Msg[12] Ends Trans PEQ[2][0] -> [2][3]X1Q
+ (   32.00 ) Msg[12] Decides in X1Q[2][0] -> [2][3]Y1Q 
+ (   32.00 ) Start Transmit from  X1Q[2][0] -> [2][1]Y1Q 
+ (   32.00 ) Msg[13] Ends Trans PEQ[1][3] -> [2][1]X1Q
+ (   32.00 ) Msg[13] Decides in X1Q[1][3] -> [2][1]X1Q 
+ (   32.00 ) Start Transmit from  X1Q[1][3] -> [2][3]X1Q 
+ (   32.00 ) Msg[14] Ends Trans PEQ[1][2] -> [1][3]X1Q
+ (   32.00 ) Msg[14] Decides in X1Q[1][2] -> [1][3]Q 
+ (   32.00 ) Msg[15] Ends Trans PEQ[1][1] -> [1][3]X1Q
+ (   32.00 ) Msg[15] Decides in X1Q[1][1] -> [1][3]Y1Q 
+ (   32.00 ) Start Transmit from  X1Q[1][1] -> [1][2]Y1Q 
+ (   38.37 ) Msg[17] Arrives in PEQ[2][3] -> [1][3] 
+ (   38.37 ) Msg[17] Decides in PEQ[2][3] -> [1][3]X2Q 
+ (   38.37 ) Start Transmit from  PEQ[2][3] -> [1][3]X2Q 
+ (   45.57 ) Msg[18] Arrives in PEQ[0][1] -> [2][1] 
+ (   45.57 ) Msg[18] Decides in PEQ[0][1] -> [2][1]X1Q 
+ (   45.57 ) Start Transmit from  PEQ[0][1] -> [1][1]X1Q 
+ (   63.83 ) Msg[19] Arrives in PEQ[2][1] -> [1][1] 
+ (   63.83 ) Msg[19] Decides in PEQ[2][1] -> [1][1]Q 
+ (   64.00 ) Msg[16] Ends Trans X1Q[1][1] -> [1][2]Y1Q
+ (   64.00 ) Msg[16] Decides in Y1Q[1][1] -> [1][2]Q 
+ (   64.00 ) Msg[2] Ends Trans X2Q[2][1] -> [2][0]Y2Q
+ (   64.00 ) Msg[2] Decides in Y2Q[2][1] -> [2][0]Y2Q 
+ (   64.00 ) Start Transmit from  Y2Q[2][1] -> [2][0]Y2Q 
+ (   64.00 ) Msg[3] Ends Trans X2Q[1][1] -> [1][2]X2Q
+ (   64.00 ) Start Transmit from  PEQ[2][1] -> [1][1]X2Q 
+ (   64.00 ) Msg[3] Decides in X2Q[1][1] -> [1][2]Q 
+ (   64.00 ) Msg[4] Ends Trans X2Q[1][0] -> [1][3]X2Q
+ (   64.00 ) Msg[4] Decides in X2Q[1][0] -> [1][3]Y1Q 
+ (   64.00 ) Start Transmit from  X2Q[1][0] -> [1][1]Y1Q 
+ (   64.00 ) Msg[5] Ends Trans X2Q[1][2] -> [1][2]Y2Q
+ (   64.00 ) Msg[5] Decides in Y2Q[1][2] -> [1][2]PEQ 
+ (   64.00 ) Start Transmit from  Y2Q[1][2] -> [1][2]PEQ 
+ (   64.00 ) Msg[5] Ends Trans Y2Q[1][2] -> [1][2]PEQ 
+               Msg[5] Response Time : 64.00 cycles   Mean Response Time : 38.40 cycles
+               Msg[5] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 0.00 cycles
+ (   64.00 ) Msg[6] Ends Trans X2Q[1][3] -> [1][3]Y1Q
+ (   64.00 ) Start Transmit from  X1Q[1][2] -> [1][3]Y1Q 
+ (   64.00 ) Msg[6] Decides in Y1Q[1][3] -> [1][3]PEQ 
+ (   64.00 ) Start Transmit from  Y1Q[1][3] -> [1][3]PEQ 
+ (   64.00 ) Msg[6] Ends Trans Y1Q[1][3] -> [1][3]PEQ 
+               Msg[6] Response Time : 64.00 cycles   Mean Response Time : 42.67 cycles
+               Msg[6] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 0.00 cycles
+ (   64.00 ) Msg[9] Ends Trans X1Q[2][2] -> [2][1]Y2Q
+ (   64.00 ) Msg[9] Decides in Y2Q[2][2] -> [2][1]Y2Q 
+ (   64.00 ) Start Transmit from  Y2Q[2][2] -> [2][1]Y2Q 
+ (   64.00 ) Msg[10] Ends Trans X1Q[3][2] -> [3][2]X1Q
+ (   64.00 ) Msg[10] Decides in X1Q[3][2] -> [3][2]PEQ 
+ (   64.00 ) Start Transmit from  X1Q[3][2] -> [3][2]PEQ 
+ (   64.00 ) Msg[10] Ends Trans X1Q[3][2] -> [3][2]PEQ 
+               Msg[10] Response Time : 64.00 cycles   Mean Response Time : 45.71 cycles
+               Msg[10] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 0.00 cycles
+ (   64.00 ) Msg[12] Ends Trans X1Q[2][1] -> [2][3]Y1Q
+ (   64.00 ) Msg[12] Decides in Y1Q[2][1] -> [2][3]Y1Q 
+ (   64.00 ) Start Transmit from  Y1Q[2][1] -> [2][2]Y1Q 
+ (   64.00 ) Msg[13] Ends Trans X1Q[2][3] -> [2][1]X1Q
+ (   64.00 ) Msg[13] Decides in X1Q[2][3] -> [2][1]Y2Q 
+ (   64.00 ) Start Transmit from  X1Q[2][3] -> [2][2]Y2Q 
+ (   64.00 ) Msg[15] Ends Trans X1Q[1][2] -> [1][3]Y1Q
+ (   64.00 ) Start Transmit from  X2Q[1][1] -> [1][2]Y1Q 
+ (   64.00 ) Msg[15] Decides in Y1Q[1][2] -> [1][3]Q 
+ (   70.37 ) Msg[17] Ends Trans PEQ[1][3] -> [1][3]X2Q
+ (   70.37 ) Msg[17] Decides in X2Q[1][3] -> [1][3]PEQ 
+ (   70.37 ) Start Transmit from  X2Q[1][3] -> [1][3]PEQ 
+ (   70.37 ) Msg[17] Ends Trans X2Q[1][3] -> [1][3]PEQ 
+               Msg[17] Response Time : 32.00 cycles   Mean Response Time : 44.00 cycles
+               Msg[17] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 0.00 cycles
+ (   77.57 ) Msg[18] Ends Trans PEQ[1][1] -> [2][1]X1Q
+ (   77.57 ) Msg[18] Decides in X1Q[1][1] -> [2][1]X1Q 
+ (   77.57 ) Start Transmit from  X1Q[1][1] -> [2][1]X1Q 
+ (   78.70 ) Msg[20] Arrives in PEQ[2][0] -> [3][0] 
+ (   78.70 ) Msg[20] Decides in PEQ[2][0] -> [3][0]X1Q 
+ (   78.70 ) Start Transmit from  PEQ[2][0] -> [3][0]X1Q 
+ (   96.00 ) Msg[2] Ends Trans Y2Q[2][0] -> [2][0]Y2Q
+ (   96.00 ) Msg[2] Decides in Y2Q[2][0] -> [2][0]PEQ 
+ (   96.00 ) Start Transmit from  Y2Q[2][0] -> [2][0]PEQ 
+ (   96.00 ) Msg[2] Ends Trans Y2Q[2][0] -> [2][0]PEQ 
+               Msg[2] Response Time : 96.00 cycles   Mean Response Time : 49.78 cycles
+               Msg[2] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 0.00 cycles
+ (   96.00 ) Msg[19] Ends Trans PEQ[1][1] -> [1][1]X2Q
+ (   96.00 ) Msg[4] Ends Trans X2Q[1][1] -> [1][3]Y1Q
+ (   96.00 ) Msg[14] Ends Trans X1Q[1][3] -> [1][3]Y1Q
+ (   96.00 ) Start Transmit from  Y1Q[1][2] -> [1][3]Y1Q 
+ (   96.00 ) Msg[14] Decides in Y1Q[1][3] -> [1][3]PEQ 
+ (   96.00 ) Start Transmit from  Y1Q[1][3] -> [1][3]PEQ 
+ (   96.00 ) Msg[14] Ends Trans Y1Q[1][3] -> [1][3]PEQ 
+               Msg[14] Response Time : 96.00 cycles   Mean Response Time : 54.40 cycles
+               Msg[14] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 0.00 cycles
+ (   96.00 ) Msg[9] Ends Trans Y2Q[2][1] -> [2][1]Y2Q
+ (   96.00 ) Msg[9] Decides in Y2Q[2][1] -> [2][1]PEQ 
+ (   96.00 ) Start Transmit from  Y2Q[2][1] -> [2][1]PEQ 
+ (   96.00 ) Msg[9] Ends Trans Y2Q[2][1] -> [2][1]PEQ 
+               Msg[9] Response Time : 96.00 cycles   Mean Response Time : 58.18 cycles
+               Msg[9] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 0.00 cycles
+ (   96.00 ) Msg[12] Ends Trans Y1Q[2][2] -> [2][3]Y1Q
+ (   96.00 ) Msg[12] Decides in Y1Q[2][2] -> [2][3]Y1Q 
+ (   96.00 ) Start Transmit from  Y1Q[2][2] -> [2][3]Y1Q 
+ (   96.00 ) Msg[13] Ends Trans X1Q[2][2] -> [2][1]Y2Q
+ (   96.00 ) Msg[13] Decides in Y2Q[2][2] -> [2][1]Y2Q 
+ (   96.00 ) Start Transmit from  Y2Q[2][2] -> [2][1]Y2Q 
+ (   96.00 ) Msg[3] Ends Trans X2Q[1][2] -> [1][2]Y1Q
+ (   96.00 ) Start Transmit from  Y1Q[1][1] -> [1][2]Y1Q 
+ (   96.00 ) Msg[19] Decides in X2Q[1][1] -> [1][1]PEQ 
+ (   96.00 ) Start Transmit from  X2Q[1][1] -> [1][1]PEQ 
+ (   96.00 ) Msg[19] Ends Trans X2Q[1][1] -> [1][1]PEQ 
+               Msg[19] Response Time : 32.17 cycles   Mean Response Time : 56.01 cycles
+               Msg[19] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 0.00 cycles
+ (  109.57 ) Msg[18] Ends Trans X1Q[2][1] -> [2][1]X1Q
+ (  109.57 ) Msg[18] Decides in X1Q[2][1] -> [2][1]PEQ 
+ (  109.57 ) Start Transmit from  X1Q[2][1] -> [2][1]PEQ 
+ (  109.57 ) Msg[18] Ends Trans X1Q[2][1] -> [2][1]PEQ 
+               Msg[18] Response Time : 64.00 cycles   Mean Response Time : 56.63 cycles
+               Msg[18] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 0.00 cycles
+ (  110.70 ) Msg[20] Ends Trans PEQ[3][0] -> [3][0]X1Q
+ (  110.70 ) Msg[20] Decides in X1Q[3][0] -> [3][0]PEQ 
+ (  110.70 ) Start Transmit from  X1Q[3][0] -> [3][0]PEQ 
+ (  110.70 ) Msg[20] Ends Trans X1Q[3][0] -> [3][0]PEQ 
+               Msg[20] Response Time : 32.00 cycles   Mean Response Time : 54.87 cycles
+               Msg[20] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 0.00 cycles
+ (  128.00 ) Msg[15] Ends Trans Y1Q[1][3] -> [1][3]Y1Q
+ (  128.00 ) Msg[3] Decides in Y1Q[1][2] -> [1][2]PEQ 
+ (  128.00 ) Start Transmit from  Y1Q[1][2] -> [1][2]PEQ 
+ (  128.00 ) Msg[3] Ends Trans Y1Q[1][2] -> [1][2]PEQ 
+               Msg[3] Response Time : 128.00 cycles   Mean Response Time : 59.74 cycles
+               Msg[3] Waiting  Time : 32.00 cycles   Mean Waiting  Time : 2.13 cycles
+ (  128.00 ) Msg[15] Decides in Y1Q[1][3] -> [1][3]PEQ 
+ (  128.00 ) Start Transmit from  Y1Q[1][3] -> [1][3]PEQ 
+ (  128.00 ) Msg[15] Ends Trans Y1Q[1][3] -> [1][3]PEQ 
+               Msg[15] Response Time : 128.00 cycles   Mean Response Time : 64.01 cycles
+               Msg[15] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 2.00 cycles
+ (  128.00 ) Msg[12] Ends Trans Y1Q[2][3] -> [2][3]Y1Q
+ (  128.00 ) Msg[12] Decides in Y1Q[2][3] -> [2][3]PEQ 
+ (  128.00 ) Start Transmit from  Y1Q[2][3] -> [2][3]PEQ 
+ (  128.00 ) Msg[12] Ends Trans Y1Q[2][3] -> [2][3]PEQ 
+               Msg[12] Response Time : 128.00 cycles   Mean Response Time : 67.77 cycles
+               Msg[12] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 1.88 cycles
+ (  128.00 ) Msg[13] Ends Trans Y2Q[2][1] -> [2][1]Y2Q
+ (  128.00 ) Msg[13] Decides in Y2Q[2][1] -> [2][1]PEQ 
+ (  128.00 ) Start Transmit from  Y2Q[2][1] -> [2][1]PEQ 
+ (  128.00 ) Msg[13] Ends Trans Y2Q[2][1] -> [2][1]PEQ 
+               Msg[13] Response Time : 128.00 cycles   Mean Response Time : 71.12 cycles
+               Msg[13] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 1.78 cycles
+ (  128.00 ) Msg[16] Ends Trans Y1Q[1][2] -> [1][2]Y1Q
+ (  128.00 ) Msg[4] Decides in Y1Q[1][1] -> [1][3]Y1Q 
+ (  128.00 ) Start Transmit from  Y1Q[1][1] -> [1][2]Y1Q 
+ (  128.00 ) Msg[16] Decides in Y1Q[1][2] -> [1][2]PEQ 
+ (  128.00 ) Start Transmit from  Y1Q[1][2] -> [1][2]PEQ 
+ (  128.00 ) Msg[16] Ends Trans Y1Q[1][2] -> [1][2]PEQ 
+               Msg[16] Response Time : 128.00 cycles   Mean Response Time : 74.11 cycles
+               Msg[16] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 1.68 cycles
+ (  138.13 ) Msg[21] Arrives in PEQ[1][3] -> [1][1] 
+ (  138.13 ) Msg[21] Decides in PEQ[1][3] -> [1][1]Y2Q 
+ (  138.13 ) Start Transmit from  PEQ[1][3] -> [1][2]Y2Q 
+ (  160.00 ) Msg[4] Ends Trans Y1Q[1][2] -> [1][3]Y1Q
+ (  160.00 ) Msg[4] Decides in Y1Q[1][2] -> [1][3]Y1Q 
+ (  160.00 ) Start Transmit from  Y1Q[1][2] -> [1][3]Y1Q 
+ (  170.13 ) Msg[21] Ends Trans PEQ[1][2] -> [1][1]Y2Q
+ (  170.13 ) Msg[21] Decides in Y2Q[1][2] -> [1][1]Y2Q 
+ (  170.13 ) Start Transmit from  Y2Q[1][2] -> [1][1]Y2Q 
+ (  174.41 ) Msg[22] Arrives in PEQ[1][2] -> [3][3] 
+ (  174.41 ) Msg[22] Decides in PEQ[1][2] -> [3][3]X1Q 
+ (  174.41 ) Start Transmit from  PEQ[1][2] -> [2][2]X1Q 
+ (  192.00 ) Msg[4] Ends Trans Y1Q[1][3] -> [1][3]Y1Q
+ (  192.00 ) Msg[4] Decides in Y1Q[1][3] -> [1][3]PEQ 
+ (  192.00 ) Start Transmit from  Y1Q[1][3] -> [1][3]PEQ 
+ (  192.00 ) Msg[4] Ends Trans Y1Q[1][3] -> [1][3]PEQ 
+               Msg[4] Response Time : 192.00 cycles   Mean Response Time : 80.01 cycles
+               Msg[4] Waiting  Time : 32.00 cycles   Mean Waiting  Time : 3.20 cycles
+ (  193.39 ) Msg[23] Arrives in PEQ[1][3] -> [2][2] 
+ (  193.39 ) Msg[23] Decides in PEQ[1][3] -> [2][2]X1Q 
+ (  193.39 ) Start Transmit from  PEQ[1][3] -> [2][3]X1Q 
+ (  202.13 ) Msg[21] Ends Trans Y2Q[1][1] -> [1][1]Y2Q
+ (  202.13 ) Msg[21] Decides in Y2Q[1][1] -> [1][1]PEQ 
+ (  202.13 ) Start Transmit from  Y2Q[1][1] -> [1][1]PEQ 
+ (  202.13 ) Msg[21] Ends Trans Y2Q[1][1] -> [1][1]PEQ 
+               Msg[21] Response Time : 64.00 cycles   Mean Response Time : 79.25 cycles
+               Msg[21] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 3.05 cycles
+ (  206.41 ) Msg[22] Ends Trans PEQ[2][2] -> [3][3]X1Q
+ (  206.41 ) Msg[22] Decides in X1Q[2][2] -> [3][3]X1Q 
+ (  206.41 ) Start Transmit from  X1Q[2][2] -> [3][2]X1Q 
+ (  224.67 ) Msg[24] Arrives in PEQ[3][2] -> [3][1] 
+ (  224.67 ) Msg[24] Decides in PEQ[3][2] -> [3][1]Y2Q 
+ (  224.67 ) Start Transmit from  PEQ[3][2] -> [3][1]Y2Q 
+ (  225.39 ) Msg[23] Ends Trans PEQ[2][3] -> [2][2]X1Q
+ (  225.39 ) Msg[23] Decides in X1Q[2][3] -> [2][2]Y2Q 
+ (  225.39 ) Start Transmit from  X1Q[2][3] -> [2][2]Y2Q 
+ (  238.41 ) Msg[22] Ends Trans X1Q[3][2] -> [3][3]X1Q
+ (  238.41 ) Msg[22] Decides in X1Q[3][2] -> [3][3]Y1Q 
+ (  238.41 ) Start Transmit from  X1Q[3][2] -> [3][3]Y1Q 
+ (  251.19 ) Msg[25] Arrives in PEQ[3][1] -> [1][2] 
+ (  251.19 ) Msg[25] Decides in PEQ[3][1] -> [1][2]X2Q 
+ (  251.19 ) Start Transmit from  PEQ[3][1] -> [2][1]X2Q 
+ (  253.35 ) Msg[26] Arrives in PEQ[3][3] -> [3][2] 
+ (  253.35 ) Msg[26] Decides in PEQ[3][3] -> [3][2]Y2Q 
+ (  253.35 ) Start Transmit from  PEQ[3][3] -> [3][2]Y2Q 
+ (  256.67 ) Msg[24] Ends Trans PEQ[3][1] -> [3][1]Y2Q
+ (  256.67 ) Msg[24] Decides in Y2Q[3][1] -> [3][1]PEQ 
+ (  256.67 ) Start Transmit from  Y2Q[3][1] -> [3][1]PEQ 
+ (  256.67 ) Msg[24] Ends Trans Y2Q[3][1] -> [3][1]PEQ 
+               Msg[24] Response Time : 32.00 cycles   Mean Response Time : 77.10 cycles
+               Msg[24] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 2.91 cycles
+ (  257.39 ) Msg[23] Ends Trans X1Q[2][2] -> [2][2]Y2Q
+ (  257.39 ) Msg[23] Decides in Y2Q[2][2] -> [2][2]PEQ 
+ (  257.39 ) Start Transmit from  Y2Q[2][2] -> [2][2]PEQ 
+ (  257.39 ) Msg[23] Ends Trans Y2Q[2][2] -> [2][2]PEQ 
+               Msg[23] Response Time : 64.00 cycles   Mean Response Time : 76.53 cycles
+               Msg[23] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 2.78 cycles
+ (  270.41 ) Msg[22] Ends Trans X1Q[3][3] -> [3][3]Y1Q
+ (  270.41 ) Msg[22] Decides in Y1Q[3][3] -> [3][3]PEQ 
+ (  270.41 ) Start Transmit from  Y1Q[3][3] -> [3][3]PEQ 
+ (  270.41 ) Msg[22] Ends Trans Y1Q[3][3] -> [3][3]PEQ 
+               Msg[22] Response Time : 96.00 cycles   Mean Response Time : 77.34 cycles
+               Msg[22] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 2.67 cycles
+ (  283.19 ) Msg[25] Ends Trans PEQ[2][1] -> [1][2]X2Q
+ (  283.19 ) Msg[25] Decides in X2Q[2][1] -> [1][2]X2Q 
+ (  283.19 ) Start Transmit from  X2Q[2][1] -> [1][1]X2Q 
+ (  285.35 ) Msg[26] Ends Trans PEQ[3][2] -> [3][2]Y2Q
+ (  285.35 ) Msg[26] Decides in Y2Q[3][2] -> [3][2]PEQ 
+ (  285.35 ) Start Transmit from  Y2Q[3][2] -> [3][2]PEQ 
+ (  285.35 ) Msg[26] Ends Trans Y2Q[3][2] -> [3][2]PEQ 
+               Msg[26] Response Time : 32.00 cycles   Mean Response Time : 75.53 cycles
+               Msg[26] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 2.56 cycles
+ (  315.19 ) Msg[25] Ends Trans X2Q[1][1] -> [1][2]X2Q
+ (  315.19 ) Msg[25] Decides in X2Q[1][1] -> [1][2]Y1Q 
+ (  315.19 ) Start Transmit from  X2Q[1][1] -> [1][2]Y1Q 
+ (  315.94 ) Msg[27] Arrives in PEQ[1][1] -> [2][2] 
+ (  315.94 ) Msg[27] Decides in PEQ[1][1] -> [2][2]X1Q 
+ (  315.94 ) Start Transmit from  PEQ[1][1] -> [2][1]X1Q 
+ (  323.19 ) Msg[28] Arrives in PEQ[1][2] -> [3][1] 
+ (  323.19 ) Msg[28] Decides in PEQ[1][2] -> [3][1]X1Q 
+ (  323.19 ) Start Transmit from  PEQ[1][2] -> [2][2]X1Q 
+ (  347.19 ) Msg[25] Ends Trans X2Q[1][2] -> [1][2]Y1Q
+ (  347.19 ) Msg[25] Decides in Y1Q[1][2] -> [1][2]PEQ 
+ (  347.19 ) Start Transmit from  Y1Q[1][2] -> [1][2]PEQ 
+ (  347.19 ) Msg[25] Ends Trans Y1Q[1][2] -> [1][2]PEQ 
+               Msg[25] Response Time : 96.00 cycles   Mean Response Time : 76.31 cycles
+               Msg[25] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 2.46 cycles
+ (  347.94 ) Msg[27] Ends Trans PEQ[2][1] -> [2][2]X1Q
+ (  347.94 ) Msg[27] Decides in X1Q[2][1] -> [2][2]Y1Q 
+ (  347.94 ) Start Transmit from  X1Q[2][1] -> [2][2]Y1Q 
+ (  355.19 ) Msg[28] Ends Trans PEQ[2][2] -> [3][1]X1Q
+ (  355.19 ) Msg[28] Decides in X1Q[2][2] -> [3][1]X1Q 
+ (  355.19 ) Start Transmit from  X1Q[2][2] -> [3][2]X1Q 
+ (  379.94 ) Msg[27] Ends Trans X1Q[2][2] -> [2][2]Y1Q
+ (  379.94 ) Msg[27] Decides in Y1Q[2][2] -> [2][2]PEQ 
+ (  379.94 ) Start Transmit from  Y1Q[2][2] -> [2][2]PEQ 
+ (  379.94 ) Msg[27] Ends Trans Y1Q[2][2] -> [2][2]PEQ 
+               Msg[27] Response Time : 64.00 cycles   Mean Response Time : 75.86 cycles
+               Msg[27] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 2.37 cycles
+ (  387.19 ) Msg[28] Ends Trans X1Q[3][2] -> [3][1]X1Q
+ (  387.19 ) Msg[28] Decides in X1Q[3][2] -> [3][1]Y2Q 
+ (  387.19 ) Start Transmit from  X1Q[3][2] -> [3][1]Y2Q 
+ (  397.02 ) Msg[29] Arrives in PEQ[2][2] -> [0][1] 
+ (  397.02 ) Msg[29] Decides in PEQ[2][2] -> [0][1]X2Q 
+ (  397.02 ) Start Transmit from  PEQ[2][2] -> [1][2]X2Q 
+ (  419.19 ) Msg[28] Ends Trans X1Q[3][1] -> [3][1]Y2Q
+ (  419.19 ) Msg[28] Decides in Y2Q[3][1] -> [3][1]PEQ 
+ (  419.19 ) Start Transmit from  Y2Q[3][1] -> [3][1]PEQ 
+ (  419.19 ) Msg[28] Ends Trans Y2Q[3][1] -> [3][1]PEQ 
+               Msg[28] Response Time : 96.00 cycles   Mean Response Time : 76.58 cycles
+               Msg[28] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 2.29 cycles
+ (  419.75 ) Msg[30] Arrives in PEQ[0][1] -> [2][2] 
+ (  419.75 ) Msg[30] Decides in PEQ[0][1] -> [2][2]X1Q 
+ (  419.75 ) Start Transmit from  PEQ[0][1] -> [1][1]X1Q 
+ (  424.05 ) Msg[31] Arrives in PEQ[1][1] -> [1][3] 
+ (  424.05 ) Msg[31] Decides in PEQ[1][1] -> [1][3]Y1Q 
+ (  424.05 ) Start Transmit from  PEQ[1][1] -> [1][2]Y1Q 
+ (  429.02 ) Msg[29] Ends Trans PEQ[1][2] -> [0][1]X2Q
+ (  429.02 ) Msg[29] Decides in X2Q[1][2] -> [0][1]X2Q 
+ (  429.02 ) Start Transmit from  X2Q[1][2] -> [0][2]X2Q 
+ (  439.30 ) Msg[32] Arrives in PEQ[3][2] -> [0][0] 
+ (  439.30 ) Msg[32] Decides in PEQ[3][2] -> [0][0]X2Q 
+ (  439.30 ) Start Transmit from  PEQ[3][2] -> [2][2]X2Q 
+ (  447.91 ) Msg[33] Arrives in PEQ[0][0] -> [1][2] 
+ (  447.91 ) Msg[33] Decides in PEQ[0][0] -> [1][2]X1Q 
+ (  447.91 ) Start Transmit from  PEQ[0][0] -> [1][0]X1Q 
+ (  451.75 ) Msg[30] Ends Trans PEQ[1][1] -> [2][2]X1Q
+ (  451.75 ) Msg[30] Decides in X1Q[1][1] -> [2][2]X1Q 
+ (  451.75 ) Start Transmit from  X1Q[1][1] -> [2][1]X1Q 
+ (  456.05 ) Msg[31] Ends Trans PEQ[1][2] -> [1][3]Y1Q
+ (  456.05 ) Msg[31] Decides in Y1Q[1][2] -> [1][3]Y1Q 
+ (  456.05 ) Start Transmit from  Y1Q[1][2] -> [1][3]Y1Q 
+ (  461.02 ) Msg[29] Ends Trans X2Q[0][2] -> [0][1]X2Q
+ (  461.02 ) Msg[29] Decides in X2Q[0][2] -> [0][1]Y2Q 
+ (  461.02 ) Start Transmit from  X2Q[0][2] -> [0][1]Y2Q 
+ (  471.30 ) Msg[32] Ends Trans PEQ[2][2] -> [0][0]X2Q
+ (  471.30 ) Msg[32] Decides in X2Q[2][2] -> [0][0]X2Q 
+ (  471.30 ) Start Transmit from  X2Q[2][2] -> [1][2]X2Q 
+ (  476.02 ) Msg[34] Arrives in PEQ[2][2] -> [2][3] 
+ (  476.02 ) Msg[34] Decides in PEQ[2][2] -> [2][3]Y1Q 
+ (  476.02 ) Start Transmit from  PEQ[2][2] -> [2][3]Y1Q 
+ (  479.33 ) Msg[35] Arrives in PEQ[1][2] -> [2][3] 
+ (  479.33 ) Msg[35] Decides in PEQ[1][2] -> [2][3]X1Q 
+ (  479.33 ) Start Transmit from  PEQ[1][2] -> [2][2]X1Q 
+ (  479.91 ) Msg[33] Ends Trans PEQ[1][0] -> [1][2]X1Q
+ (  479.91 ) Msg[33] Decides in X1Q[1][0] -> [1][2]Y1Q 
+ (  479.91 ) Start Transmit from  X1Q[1][0] -> [1][1]Y1Q 
+ (  483.75 ) Msg[30] Ends Trans X1Q[2][1] -> [2][2]X1Q
+ (  483.75 ) Msg[30] Decides in X1Q[2][1] -> [2][2]Y1Q 
+ (  483.75 ) Start Transmit from  X1Q[2][1] -> [2][2]Y1Q 
+ (  488.05 ) Msg[31] Ends Trans Y1Q[1][3] -> [1][3]Y1Q
+ (  488.05 ) Msg[31] Decides in Y1Q[1][3] -> [1][3]PEQ 
+ (  488.05 ) Start Transmit from  Y1Q[1][3] -> [1][3]PEQ 
+ (  488.05 ) Msg[31] Ends Trans Y1Q[1][3] -> [1][3]PEQ 
+               Msg[31] Response Time : 64.00 cycles   Mean Response Time : 76.14 cycles
+               Msg[31] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 2.21 cycles
+ (  493.02 ) Msg[29] Ends Trans X2Q[0][1] -> [0][1]Y2Q
+ (  493.02 ) Msg[29] Decides in Y2Q[0][1] -> [0][1]PEQ 
+ (  493.02 ) Start Transmit from  Y2Q[0][1] -> [0][1]PEQ 
+ (  493.02 ) Msg[29] Ends Trans Y2Q[0][1] -> [0][1]PEQ 
+               Msg[29] Response Time : 96.00 cycles   Mean Response Time : 76.81 cycles
+               Msg[29] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 2.13 cycles
+ (  503.30 ) Msg[32] Ends Trans X2Q[1][2] -> [0][0]X2Q
+ (  503.30 ) Msg[32] Decides in X2Q[1][2] -> [0][0]X2Q 
+ (  503.30 ) Start Transmit from  X2Q[1][2] -> [0][2]X2Q 
+ (  503.57 ) Msg[36] Arrives in PEQ[1][3] -> [3][2] 
+ (  503.57 ) Msg[36] Decides in PEQ[1][3] -> [3][2]X1Q 
+ (  503.57 ) Start Transmit from  PEQ[1][3] -> [2][3]X1Q 
+ (  508.02 ) Msg[34] Ends Trans PEQ[2][3] -> [2][3]Y1Q
+ (  508.02 ) Msg[34] Decides in Y1Q[2][3] -> [2][3]PEQ 
+ (  508.02 ) Start Transmit from  Y1Q[2][3] -> [2][3]PEQ 
+ (  508.02 ) Msg[34] Ends Trans Y1Q[2][3] -> [2][3]PEQ 
+               Msg[34] Response Time : 32.00 cycles   Mean Response Time : 75.36 cycles
+               Msg[34] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 2.06 cycles
+ (  511.33 ) Msg[35] Ends Trans PEQ[2][2] -> [2][3]X1Q
+ (  511.33 ) Msg[35] Decides in X1Q[2][2] -> [2][3]Y1Q 
+ (  511.33 ) Start Transmit from  X1Q[2][2] -> [2][3]Y1Q 
+ (  511.91 ) Msg[33] Ends Trans X1Q[1][1] -> [1][2]Y1Q
+ (  511.91 ) Msg[33] Decides in Y1Q[1][1] -> [1][2]Y1Q 
+ (  511.91 ) Start Transmit from  Y1Q[1][1] -> [1][2]Y1Q 
+ (  515.75 ) Msg[30] Ends Trans X1Q[2][2] -> [2][2]Y1Q
+ (  515.75 ) Msg[30] Decides in Y1Q[2][2] -> [2][2]PEQ 
+ (  515.75 ) Start Transmit from  Y1Q[2][2] -> [2][2]PEQ 
+ (  515.75 ) Msg[30] Ends Trans Y1Q[2][2] -> [2][2]PEQ 
+               Msg[30] Response Time : 96.00 cycles   Mean Response Time : 76.01 cycles
+               Msg[30] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 2.00 cycles
+ (  535.30 ) Msg[32] Ends Trans X2Q[0][2] -> [0][0]X2Q
+ (  535.30 ) Msg[32] Decides in X2Q[0][2] -> [0][0]Y2Q 
+ (  535.30 ) Start Transmit from  X2Q[0][2] -> [0][1]Y2Q 
+ (  535.57 ) Msg[36] Ends Trans PEQ[2][3] -> [3][2]X1Q
+ (  535.57 ) Msg[36] Decides in X1Q[2][3] -> [3][2]X1Q 
+ (  535.57 ) Start Transmit from  X1Q[2][3] -> [3][3]X1Q 
+ (  543.33 ) Msg[35] Ends Trans X1Q[2][3] -> [2][3]Y1Q
+ (  543.33 ) Msg[35] Decides in Y1Q[2][3] -> [2][3]PEQ 
+ (  543.33 ) Start Transmit from  Y1Q[2][3] -> [2][3]PEQ 
+ (  543.33 ) Msg[35] Ends Trans Y1Q[2][3] -> [2][3]PEQ 
+               Msg[35] Response Time : 64.00 cycles   Mean Response Time : 75.64 cycles
+               Msg[35] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 1.94 cycles
+ (  543.91 ) Msg[33] Ends Trans Y1Q[1][2] -> [1][2]Y1Q
+ (  543.91 ) Msg[33] Decides in Y1Q[1][2] -> [1][2]PEQ 
+ (  543.91 ) Start Transmit from  Y1Q[1][2] -> [1][2]PEQ 
+ (  543.91 ) Msg[33] Ends Trans Y1Q[1][2] -> [1][2]PEQ 
+               Msg[33] Response Time : 96.00 cycles   Mean Response Time : 76.24 cycles
+               Msg[33] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 1.88 cycles
+ (  567.30 ) Msg[32] Ends Trans X2Q[0][1] -> [0][0]Y2Q
+ (  567.30 ) Msg[32] Decides in Y2Q[0][1] -> [0][0]Y2Q 
+ (  567.30 ) Start Transmit from  Y2Q[0][1] -> [0][0]Y2Q 
+ (  567.57 ) Msg[36] Ends Trans X1Q[3][3] -> [3][2]X1Q
+ (  567.57 ) Msg[36] Decides in X1Q[3][3] -> [3][2]Y2Q 
+ (  567.57 ) Start Transmit from  X1Q[3][3] -> [3][2]Y2Q 
+ (  599.30 ) Msg[32] Ends Trans Y2Q[0][0] -> [0][0]Y2Q
+ (  599.30 ) Msg[32] Decides in Y2Q[0][0] -> [0][0]PEQ 
+ (  599.30 ) Start Transmit from  Y2Q[0][0] -> [0][0]PEQ 
+ (  599.30 ) Msg[32] Ends Trans Y2Q[0][0] -> [0][0]PEQ 
+               Msg[32] Response Time : 160.00 cycles   Mean Response Time : 78.63 cycles
+               Msg[32] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 1.83 cycles
+ (  599.57 ) Msg[36] Ends Trans X1Q[3][2] -> [3][2]Y2Q
+ (  599.57 ) Msg[36] Decides in Y2Q[3][2] -> [3][2]PEQ 
+ (  599.57 ) Start Transmit from  Y2Q[3][2] -> [3][2]PEQ 
+ (  599.57 ) Msg[36] Ends Trans Y2Q[3][2] -> [3][2]PEQ 
+               Msg[36] Response Time : 96.00 cycles   Mean Response Time : 79.12 cycles
+               Msg[36] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 1.78 cycles
+ (  618.02 ) Msg[37] Arrives in PEQ[1][3] -> [0][0] 
+ (  618.02 ) Msg[37] Decides in PEQ[1][3] -> [0][0]X2Q 
+ (  618.02 ) Start Transmit from  PEQ[1][3] -> [0][3]X2Q 
+ (  640.08 ) Msg[38] Arrives in PEQ[1][3] -> [0][1] 
+ (  640.08 ) Msg[38] Not Head Of Queue in PEQ[1][3] -> [0][1] 
+ (  650.02 ) Msg[37] Ends Trans PEQ[0][3] -> [0][0]X2Q
+ (  650.02 ) Msg[38] Decides in PEQ[1][3] -> [0][1]X2Q 
+ (  650.02 ) Start Transmit from  PEQ[1][3] -> [0][3]X2Q 
+ (  650.02 ) Msg[37] Decides in X2Q[0][3] -> [0][0]Y2Q 
+ (  650.02 ) Start Transmit from  X2Q[0][3] -> [0][2]Y2Q 
+ (  659.31 ) Msg[39] Arrives in PEQ[0][1] -> [1][0] 
+ (  659.31 ) Msg[39] Decides in PEQ[0][1] -> [1][0]X1Q 
+ (  659.31 ) Start Transmit from  PEQ[0][1] -> [1][1]X1Q 
+ (  673.75 ) Msg[40] Arrives in PEQ[2][1] -> [1][2] 
+ (  673.75 ) Msg[40] Decides in PEQ[2][1] -> [1][2]X2Q 
+ (  673.75 ) Start Transmit from  PEQ[2][1] -> [1][1]X2Q 
+ (  682.02 ) Msg[38] Ends Trans PEQ[0][3] -> [0][1]X2Q
+ (  682.02 ) Msg[37] Ends Trans X2Q[0][2] -> [0][0]Y2Q
+ (  682.02 ) Msg[38] Decides in X2Q[0][3] -> [0][1]Y2Q 
+ (  682.02 ) Start Transmit from  X2Q[0][3] -> [0][2]Y2Q 
+ (  682.02 ) Msg[37] Decides in Y2Q[0][2] -> [0][0]Y2Q 
+ (  682.02 ) Start Transmit from  Y2Q[0][2] -> [0][1]Y2Q 
+ (  682.81 ) Msg[41] Arrives in PEQ[2][3] -> [0][1] 
+ (  682.81 ) Msg[41] Decides in PEQ[2][3] -> [0][1]X2Q 
+ (  682.81 ) Start Transmit from  PEQ[2][3] -> [1][3]X2Q 
+ (  682.96 ) Msg[42] Arrives in PEQ[2][2] -> [3][3] 
+ (  682.96 ) Msg[42] Decides in PEQ[2][2] -> [3][3]X1Q 
+ (  682.96 ) Start Transmit from  PEQ[2][2] -> [3][2]X1Q 
+ (  691.31 ) Msg[39] Ends Trans PEQ[1][1] -> [1][0]X1Q
+ (  691.31 ) Msg[39] Decides in X1Q[1][1] -> [1][0]Y2Q 
+ (  691.31 ) Start Transmit from  X1Q[1][1] -> [1][0]Y2Q 
+ (  697.23 ) Msg[43] Arrives in PEQ[1][2] -> [2][0] 
+ (  697.23 ) Msg[43] Decides in PEQ[1][2] -> [2][0]X1Q 
+ (  697.23 ) Start Transmit from  PEQ[1][2] -> [2][2]X1Q 
+ (  705.75 ) Msg[40] Ends Trans PEQ[1][1] -> [1][2]X2Q
+ (  705.75 ) Msg[40] Decides in X2Q[1][1] -> [1][2]Y1Q 
+ (  705.75 ) Start Transmit from  X2Q[1][1] -> [1][2]Y1Q 
+ (  714.02 ) Msg[38] Ends Trans X2Q[0][2] -> [0][1]Y2Q
+ (  714.02 ) Msg[37] Ends Trans Y2Q[0][1] -> [0][0]Y2Q
+ (  714.02 ) Msg[38] Decides in Y2Q[0][2] -> [0][1]Y2Q 
+ (  714.02 ) Start Transmit from  Y2Q[0][2] -> [0][1]Y2Q 
+ (  714.02 ) Msg[37] Decides in Y2Q[0][1] -> [0][0]Y2Q 
+ (  714.02 ) Start Transmit from  Y2Q[0][1] -> [0][0]Y2Q 
+ (  714.81 ) Msg[41] Ends Trans PEQ[1][3] -> [0][1]X2Q
+ (  714.81 ) Msg[41] Decides in X2Q[1][3] -> [0][1]X2Q 
+ (  714.81 ) Start Transmit from  X2Q[1][3] -> [0][3]X2Q 
+ (  714.96 ) Msg[42] Ends Trans PEQ[3][2] -> [3][3]X1Q
+ (  714.96 ) Msg[42] Decides in X1Q[3][2] -> [3][3]Y1Q 
+ (  714.96 ) Start Transmit from  X1Q[3][2] -> [3][3]Y1Q 
+ (  723.31 ) Msg[39] Ends Trans X1Q[1][0] -> [1][0]Y2Q
+ (  723.31 ) Msg[39] Decides in Y2Q[1][0] -> [1][0]PEQ 
+ (  723.31 ) Start Transmit from  Y2Q[1][0] -> [1][0]PEQ 
+ (  723.31 ) Msg[39] Ends Trans Y2Q[1][0] -> [1][0]PEQ 
+               Msg[39] Response Time : 64.00 cycles   Mean Response Time : 78.71 cycles
+               Msg[39] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 1.73 cycles
+ (  729.23 ) Msg[43] Ends Trans PEQ[2][2] -> [2][0]X1Q
+ (  729.23 ) Msg[43] Decides in X1Q[2][2] -> [2][0]Y2Q 
+ (  729.23 ) Start Transmit from  X1Q[2][2] -> [2][1]Y2Q 
+ (  737.75 ) Msg[40] Ends Trans X2Q[1][2] -> [1][2]Y1Q
+ (  737.75 ) Msg[40] Decides in Y1Q[1][2] -> [1][2]PEQ 
+ (  737.75 ) Start Transmit from  Y1Q[1][2] -> [1][2]PEQ 
+ (  737.75 ) Msg[40] Ends Trans Y1Q[1][2] -> [1][2]PEQ 
+               Msg[40] Response Time : 64.00 cycles   Mean Response Time : 78.32 cycles
+               Msg[40] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 1.68 cycles
+ (  746.02 ) Msg[38] Ends Trans Y2Q[0][1] -> [0][1]Y2Q
+ (  746.02 ) Msg[37] Ends Trans Y2Q[0][0] -> [0][0]Y2Q
+ (  746.02 ) Msg[38] Decides in Y2Q[0][1] -> [0][1]PEQ 
+ (  746.02 ) Start Transmit from  Y2Q[0][1] -> [0][1]PEQ 
+ (  746.02 ) Msg[38] Ends Trans Y2Q[0][1] -> [0][1]PEQ 
+               Msg[38] Response Time : 105.94 cycles   Mean Response Time : 79.03 cycles
+               Msg[38] Waiting  Time : 9.94 cycles   Mean Waiting  Time : 1.90 cycles
+ (  746.02 ) Msg[37] Decides in Y2Q[0][0] -> [0][0]PEQ 
+ (  746.02 ) Start Transmit from  Y2Q[0][0] -> [0][0]PEQ 
+ (  746.02 ) Msg[37] Ends Trans Y2Q[0][0] -> [0][0]PEQ 
+               Msg[37] Response Time : 128.00 cycles   Mean Response Time : 80.25 cycles
+               Msg[37] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 1.85 cycles
+ (  746.81 ) Msg[41] Ends Trans X2Q[0][3] -> [0][1]X2Q
+ (  746.81 ) Msg[41] Decides in X2Q[0][3] -> [0][1]Y2Q 
+ (  746.81 ) Start Transmit from  X2Q[0][3] -> [0][2]Y2Q 
+ (  746.96 ) Msg[42] Ends Trans X1Q[3][3] -> [3][3]Y1Q
+ (  746.96 ) Msg[42] Decides in Y1Q[3][3] -> [3][3]PEQ 
+ (  746.96 ) Start Transmit from  Y1Q[3][3] -> [3][3]PEQ 
+ (  746.96 ) Msg[42] Ends Trans Y1Q[3][3] -> [3][3]PEQ 
+               Msg[42] Response Time : 64.00 cycles   Mean Response Time : 79.86 cycles
+               Msg[42] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 1.80 cycles
+ (  761.23 ) Msg[43] Ends Trans X1Q[2][1] -> [2][0]Y2Q
+ (  761.23 ) Msg[43] Decides in Y2Q[2][1] -> [2][0]Y2Q 
+ (  761.23 ) Start Transmit from  Y2Q[2][1] -> [2][0]Y2Q 
+ (  768.72 ) Msg[44] Arrives in PEQ[2][1] -> [1][1] 
+ (  768.72 ) Msg[44] Decides in PEQ[2][1] -> [1][1]X2Q 
+ (  768.72 ) Start Transmit from  PEQ[2][1] -> [1][1]X2Q 
+ (  770.98 ) Msg[45] Arrives in PEQ[2][3] -> [2][1] 
+ (  770.98 ) Msg[45] Decides in PEQ[2][3] -> [2][1]Y2Q 
+ (  770.98 ) Start Transmit from  PEQ[2][3] -> [2][2]Y2Q 
+ (  778.81 ) Msg[41] Ends Trans X2Q[0][2] -> [0][1]Y2Q
+ (  778.81 ) Msg[41] Decides in Y2Q[0][2] -> [0][1]Y2Q 
+ (  778.81 ) Start Transmit from  Y2Q[0][2] -> [0][1]Y2Q 
+ (  793.23 ) Msg[43] Ends Trans Y2Q[2][0] -> [2][0]Y2Q
+ (  793.23 ) Msg[43] Decides in Y2Q[2][0] -> [2][0]PEQ 
+ (  793.23 ) Start Transmit from  Y2Q[2][0] -> [2][0]PEQ 
+ (  793.23 ) Msg[43] Ends Trans Y2Q[2][0] -> [2][0]PEQ 
+               Msg[43] Response Time : 96.00 cycles   Mean Response Time : 80.24 cycles
+               Msg[43] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 1.76 cycles
+ (  800.72 ) Msg[44] Ends Trans PEQ[1][1] -> [1][1]X2Q
+ (  800.72 ) Msg[44] Decides in X2Q[1][1] -> [1][1]PEQ 
+ (  800.72 ) Start Transmit from  X2Q[1][1] -> [1][1]PEQ 
+ (  800.72 ) Msg[44] Ends Trans X2Q[1][1] -> [1][1]PEQ 
+               Msg[44] Response Time : 32.00 cycles   Mean Response Time : 79.12 cycles
+               Msg[44] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 1.72 cycles
+ (  802.98 ) Msg[45] Ends Trans PEQ[2][2] -> [2][1]Y2Q
+ (  802.98 ) Msg[45] Decides in Y2Q[2][2] -> [2][1]Y2Q 
+ (  802.98 ) Start Transmit from  Y2Q[2][2] -> [2][1]Y2Q 
+ (  806.96 ) Msg[46] Arrives in PEQ[3][1] -> [2][0] 
+ (  806.96 ) Msg[46] Decides in PEQ[3][1] -> [2][0]X2Q 
+ (  806.96 ) Start Transmit from  PEQ[3][1] -> [2][1]X2Q 
+ (  810.81 ) Msg[41] Ends Trans Y2Q[0][1] -> [0][1]Y2Q
+ (  810.81 ) Msg[41] Decides in Y2Q[0][1] -> [0][1]PEQ 
+ (  810.81 ) Start Transmit from  Y2Q[0][1] -> [0][1]PEQ 
+ (  810.81 ) Msg[41] Ends Trans Y2Q[0][1] -> [0][1]PEQ 
+               Msg[41] Response Time : 128.00 cycles   Mean Response Time : 80.23 cycles
+               Msg[41] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 1.68 cycles
+ (  818.04 ) Msg[47] Arrives in PEQ[3][0] -> [2][1] 
+ (  818.04 ) Msg[47] Decides in PEQ[3][0] -> [2][1]X2Q 
+ (  818.04 ) Start Transmit from  PEQ[3][0] -> [2][0]X2Q 
+ (  818.50 ) Msg[48] Arrives in PEQ[2][0] -> [1][2] 
+ (  818.50 ) Msg[48] Decides in PEQ[2][0] -> [1][2]X2Q 
+ (  818.50 ) Start Transmit from  PEQ[2][0] -> [1][0]X2Q 
+ (  834.98 ) Msg[45] Ends Trans Y2Q[2][1] -> [2][1]Y2Q
+ (  834.98 ) Msg[45] Decides in Y2Q[2][1] -> [2][1]PEQ 
+ (  834.98 ) Start Transmit from  Y2Q[2][1] -> [2][1]PEQ 
+ (  834.98 ) Msg[45] Ends Trans Y2Q[2][1] -> [2][1]PEQ 
+               Msg[45] Response Time : 64.00 cycles   Mean Response Time : 79.87 cycles
+               Msg[45] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 1.64 cycles
+ (  838.96 ) Msg[46] Ends Trans PEQ[2][1] -> [2][0]X2Q
+ (  838.96 ) Msg[46] Decides in X2Q[2][1] -> [2][0]Y2Q 
+ (  838.96 ) Start Transmit from  X2Q[2][1] -> [2][0]Y2Q 
+ (  850.04 ) Msg[47] Ends Trans PEQ[2][0] -> [2][1]X2Q
+ (  850.04 ) Msg[47] Decides in X2Q[2][0] -> [2][1]Y1Q 
+ (  850.04 ) Start Transmit from  X2Q[2][0] -> [2][1]Y1Q 
+ (  850.50 ) Msg[48] Ends Trans PEQ[1][0] -> [1][2]X2Q
+ (  850.50 ) Msg[48] Decides in X2Q[1][0] -> [1][2]Y1Q 
+ (  850.50 ) Start Transmit from  X2Q[1][0] -> [1][1]Y1Q 
+ (  853.86 ) Msg[49] Arrives in PEQ[2][2] -> [0][2] 
+ (  853.86 ) Msg[49] Decides in PEQ[2][2] -> [0][2]X2Q 
+ (  853.86 ) Start Transmit from  PEQ[2][2] -> [1][2]X2Q 
+ (  855.21 ) Msg[50] Arrives in PEQ[2][1] -> [3][1] 
+ (  855.21 ) Msg[50] Decides in PEQ[2][1] -> [3][1]X1Q 
+ (  855.21 ) Start Transmit from  PEQ[2][1] -> [3][1]X1Q 
+ (  870.96 ) Msg[46] Ends Trans X2Q[2][0] -> [2][0]Y2Q
+ (  870.96 ) Msg[46] Decides in Y2Q[2][0] -> [2][0]PEQ 
+ (  870.96 ) Start Transmit from  Y2Q[2][0] -> [2][0]PEQ 
+ (  870.96 ) Msg[46] Ends Trans Y2Q[2][0] -> [2][0]PEQ 
+               Msg[46] Response Time : 64.00 cycles   Mean Response Time : 79.52 cycles
+               Msg[46] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 1.61 cycles
+ (  882.04 ) Msg[47] Ends Trans X2Q[2][1] -> [2][1]Y1Q
+ (  882.04 ) Msg[47] Decides in Y1Q[2][1] -> [2][1]PEQ 
+ (  882.04 ) Start Transmit from  Y1Q[2][1] -> [2][1]PEQ 
+ (  882.04 ) Msg[47] Ends Trans Y1Q[2][1] -> [2][1]PEQ 
+               Msg[47] Response Time : 64.00 cycles   Mean Response Time : 79.19 cycles
+               Msg[47] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 1.57 cycles
+ (  882.50 ) Msg[48] Ends Trans X2Q[1][1] -> [1][2]Y1Q
+ (  882.50 ) Msg[48] Decides in Y1Q[1][1] -> [1][2]Y1Q 
+ (  882.50 ) Start Transmit from  Y1Q[1][1] -> [1][2]Y1Q 
+ (  885.86 ) Msg[49] Ends Trans PEQ[1][2] -> [0][2]X2Q
+ (  885.86 ) Msg[49] Decides in X2Q[1][2] -> [0][2]X2Q 
+ (  885.86 ) Start Transmit from  X2Q[1][2] -> [0][2]X2Q 
+ (  887.21 ) Msg[50] Ends Trans PEQ[3][1] -> [3][1]X1Q
+ (  887.21 ) Msg[50] Decides in X1Q[3][1] -> [3][1]PEQ 
+ (  887.21 ) Start Transmit from  X1Q[3][1] -> [3][1]PEQ 
+ (  887.21 ) Msg[50] Ends Trans X1Q[3][1] -> [3][1]PEQ 
+               Msg[50] Response Time : 32.00 cycles   Mean Response Time : 78.21 cycles
+               Msg[50] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 1.54 cycles
+ (  914.50 ) Msg[48] Ends Trans Y1Q[1][2] -> [1][2]Y1Q
+ (  914.50 ) Msg[48] Decides in Y1Q[1][2] -> [1][2]PEQ 
+ (  914.50 ) Start Transmit from  Y1Q[1][2] -> [1][2]PEQ 
+ (  914.50 ) Msg[48] Ends Trans Y1Q[1][2] -> [1][2]PEQ 
+               Msg[48] Response Time : 96.00 cycles   Mean Response Time : 78.57 cycles
+               Msg[48] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 1.51 cycles
+ (  917.86 ) Msg[49] Ends Trans X2Q[0][2] -> [0][2]X2Q
+ (  917.86 ) Msg[49] Decides in X2Q[0][2] -> [0][2]PEQ 
+ (  917.86 ) Start Transmit from  X2Q[0][2] -> [0][2]PEQ 
+ (  917.86 ) Msg[49] Ends Trans X2Q[0][2] -> [0][2]PEQ 
+               Msg[49] Response Time : 64.00 cycles   Mean Response Time : 78.28 cycles
+               Msg[49] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 1.48 cycles
+ (  929.26 ) Msg[51] Arrives in PEQ[0][0] -> [0][1] 
+ (  929.26 ) Msg[51] Decides in PEQ[0][0] -> [0][1]Y1Q 
+ (  929.26 ) Start Transmit from  PEQ[0][0] -> [0][1]Y1Q 
+ (  934.73 ) Msg[52] Arrives in PEQ[0][2] -> [1][2] 
+ (  934.73 ) Msg[52] Decides in PEQ[0][2] -> [1][2]X1Q 
+ (  934.73 ) Start Transmit from  PEQ[0][2] -> [1][2]X1Q 
+ (  956.74 ) Msg[53] Arrives in PEQ[3][3] -> [1][1] 
+ (  956.74 ) Msg[53] Decides in PEQ[3][3] -> [1][1]X2Q 
+ (  956.74 ) Start Transmit from  PEQ[3][3] -> [2][3]X2Q 
+ (  961.26 ) Msg[51] Ends Trans PEQ[0][1] -> [0][1]Y1Q
+ (  961.26 ) Msg[51] Decides in Y1Q[0][1] -> [0][1]PEQ 
+ (  961.26 ) Start Transmit from  Y1Q[0][1] -> [0][1]PEQ 
+ (  961.26 ) Msg[51] Ends Trans Y1Q[0][1] -> [0][1]PEQ 
+               Msg[51] Response Time : 32.00 cycles   Mean Response Time : 77.37 cycles
+               Msg[51] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 1.45 cycles
+ (  965.11 ) Msg[54] Arrives in PEQ[0][1] -> [2][1] 
+ (  965.11 ) Msg[54] Decides in PEQ[0][1] -> [2][1]X1Q 
+ (  965.11 ) Start Transmit from  PEQ[0][1] -> [1][1]X1Q 
+ (  966.73 ) Msg[52] Ends Trans PEQ[1][2] -> [1][2]X1Q
+ (  966.73 ) Msg[52] Decides in X1Q[1][2] -> [1][2]PEQ 
+ (  966.73 ) Start Transmit from  X1Q[1][2] -> [1][2]PEQ 
+ (  966.73 ) Msg[52] Ends Trans X1Q[1][2] -> [1][2]PEQ 
+               Msg[52] Response Time : 32.00 cycles   Mean Response Time : 76.50 cycles
+               Msg[52] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 1.42 cycles
+ (  988.31 ) Msg[55] Arrives in PEQ[1][2] -> [0][2] 
+ (  988.31 ) Msg[55] Decides in PEQ[1][2] -> [0][2]X2Q 
+ (  988.31 ) Start Transmit from  PEQ[1][2] -> [0][2]X2Q 
+ (  988.74 ) Msg[53] Ends Trans PEQ[2][3] -> [1][1]X2Q
+ (  988.74 ) Msg[53] Decides in X2Q[2][3] -> [1][1]X2Q 
+ (  988.74 ) Start Transmit from  X2Q[2][3] -> [1][3]X2Q 
+ (  997.11 ) Msg[54] Ends Trans PEQ[1][1] -> [2][1]X1Q
+ (  997.11 ) Msg[54] Decides in X1Q[1][1] -> [2][1]X1Q 
+ (  997.11 ) Start Transmit from  X1Q[1][1] -> [2][1]X1Q 
+ ( 1020.31 ) Msg[55] Ends Trans PEQ[0][2] -> [0][2]X2Q
+ ( 1020.31 ) Msg[55] Decides in X2Q[0][2] -> [0][2]PEQ 
+ ( 1020.31 ) Start Transmit from  X2Q[0][2] -> [0][2]PEQ 
+ ( 1020.31 ) Msg[55] Ends Trans X2Q[0][2] -> [0][2]PEQ 
+               Msg[55] Response Time : 32.00 cycles   Mean Response Time : 75.66 cycles
+               Msg[55] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 1.40 cycles
+ ( 1020.63 ) Msg[56] Arrives in PEQ[2][1] -> [3][1] 
+ ( 1020.63 ) Msg[56] Decides in PEQ[2][1] -> [3][1]X1Q 
+ ( 1020.63 ) Start Transmit from  PEQ[2][1] -> [3][1]X1Q 
+ ( 1020.74 ) Msg[53] Ends Trans X2Q[1][3] -> [1][1]X2Q
+ ( 1020.74 ) Msg[53] Decides in X2Q[1][3] -> [1][1]Y2Q 
+ ( 1020.74 ) Start Transmit from  X2Q[1][3] -> [1][2]Y2Q 
+ ( 1027.77 ) Msg[57] Arrives in PEQ[1][1] -> [3][1] 
+ ( 1027.77 ) Msg[57] Decides in PEQ[1][1] -> [3][1]Q 
+ ( 1029.11 ) Msg[54] Ends Trans X1Q[2][1] -> [2][1]X1Q
+ ( 1029.11 ) Start Transmit from  PEQ[1][1] -> [2][1]X1Q 
+ ( 1029.11 ) Msg[54] Decides in X1Q[2][1] -> [2][1]PEQ 
+ ( 1029.11 ) Start Transmit from  X1Q[2][1] -> [2][1]PEQ 
+ ( 1029.11 ) Msg[54] Ends Trans X1Q[2][1] -> [2][1]PEQ 
+               Msg[54] Response Time : 64.00 cycles   Mean Response Time : 75.45 cycles
+               Msg[54] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 1.37 cycles
+ ( 1052.63 ) Msg[56] Ends Trans PEQ[3][1] -> [3][1]X1Q
+ ( 1052.63 ) Msg[56] Decides in X1Q[3][1] -> [3][1]PEQ 
+ ( 1052.63 ) Start Transmit from  X1Q[3][1] -> [3][1]PEQ 
+ ( 1052.63 ) Msg[56] Ends Trans X1Q[3][1] -> [3][1]PEQ 
+               Msg[56] Response Time : 32.00 cycles   Mean Response Time : 74.66 cycles
+               Msg[56] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 1.34 cycles
+ ( 1052.74 ) Msg[53] Ends Trans X2Q[1][2] -> [1][1]Y2Q
+ ( 1052.74 ) Msg[53] Decides in Y2Q[1][2] -> [1][1]Y2Q 
+ ( 1052.74 ) Start Transmit from  Y2Q[1][2] -> [1][1]Y2Q 
+ ( 1054.26 ) Msg[58] Arrives in PEQ[1][0] -> [2][1] 
+ ( 1054.26 ) Msg[58] Decides in PEQ[1][0] -> [2][1]X1Q 
+ ( 1054.26 ) Start Transmit from  PEQ[1][0] -> [2][0]X1Q 
+ ( 1061.11 ) Msg[57] Ends Trans PEQ[2][1] -> [3][1]X1Q
+ ( 1061.11 ) Msg[57] Decides in X1Q[2][1] -> [3][1]X1Q 
+ ( 1061.11 ) Start Transmit from  X1Q[2][1] -> [3][1]X1Q 
+ ( 1076.85 ) Msg[59] Arrives in PEQ[0][2] -> [2][1] 
+ ( 1076.85 ) Msg[59] Decides in PEQ[0][2] -> [2][1]X1Q 
+ ( 1076.85 ) Start Transmit from  PEQ[0][2] -> [1][2]X1Q 
+ ( 1084.74 ) Msg[53] Ends Trans Y2Q[1][1] -> [1][1]Y2Q
+ ( 1084.74 ) Msg[53] Decides in Y2Q[1][1] -> [1][1]PEQ 
+ ( 1084.74 ) Start Transmit from  Y2Q[1][1] -> [1][1]PEQ 
+ ( 1084.74 ) Msg[53] Ends Trans Y2Q[1][1] -> [1][1]PEQ 
+               Msg[53] Response Time : 128.00 cycles   Mean Response Time : 75.61 cycles
+               Msg[53] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 1.32 cycles
+ ( 1086.26 ) Msg[58] Ends Trans PEQ[2][0] -> [2][1]X1Q
+ ( 1086.26 ) Msg[58] Decides in X1Q[2][0] -> [2][1]Y1Q 
+ ( 1086.26 ) Start Transmit from  X1Q[2][0] -> [2][1]Y1Q 
+ ( 1093.11 ) Msg[57] Ends Trans X1Q[3][1] -> [3][1]X1Q
+ ( 1093.11 ) Msg[57] Decides in X1Q[3][1] -> [3][1]PEQ 
+ ( 1093.11 ) Start Transmit from  X1Q[3][1] -> [3][1]PEQ 
+ ( 1093.11 ) Msg[57] Ends Trans X1Q[3][1] -> [3][1]PEQ 
+               Msg[57] Response Time : 65.33 cycles   Mean Response Time : 75.43 cycles
+               Msg[57] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 1.30 cycles
+ ( 1095.58 ) Msg[60] Arrives in PEQ[2][1] -> [1][0] 
+ ( 1095.58 ) Msg[60] Decides in PEQ[2][1] -> [1][0]X2Q 
+ ( 1095.58 ) Start Transmit from  PEQ[2][1] -> [1][1]X2Q 
+ ( 1099.00 ) Msg[61] Arrives in PEQ[2][1] -> [0][2] 
+ ( 1099.00 ) Msg[61] Not Head Of Queue in PEQ[2][1] -> [0][2] 
+ ( 1108.85 ) Msg[59] Ends Trans PEQ[1][2] -> [2][1]X1Q
+ ( 1108.85 ) Msg[59] Decides in X1Q[1][2] -> [2][1]X1Q 
+ ( 1108.85 ) Start Transmit from  X1Q[1][2] -> [2][2]X1Q 
+ ( 1118.26 ) Msg[58] Ends Trans X1Q[2][1] -> [2][1]Y1Q
+ ( 1118.26 ) Msg[58] Decides in Y1Q[2][1] -> [2][1]PEQ 
+ ( 1118.26 ) Start Transmit from  Y1Q[2][1] -> [2][1]PEQ 
+ ( 1118.26 ) Msg[58] Ends Trans Y1Q[2][1] -> [2][1]PEQ 
+               Msg[58] Response Time : 64.00 cycles   Mean Response Time : 75.23 cycles
+               Msg[58] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 1.27 cycles
+ ( 1127.58 ) Msg[60] Ends Trans PEQ[1][1] -> [1][0]X2Q
+ ( 1127.58 ) Msg[61] Decides in PEQ[2][1] -> [0][2]X2Q 
+ ( 1127.58 ) Start Transmit from  PEQ[2][1] -> [1][1]X2Q 
+ ( 1127.58 ) Msg[60] Decides in X2Q[1][1] -> [1][0]Y2Q 
+ ( 1127.58 ) Start Transmit from  X2Q[1][1] -> [1][0]Y2Q 
+ ( 1140.85 ) Msg[59] Ends Trans X1Q[2][2] -> [2][1]X1Q
+ ( 1140.85 ) Msg[59] Decides in X1Q[2][2] -> [2][1]Y2Q 
+ ( 1140.85 ) Start Transmit from  X1Q[2][2] -> [2][1]Y2Q 
+ ( 1144.89 ) Msg[62] Arrives in PEQ[3][2] -> [2][0] 
+ ( 1144.89 ) Msg[62] Decides in PEQ[3][2] -> [2][0]X2Q 
+ ( 1144.89 ) Start Transmit from  PEQ[3][2] -> [2][2]X2Q 
+ ( 1158.73 ) Msg[63] Arrives in PEQ[3][1] -> [1][2] 
+ ( 1158.73 ) Msg[63] Decides in PEQ[3][1] -> [1][2]X2Q 
+ ( 1158.73 ) Start Transmit from  PEQ[3][1] -> [2][1]X2Q 
+ ( 1159.58 ) Msg[61] Ends Trans PEQ[1][1] -> [0][2]X2Q
+ ( 1159.58 ) Msg[60] Ends Trans X2Q[1][0] -> [1][0]Y2Q
+ ( 1159.58 ) Msg[61] Decides in X2Q[1][1] -> [0][2]X2Q 
+ ( 1159.58 ) Start Transmit from  X2Q[1][1] -> [0][1]X2Q 
+ ( 1159.58 ) Msg[60] Decides in Y2Q[1][0] -> [1][0]PEQ 
+ ( 1159.58 ) Start Transmit from  Y2Q[1][0] -> [1][0]PEQ 
+ ( 1159.58 ) Msg[60] Ends Trans Y2Q[1][0] -> [1][0]PEQ 
+               Msg[60] Response Time : 64.00 cycles   Mean Response Time : 75.04 cycles
+               Msg[60] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 1.25 cycles
+ ( 1171.54 ) Msg[64] Arrives in PEQ[2][1] -> [3][2] 
+ ( 1171.54 ) Msg[64] Decides in PEQ[2][1] -> [3][2]X1Q 
+ ( 1171.54 ) Start Transmit from  PEQ[2][1] -> [3][1]X1Q 
+ ( 1172.08 ) Msg[65] Arrives in PEQ[3][1] -> [3][3] 
+ ( 1172.08 ) Msg[65] Not Head Of Queue in PEQ[3][1] -> [3][3] 
+ ( 1172.85 ) Msg[59] Ends Trans X1Q[2][1] -> [2][1]Y2Q
+ ( 1172.85 ) Msg[59] Decides in Y2Q[2][1] -> [2][1]PEQ 
+ ( 1172.85 ) Start Transmit from  Y2Q[2][1] -> [2][1]PEQ 
+ ( 1172.85 ) Msg[59] Ends Trans Y2Q[2][1] -> [2][1]PEQ 
+               Msg[59] Response Time : 96.00 cycles   Mean Response Time : 75.39 cycles
+               Msg[59] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 1.23 cycles
+ ( 1176.52 ) Msg[66] Arrives in PEQ[1][2] -> [0][1] 
+ ( 1176.52 ) Msg[66] Decides in PEQ[1][2] -> [0][1]X2Q 
+ ( 1176.52 ) Start Transmit from  PEQ[1][2] -> [0][2]X2Q 
+ ( 1176.89 ) Msg[62] Ends Trans PEQ[2][2] -> [2][0]X2Q
+ ( 1176.89 ) Msg[62] Decides in X2Q[2][2] -> [2][0]Y2Q 
+ ( 1176.89 ) Start Transmit from  X2Q[2][2] -> [2][1]Y2Q 
+ ( 1189.23 ) Msg[67] Arrives in PEQ[2][1] -> [2][3] 
+ ( 1189.23 ) Msg[67] Not Head Of Queue in PEQ[2][1] -> [2][3] 
+ ( 1190.73 ) Msg[63] Ends Trans PEQ[2][1] -> [1][2]X2Q
+ ( 1190.73 ) Msg[65] Decides in PEQ[3][1] -> [3][3]Y1Q 
+ ( 1190.73 ) Start Transmit from  PEQ[3][1] -> [3][2]Y1Q 
+ ( 1190.73 ) Msg[63] Decides in X2Q[2][1] -> [1][2]X2Q 
+ ( 1190.73 ) Start Transmit from  X2Q[2][1] -> [1][1]X2Q 
+ ( 1191.58 ) Msg[61] Ends Trans X2Q[0][1] -> [0][2]X2Q
+ ( 1191.58 ) Msg[61] Decides in X2Q[0][1] -> [0][2]Y1Q 
+ ( 1191.58 ) Start Transmit from  X2Q[0][1] -> [0][2]Y1Q 
+ ( 1194.66 ) Msg[68] Arrives in PEQ[0][1] -> [2][1] 
+ ( 1194.66 ) Msg[68] Decides in PEQ[0][1] -> [2][1]X1Q 
+ ( 1194.66 ) Start Transmit from  PEQ[0][1] -> [1][1]X1Q 
+ ( 1202.24 ) Msg[69] Arrives in PEQ[1][2] -> [3][2] 
+ ( 1202.24 ) Msg[69] Not Head Of Queue in PEQ[1][2] -> [3][2] 
+ ( 1203.54 ) Msg[64] Ends Trans PEQ[3][1] -> [3][2]X1Q
+ ( 1203.54 ) Msg[67] Decides in PEQ[2][1] -> [2][3]Y1Q 
+ ( 1203.54 ) Start Transmit from  PEQ[2][1] -> [2][2]Y1Q 
+ ( 1203.54 ) Msg[64] Decides in X1Q[3][1] -> [3][2]Q 
+ ( 1208.52 ) Msg[66] Ends Trans PEQ[0][2] -> [0][1]X2Q
+ ( 1208.52 ) Msg[69] Decides in PEQ[1][2] -> [3][2]X1Q 
+ ( 1208.52 ) Start Transmit from  PEQ[1][2] -> [2][2]X1Q 
+ ( 1208.52 ) Msg[66] Decides in X2Q[0][2] -> [0][1]Y2Q 
+ ( 1208.52 ) Start Transmit from  X2Q[0][2] -> [0][1]Y2Q 
+ ( 1208.89 ) Msg[62] Ends Trans X2Q[2][1] -> [2][0]Y2Q
+ ( 1208.89 ) Msg[62] Decides in Y2Q[2][1] -> [2][0]Y2Q 
+ ( 1208.89 ) Start Transmit from  Y2Q[2][1] -> [2][0]Y2Q 
+ ( 1215.51 ) Msg[70] Arrives in PEQ[2][3] -> [2][1] 
+ ( 1215.51 ) Msg[70] Decides in PEQ[2][3] -> [2][1]Y2Q 
+ ( 1215.51 ) Start Transmit from  PEQ[2][3] -> [2][2]Y2Q 
+ ( 1222.73 ) Msg[65] Ends Trans PEQ[3][2] -> [3][3]Y1Q
+ ( 1222.73 ) Start Transmit from  X1Q[3][1] -> [3][2]Y1Q 
+ ( 1222.73 ) Msg[65] Decides in Y1Q[3][2] -> [3][3]Y1Q 
+ ( 1222.73 ) Start Transmit from  Y1Q[3][2] -> [3][3]Y1Q 
+ ( 1222.73 ) Msg[63] Ends Trans X2Q[1][1] -> [1][2]X2Q
+ ( 1222.73 ) Msg[63] Decides in X2Q[1][1] -> [1][2]Y1Q 
+ ( 1222.73 ) Start Transmit from  X2Q[1][1] -> [1][2]Y1Q 
+ ( 1223.58 ) Msg[61] Ends Trans X2Q[0][2] -> [0][2]Y1Q
+ ( 1223.58 ) Msg[61] Decides in Y1Q[0][2] -> [0][2]PEQ 
+ ( 1223.58 ) Start Transmit from  Y1Q[0][2] -> [0][2]PEQ 
+ ( 1223.58 ) Msg[61] Ends Trans Y1Q[0][2] -> [0][2]PEQ 
+               Msg[61] Response Time : 124.58 cycles   Mean Response Time : 76.20 cycles
+               Msg[61] Waiting  Time : 28.58 cycles   Mean Waiting  Time : 1.68 cycles
+ ( 1226.66 ) Msg[68] Ends Trans PEQ[1][1] -> [2][1]X1Q
+ ( 1226.66 ) Msg[68] Decides in X1Q[1][1] -> [2][1]X1Q 
+ ( 1226.66 ) Start Transmit from  X1Q[1][1] -> [2][1]X1Q 
+ ( 1235.54 ) Msg[67] Ends Trans PEQ[2][2] -> [2][3]Y1Q
+ ( 1235.54 ) Msg[67] Decides in Y1Q[2][2] -> [2][3]Y1Q 
+ ( 1235.54 ) Start Transmit from  Y1Q[2][2] -> [2][3]Y1Q 
+ ( 1236.90 ) Msg[71] Arrives in PEQ[1][0] -> [0][1] 
+ ( 1236.90 ) Msg[71] Decides in PEQ[1][0] -> [0][1]X2Q 
+ ( 1236.90 ) Start Transmit from  PEQ[1][0] -> [0][0]X2Q 
+ ( 1240.52 ) Msg[69] Ends Trans PEQ[2][2] -> [3][2]X1Q
+ ( 1240.52 ) Msg[69] Decides in X1Q[2][2] -> [3][2]X1Q 
+ ( 1240.52 ) Start Transmit from  X1Q[2][2] -> [3][2]X1Q 
+ ( 1240.52 ) Msg[66] Ends Trans X2Q[0][1] -> [0][1]Y2Q
+ ( 1240.52 ) Msg[66] Decides in Y2Q[0][1] -> [0][1]PEQ 
+ ( 1240.52 ) Start Transmit from  Y2Q[0][1] -> [0][1]PEQ 
+ ( 1240.52 ) Msg[66] Ends Trans Y2Q[0][1] -> [0][1]PEQ 
+               Msg[66] Response Time : 64.00 cycles   Mean Response Time : 76.00 cycles
+               Msg[66] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 1.65 cycles
+ ( 1240.89 ) Msg[62] Ends Trans Y2Q[2][0] -> [2][0]Y2Q
+ ( 1240.89 ) Msg[62] Decides in Y2Q[2][0] -> [2][0]PEQ 
+ ( 1240.89 ) Start Transmit from  Y2Q[2][0] -> [2][0]PEQ 
+ ( 1240.89 ) Msg[62] Ends Trans Y2Q[2][0] -> [2][0]PEQ 
+               Msg[62] Response Time : 96.00 cycles   Mean Response Time : 76.32 cycles
+               Msg[62] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 1.63 cycles
+ ( 1243.09 ) Msg[72] Arrives in PEQ[0][1] -> [1][2] 
+ ( 1243.09 ) Msg[72] Decides in PEQ[0][1] -> [1][2]X1Q 
+ ( 1243.09 ) Start Transmit from  PEQ[0][1] -> [1][1]X1Q 
+ ( 1247.51 ) Msg[70] Ends Trans PEQ[2][2] -> [2][1]Y2Q
+ ( 1247.51 ) Msg[70] Decides in Y2Q[2][2] -> [2][1]Y2Q 
+ ( 1247.51 ) Start Transmit from  Y2Q[2][2] -> [2][1]Y2Q 
+ ( 1254.73 ) Msg[64] Ends Trans X1Q[3][2] -> [3][2]Y1Q
+ ( 1254.73 ) Msg[65] Ends Trans Y1Q[3][3] -> [3][3]Y1Q
+ ( 1254.73 ) Msg[64] Decides in Y1Q[3][2] -> [3][2]PEQ 
+ ( 1254.73 ) Start Transmit from  Y1Q[3][2] -> [3][2]PEQ 
+ ( 1254.73 ) Msg[64] Ends Trans Y1Q[3][2] -> [3][2]PEQ 
+               Msg[64] Response Time : 83.18 cycles   Mean Response Time : 76.43 cycles
+               Msg[64] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 1.60 cycles
+ ( 1254.73 ) Msg[65] Decides in Y1Q[3][3] -> [3][3]PEQ 
+ ( 1254.73 ) Start Transmit from  Y1Q[3][3] -> [3][3]PEQ 
+ ( 1254.73 ) Msg[65] Ends Trans Y1Q[3][3] -> [3][3]PEQ 
+               Msg[65] Response Time : 82.64 cycles   Mean Response Time : 76.52 cycles
+               Msg[65] Waiting  Time : 18.64 cycles   Mean Waiting  Time : 1.86 cycles
+ ( 1254.73 ) Msg[63] Ends Trans X2Q[1][2] -> [1][2]Y1Q
+ ( 1254.73 ) Msg[63] Decides in Y1Q[1][2] -> [1][2]PEQ 
+ ( 1254.73 ) Start Transmit from  Y1Q[1][2] -> [1][2]PEQ 
+ ( 1254.73 ) Msg[63] Ends Trans Y1Q[1][2] -> [1][2]PEQ 
+               Msg[63] Response Time : 96.00 cycles   Mean Response Time : 76.82 cycles
+               Msg[63] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 1.84 cycles
+ ( 1258.66 ) Msg[68] Ends Trans X1Q[2][1] -> [2][1]X1Q
+ ( 1258.66 ) Msg[68] Decides in X1Q[2][1] -> [2][1]PEQ 
+ ( 1258.66 ) Start Transmit from  X1Q[2][1] -> [2][1]PEQ 
+ ( 1258.66 ) Msg[68] Ends Trans X1Q[2][1] -> [2][1]PEQ 
+               Msg[68] Response Time : 64.00 cycles   Mean Response Time : 76.62 cycles
+               Msg[68] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 1.81 cycles
+ ( 1267.54 ) Msg[67] Ends Trans Y1Q[2][3] -> [2][3]Y1Q
+ ( 1267.54 ) Msg[67] Decides in Y1Q[2][3] -> [2][3]PEQ 
+ ( 1267.54 ) Start Transmit from  Y1Q[2][3] -> [2][3]PEQ 
+ ( 1267.54 ) Msg[67] Ends Trans Y1Q[2][3] -> [2][3]PEQ 
+               Msg[67] Response Time : 78.31 cycles   Mean Response Time : 76.65 cycles
+               Msg[67] Waiting  Time : 14.31 cycles   Mean Waiting  Time : 1.99 cycles
+ ( 1268.90 ) Msg[71] Ends Trans PEQ[0][0] -> [0][1]X2Q
+ ( 1268.90 ) Msg[71] Decides in X2Q[0][0] -> [0][1]Y1Q 
+ ( 1268.90 ) Start Transmit from  X2Q[0][0] -> [0][1]Y1Q 
+ ( 1272.52 ) Msg[69] Ends Trans X1Q[3][2] -> [3][2]X1Q
+ ( 1272.52 ) Msg[69] Decides in X1Q[3][2] -> [3][2]PEQ 
+ ( 1272.52 ) Start Transmit from  X1Q[3][2] -> [3][2]PEQ 
+ ( 1272.52 ) Msg[69] Ends Trans X1Q[3][2] -> [3][2]PEQ 
+               Msg[69] Response Time : 70.28 cycles   Mean Response Time : 76.56 cycles
+               Msg[69] Waiting  Time : 6.28 cycles   Mean Waiting  Time : 2.05 cycles
+ ( 1275.09 ) Msg[72] Ends Trans PEQ[1][1] -> [1][2]X1Q
+ ( 1275.09 ) Msg[72] Decides in X1Q[1][1] -> [1][2]Y1Q 
+ ( 1275.09 ) Start Transmit from  X1Q[1][1] -> [1][2]Y1Q 
+ ( 1279.51 ) Msg[70] Ends Trans Y2Q[2][1] -> [2][1]Y2Q
+ ( 1279.51 ) Msg[70] Decides in Y2Q[2][1] -> [2][1]PEQ 
+ ( 1279.51 ) Start Transmit from  Y2Q[2][1] -> [2][1]PEQ 
+ ( 1279.51 ) Msg[70] Ends Trans Y2Q[2][1] -> [2][1]PEQ 
+               Msg[70] Response Time : 64.00 cycles   Mean Response Time : 76.38 cycles
+               Msg[70] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 2.03 cycles
+ ( 1289.14 ) Msg[73] Arrives in PEQ[3][2] -> [2][1] 
+ ( 1289.14 ) Msg[73] Decides in PEQ[3][2] -> [2][1]X2Q 
+ ( 1289.14 ) Start Transmit from  PEQ[3][2] -> [2][2]X2Q 
+ ( 1300.90 ) Msg[71] Ends Trans X2Q[0][1] -> [0][1]Y1Q
+ ( 1300.90 ) Msg[71] Decides in Y1Q[0][1] -> [0][1]PEQ 
+ ( 1300.90 ) Start Transmit from  Y1Q[0][1] -> [0][1]PEQ 
+ ( 1300.90 ) Msg[71] Ends Trans Y1Q[0][1] -> [0][1]PEQ 
+               Msg[71] Response Time : 64.00 cycles   Mean Response Time : 76.20 cycles
+               Msg[71] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 2.00 cycles
+ ( 1307.09 ) Msg[72] Ends Trans X1Q[1][2] -> [1][2]Y1Q
+ ( 1307.09 ) Msg[72] Decides in Y1Q[1][2] -> [1][2]PEQ 
+ ( 1307.09 ) Start Transmit from  Y1Q[1][2] -> [1][2]PEQ 
+ ( 1307.09 ) Msg[72] Ends Trans Y1Q[1][2] -> [1][2]PEQ 
+               Msg[72] Response Time : 64.00 cycles   Mean Response Time : 76.03 cycles
+               Msg[72] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 1.97 cycles
+ ( 1321.14 ) Msg[73] Ends Trans PEQ[2][2] -> [2][1]X2Q
+ ( 1321.14 ) Msg[73] Decides in X2Q[2][2] -> [2][1]Y2Q 
+ ( 1321.14 ) Start Transmit from  X2Q[2][2] -> [2][1]Y2Q 
+ ( 1329.13 ) Msg[74] Arrives in PEQ[0][1] -> [3][1] 
+ ( 1329.13 ) Msg[74] Decides in PEQ[0][1] -> [3][1]X1Q 
+ ( 1329.13 ) Start Transmit from  PEQ[0][1] -> [1][1]X1Q 
+ ( 1341.24 ) Msg[75] Arrives in PEQ[2][1] -> [1][1] 
+ ( 1341.24 ) Msg[75] Decides in PEQ[2][1] -> [1][1]X2Q 
+ ( 1341.24 ) Start Transmit from  PEQ[2][1] -> [1][1]X2Q 
+ ( 1348.02 ) Msg[76] Arrives in PEQ[2][1] -> [0][0] 
+ ( 1348.02 ) Msg[76] Not Head Of Queue in PEQ[2][1] -> [0][0] 
+ ( 1353.14 ) Msg[73] Ends Trans X2Q[2][1] -> [2][1]Y2Q
+ ( 1353.14 ) Msg[73] Decides in Y2Q[2][1] -> [2][1]PEQ 
+ ( 1353.14 ) Start Transmit from  Y2Q[2][1] -> [2][1]PEQ 
+ ( 1353.14 ) Msg[73] Ends Trans Y2Q[2][1] -> [2][1]PEQ 
+               Msg[73] Response Time : 64.00 cycles   Mean Response Time : 75.87 cycles
+               Msg[73] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 1.94 cycles
+ ( 1361.13 ) Msg[74] Ends Trans PEQ[1][1] -> [3][1]X1Q
+ ( 1361.13 ) Msg[74] Decides in X1Q[1][1] -> [3][1]X1Q 
+ ( 1361.13 ) Start Transmit from  X1Q[1][1] -> [2][1]X1Q 
+ ( 1373.24 ) Msg[75] Ends Trans PEQ[1][1] -> [1][1]X2Q
+ ( 1373.24 ) Msg[76] Decides in PEQ[2][1] -> [0][0]X2Q 
+ ( 1373.24 ) Start Transmit from  PEQ[2][1] -> [1][1]X2Q 
+ ( 1373.24 ) Msg[75] Decides in X2Q[1][1] -> [1][1]PEQ 
+ ( 1373.24 ) Start Transmit from  X2Q[1][1] -> [1][1]PEQ 
+ ( 1373.24 ) Msg[75] Ends Trans X2Q[1][1] -> [1][1]PEQ 
+               Msg[75] Response Time : 32.00 cycles   Mean Response Time : 75.28 cycles
+               Msg[75] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 1.92 cycles
+ ( 1376.64 ) Msg[77] Arrives in PEQ[2][3] -> [1][2] 
+ ( 1376.64 ) Msg[77] Decides in PEQ[2][3] -> [1][2]X2Q 
+ ( 1376.64 ) Start Transmit from  PEQ[2][3] -> [1][3]X2Q 
+ ( 1376.68 ) Msg[78] Arrives in PEQ[2][1] -> [3][3] 
+ ( 1376.68 ) Msg[78] Not Head Of Queue in PEQ[2][1] -> [3][3] 
+ ( 1383.28 ) Msg[79] Arrives in PEQ[1][1] -> [3][3] 
+ ( 1383.28 ) Msg[79] Decides in PEQ[1][1] -> [3][3]Q 
+ ( 1393.13 ) Msg[74] Ends Trans X1Q[2][1] -> [3][1]X1Q
+ ( 1393.13 ) Start Transmit from  PEQ[1][1] -> [2][1]X1Q 
+ ( 1393.13 ) Msg[74] Decides in X1Q[2][1] -> [3][1]X1Q 
+ ( 1393.13 ) Start Transmit from  X1Q[2][1] -> [3][1]X1Q 
+ ( 1405.24 ) Msg[76] Ends Trans PEQ[1][1] -> [0][0]X2Q
+ ( 1405.24 ) Msg[78] Decides in PEQ[2][1] -> [3][3]Q 
+ ( 1405.24 ) Msg[76] Decides in X2Q[1][1] -> [0][0]X2Q 
+ ( 1405.24 ) Start Transmit from  X2Q[1][1] -> [0][1]X2Q 
+ ( 1408.64 ) Msg[77] Ends Trans PEQ[1][3] -> [1][2]X2Q
+ ( 1408.64 ) Msg[77] Decides in X2Q[1][3] -> [1][2]Y2Q 
+ ( 1408.64 ) Start Transmit from  X2Q[1][3] -> [1][2]Y2Q 
+ ( 1409.41 ) Msg[80] Arrives in PEQ[3][3] -> [3][2] 
+ ( 1409.41 ) Msg[80] Decides in PEQ[3][3] -> [3][2]Y2Q 
+ ( 1409.41 ) Start Transmit from  PEQ[3][3] -> [3][2]Y2Q 
+ ( 1413.28 ) Msg[81] Arrives in PEQ[3][2] -> [1][0] 
+ ( 1413.28 ) Msg[81] Decides in PEQ[3][2] -> [1][0]X2Q 
+ ( 1413.28 ) Start Transmit from  PEQ[3][2] -> [2][2]X2Q 
+ ( 1425.13 ) Msg[79] Ends Trans PEQ[2][1] -> [3][3]X1Q
+ ( 1425.13 ) Msg[74] Ends Trans X1Q[3][1] -> [3][1]X1Q
+ ( 1425.13 ) Start Transmit from  PEQ[2][1] -> [3][1]X1Q 
+ ( 1425.13 ) Msg[79] Decides in X1Q[2][1] -> [3][3]Q 
+ ( 1425.13 ) Msg[74] Decides in X1Q[3][1] -> [3][1]PEQ 
+ ( 1425.13 ) Start Transmit from  X1Q[3][1] -> [3][1]PEQ 
+ ( 1425.13 ) Msg[74] Ends Trans X1Q[3][1] -> [3][1]PEQ 
+               Msg[74] Response Time : 96.00 cycles   Mean Response Time : 75.55 cycles
+               Msg[74] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 1.89 cycles
+ ( 1437.24 ) Msg[76] Ends Trans X2Q[0][1] -> [0][0]X2Q
+ ( 1437.24 ) Msg[76] Decides in X2Q[0][1] -> [0][0]Y2Q 
+ ( 1437.24 ) Start Transmit from  X2Q[0][1] -> [0][0]Y2Q 
+ ( 1440.64 ) Msg[77] Ends Trans X2Q[1][2] -> [1][2]Y2Q
+ ( 1440.64 ) Msg[77] Decides in Y2Q[1][2] -> [1][2]PEQ 
+ ( 1440.64 ) Start Transmit from  Y2Q[1][2] -> [1][2]PEQ 
+ ( 1440.64 ) Msg[77] Ends Trans Y2Q[1][2] -> [1][2]PEQ 
+               Msg[77] Response Time : 64.00 cycles   Mean Response Time : 75.40 cycles
+               Msg[77] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 1.87 cycles
+ ( 1441.41 ) Msg[80] Ends Trans PEQ[3][2] -> [3][2]Y2Q
+ ( 1441.41 ) Msg[80] Decides in Y2Q[3][2] -> [3][2]PEQ 
+ ( 1441.41 ) Start Transmit from  Y2Q[3][2] -> [3][2]PEQ 
+ ( 1441.41 ) Msg[80] Ends Trans Y2Q[3][2] -> [3][2]PEQ 
+               Msg[80] Response Time : 32.00 cycles   Mean Response Time : 74.84 cycles
+               Msg[80] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 1.84 cycles
+ ( 1445.28 ) Msg[81] Ends Trans PEQ[2][2] -> [1][0]X2Q
+ ( 1445.28 ) Msg[81] Decides in X2Q[2][2] -> [1][0]X2Q 
+ ( 1445.28 ) Start Transmit from  X2Q[2][2] -> [1][2]X2Q 
+ ( 1453.44 ) Msg[82] Arrives in PEQ[1][1] -> [0][2] 
+ ( 1453.44 ) Msg[82] Decides in PEQ[1][1] -> [0][2]X2Q 
+ ( 1453.44 ) Start Transmit from  PEQ[1][1] -> [0][1]X2Q 
+ ( 1456.73 ) Msg[83] Arrives in PEQ[3][1] -> [1][2] 
+ ( 1456.73 ) Msg[83] Decides in PEQ[3][1] -> [1][2]X2Q 
+ ( 1456.73 ) Start Transmit from  PEQ[3][1] -> [2][1]X2Q 
+ ( 1457.13 ) Msg[78] Ends Trans PEQ[3][1] -> [3][3]X1Q
+ ( 1457.13 ) Start Transmit from  X1Q[2][1] -> [3][1]X1Q 
+ ( 1457.13 ) Msg[78] Decides in X1Q[3][1] -> [3][3]Y1Q 
+ ( 1457.13 ) Start Transmit from  X1Q[3][1] -> [3][2]Y1Q 
+ ( 1469.24 ) Msg[76] Ends Trans X2Q[0][0] -> [0][0]Y2Q
+ ( 1469.24 ) Msg[76] Decides in Y2Q[0][0] -> [0][0]PEQ 
+ ( 1469.24 ) Start Transmit from  Y2Q[0][0] -> [0][0]PEQ 
+ ( 1469.24 ) Msg[76] Ends Trans Y2Q[0][0] -> [0][0]PEQ 
+               Msg[76] Response Time : 121.21 cycles   Mean Response Time : 75.43 cycles
+               Msg[76] Waiting  Time : 25.21 cycles   Mean Waiting  Time : 2.14 cycles
+ ( 1477.28 ) Msg[81] Ends Trans X2Q[1][2] -> [1][0]X2Q
+ ( 1477.28 ) Msg[81] Decides in X2Q[1][2] -> [1][0]Y2Q 
+ ( 1477.28 ) Start Transmit from  X2Q[1][2] -> [1][1]Y2Q 
+ ( 1484.81 ) Msg[84] Arrives in PEQ[2][0] -> [1][1] 
+ ( 1484.81 ) Msg[84] Decides in PEQ[2][0] -> [1][1]X2Q 
+ ( 1484.81 ) Start Transmit from  PEQ[2][0] -> [1][0]X2Q 
+ ( 1485.44 ) Msg[82] Ends Trans PEQ[0][1] -> [0][2]X2Q
+ ( 1485.44 ) Msg[82] Decides in X2Q[0][1] -> [0][2]Y1Q 
+ ( 1485.44 ) Start Transmit from  X2Q[0][1] -> [0][2]Y1Q 
+ ( 1487.92 ) Msg[85] Arrives in PEQ[1][2] -> [2][0] 
+ ( 1487.92 ) Msg[85] Decides in PEQ[1][2] -> [2][0]X1Q 
+ ( 1487.92 ) Start Transmit from  PEQ[1][2] -> [2][2]X1Q 
+ ( 1488.29 ) Msg[86] Arrives in PEQ[1][2] -> [2][3] 
+ ( 1488.29 ) Msg[86] Not Head Of Queue in PEQ[1][2] -> [2][3] 
+ ( 1488.73 ) Msg[83] Ends Trans PEQ[2][1] -> [1][2]X2Q
+ ( 1488.73 ) Msg[83] Decides in X2Q[2][1] -> [1][2]X2Q 
+ ( 1488.73 ) Start Transmit from  X2Q[2][1] -> [1][1]X2Q 
+ ( 1489.13 ) Msg[79] Ends Trans X1Q[3][1] -> [3][3]X1Q
+ ( 1489.13 ) Msg[78] Ends Trans X1Q[3][2] -> [3][3]Y1Q
+ ( 1489.13 ) Msg[79] Decides in X1Q[3][1] -> [3][3]Y1Q 
+ ( 1489.13 ) Start Transmit from  X1Q[3][1] -> [3][2]Y1Q 
+ ( 1489.13 ) Msg[78] Decides in Y1Q[3][2] -> [3][3]Y1Q 
+ ( 1489.13 ) Start Transmit from  Y1Q[3][2] -> [3][3]Y1Q 
+ ( 1509.28 ) Msg[81] Ends Trans X2Q[1][1] -> [1][0]Y2Q
+ ( 1509.28 ) Msg[81] Decides in Y2Q[1][1] -> [1][0]Y2Q 
+ ( 1509.28 ) Start Transmit from  Y2Q[1][1] -> [1][0]Y2Q 
+ ( 1516.81 ) Msg[84] Ends Trans PEQ[1][0] -> [1][1]X2Q
+ ( 1516.81 ) Msg[84] Decides in X2Q[1][0] -> [1][1]Y1Q 
+ ( 1516.81 ) Start Transmit from  X2Q[1][0] -> [1][1]Y1Q 
+ ( 1517.44 ) Msg[82] Ends Trans X2Q[0][2] -> [0][2]Y1Q
+ ( 1517.44 ) Msg[82] Decides in Y1Q[0][2] -> [0][2]PEQ 
+ ( 1517.44 ) Start Transmit from  Y1Q[0][2] -> [0][2]PEQ 
+ ( 1517.44 ) Msg[82] Ends Trans Y1Q[0][2] -> [0][2]PEQ 
+               Msg[82] Response Time : 64.00 cycles   Mean Response Time : 75.29 cycles
+               Msg[82] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 2.11 cycles
+ ( 1518.54 ) Msg[87] Arrives in PEQ[1][2] -> [2][2] 
+ ( 1518.54 ) Msg[87] Not Head Of Queue in PEQ[1][2] -> [2][2] 
+ ( 1519.92 ) Msg[85] Ends Trans PEQ[2][2] -> [2][0]X1Q
+ ( 1519.92 ) Msg[86] Decides in PEQ[1][2] -> [2][3]X1Q 
+ ( 1519.92 ) Start Transmit from  PEQ[1][2] -> [2][2]X1Q 
+ ( 1519.92 ) Msg[85] Decides in X1Q[2][2] -> [2][0]Y2Q 
+ ( 1519.92 ) Start Transmit from  X1Q[2][2] -> [2][1]Y2Q 
+ ( 1520.73 ) Msg[83] Ends Trans X2Q[1][1] -> [1][2]X2Q
+ ( 1520.73 ) Msg[83] Decides in X2Q[1][1] -> [1][2]Y1Q 
+ ( 1520.73 ) Start Transmit from  X2Q[1][1] -> [1][2]Y1Q 
+ ( 1521.13 ) Msg[79] Ends Trans X1Q[3][2] -> [3][3]Y1Q
+ ( 1521.13 ) Msg[78] Ends Trans Y1Q[3][3] -> [3][3]Y1Q
+ ( 1521.13 ) Msg[79] Decides in Y1Q[3][2] -> [3][3]Y1Q 
+ ( 1521.13 ) Start Transmit from  Y1Q[3][2] -> [3][3]Y1Q 
+ ( 1521.13 ) Msg[78] Decides in Y1Q[3][3] -> [3][3]PEQ 
+ ( 1521.13 ) Start Transmit from  Y1Q[3][3] -> [3][3]PEQ 
+ ( 1521.13 ) Msg[78] Ends Trans Y1Q[3][3] -> [3][3]PEQ 
+               Msg[78] Response Time : 144.45 cycles   Mean Response Time : 76.15 cycles
+               Msg[78] Waiting  Time : 28.56 cycles   Mean Waiting  Time : 2.44 cycles
+ ( 1526.12 ) Msg[88] Arrives in PEQ[2][0] -> [2][1] 
+ ( 1526.12 ) Msg[88] Decides in PEQ[2][0] -> [2][1]Y1Q 
+ ( 1526.12 ) Start Transmit from  PEQ[2][0] -> [2][1]Y1Q 
+ ( 1526.17 ) Msg[89] Arrives in PEQ[1][2] -> [3][0] 
+ ( 1526.17 ) Msg[89] Not Head Of Queue in PEQ[1][2] -> [3][0] 
+ ( 1533.00 ) Msg[90] Arrives in PEQ[2][1] -> [2][2] 
+ ( 1533.00 ) Msg[90] Decides in PEQ[2][1] -> [2][2]Y1Q 
+ ( 1533.00 ) Start Transmit from  PEQ[2][1] -> [2][2]Y1Q 
+ ( 1534.35 ) Msg[91] Arrives in PEQ[3][1] -> [0][0] 
+ ( 1534.35 ) Msg[91] Decides in PEQ[3][1] -> [0][0]X2Q 
+ ( 1534.35 ) Start Transmit from  PEQ[3][1] -> [2][1]X2Q 
+ ( 1541.28 ) Msg[81] Ends Trans Y2Q[1][0] -> [1][0]Y2Q
+ ( 1541.28 ) Msg[81] Decides in Y2Q[1][0] -> [1][0]PEQ 
+ ( 1541.28 ) Start Transmit from  Y2Q[1][0] -> [1][0]PEQ 
+ ( 1541.28 ) Msg[81] Ends Trans Y2Q[1][0] -> [1][0]PEQ 
+               Msg[81] Response Time : 128.00 cycles   Mean Response Time : 76.79 cycles
+               Msg[81] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 2.41 cycles
+ ( 1548.81 ) Msg[84] Ends Trans X2Q[1][1] -> [1][1]Y1Q
+ ( 1548.81 ) Msg[84] Decides in Y1Q[1][1] -> [1][1]PEQ 
+ ( 1548.81 ) Start Transmit from  Y1Q[1][1] -> [1][1]PEQ 
+ ( 1548.81 ) Msg[84] Ends Trans Y1Q[1][1] -> [1][1]PEQ 
+               Msg[84] Response Time : 64.00 cycles   Mean Response Time : 76.64 cycles
+               Msg[84] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 2.38 cycles
+ ( 1551.92 ) Msg[86] Ends Trans PEQ[2][2] -> [2][3]X1Q
+ ( 1551.92 ) Msg[87] Decides in PEQ[1][2] -> [2][2]X1Q 
+ ( 1551.92 ) Start Transmit from  PEQ[1][2] -> [2][2]X1Q 
+ ( 1551.92 ) Msg[85] Ends Trans X1Q[2][1] -> [2][0]Y2Q
+ ( 1551.92 ) Msg[86] Decides in X1Q[2][2] -> [2][3]Y1Q 
+ ( 1551.92 ) Start Transmit from  X1Q[2][2] -> [2][3]Y1Q 
+ ( 1551.92 ) Msg[85] Decides in Y2Q[2][1] -> [2][0]Y2Q 
+ ( 1551.92 ) Start Transmit from  Y2Q[2][1] -> [2][0]Y2Q 
+ ( 1552.73 ) Msg[83] Ends Trans X2Q[1][2] -> [1][2]Y1Q
+ ( 1552.73 ) Msg[83] Decides in Y1Q[1][2] -> [1][2]PEQ 
+ ( 1552.73 ) Start Transmit from  Y1Q[1][2] -> [1][2]PEQ 
+ ( 1552.73 ) Msg[83] Ends Trans Y1Q[1][2] -> [1][2]PEQ 
+               Msg[83] Response Time : 96.00 cycles   Mean Response Time : 76.87 cycles
+               Msg[83] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 2.36 cycles
+ ( 1553.13 ) Msg[79] Ends Trans Y1Q[3][3] -> [3][3]Y1Q
+ ( 1553.13 ) Msg[79] Decides in Y1Q[3][3] -> [3][3]PEQ 
+ ( 1553.13 ) Start Transmit from  Y1Q[3][3] -> [3][3]PEQ 
+ ( 1553.13 ) Msg[79] Ends Trans Y1Q[3][3] -> [3][3]PEQ 
+               Msg[79] Response Time : 169.85 cycles   Mean Response Time : 77.98 cycles
+               Msg[79] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 2.33 cycles
+ ( 1558.12 ) Msg[88] Ends Trans PEQ[2][1] -> [2][1]Y1Q
+ ( 1558.12 ) Msg[88] Decides in Y1Q[2][1] -> [2][1]PEQ 
+ ( 1558.12 ) Start Transmit from  Y1Q[2][1] -> [2][1]PEQ 
+ ( 1558.12 ) Msg[88] Ends Trans Y1Q[2][1] -> [2][1]PEQ 
+               Msg[88] Response Time : 32.00 cycles   Mean Response Time : 77.43 cycles
+               Msg[88] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 2.30 cycles
+ ( 1565.00 ) Msg[90] Ends Trans PEQ[2][2] -> [2][2]Y1Q
+ ( 1565.00 ) Msg[90] Decides in Y1Q[2][2] -> [2][2]PEQ 
+ ( 1565.00 ) Start Transmit from  Y1Q[2][2] -> [2][2]PEQ 
+ ( 1565.00 ) Msg[90] Ends Trans Y1Q[2][2] -> [2][2]PEQ 
+               Msg[90] Response Time : 32.00 cycles   Mean Response Time : 76.91 cycles
+               Msg[90] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 2.27 cycles
+ ( 1566.35 ) Msg[91] Ends Trans PEQ[2][1] -> [0][0]X2Q
+ ( 1566.35 ) Msg[91] Decides in X2Q[2][1] -> [0][0]X2Q 
+ ( 1566.35 ) Start Transmit from  X2Q[2][1] -> [1][1]X2Q 
+ ( 1576.70 ) Msg[92] Arrives in PEQ[2][2] -> [2][1] 
+ ( 1576.70 ) Msg[92] Decides in PEQ[2][2] -> [2][1]Y2Q 
+ ( 1576.70 ) Start Transmit from  PEQ[2][2] -> [2][1]Y2Q 
+ ( 1580.91 ) Msg[93] Arrives in PEQ[0][0] -> [3][1] 
+ ( 1580.91 ) Msg[93] Decides in PEQ[0][0] -> [3][1]X1Q 
+ ( 1580.91 ) Start Transmit from  PEQ[0][0] -> [1][0]X1Q 
+ ( 1583.92 ) Msg[87] Ends Trans PEQ[2][2] -> [2][2]X1Q
+ ( 1583.92 ) Msg[89] Decides in PEQ[1][2] -> [3][0]X1Q 
+ ( 1583.92 ) Start Transmit from  PEQ[1][2] -> [2][2]X1Q 
+ ( 1583.92 ) Msg[86] Ends Trans X1Q[2][3] -> [2][3]Y1Q
+ ( 1583.92 ) Msg[87] Decides in X1Q[2][2] -> [2][2]PEQ 
+ ( 1583.92 ) Start Transmit from  X1Q[2][2] -> [2][2]PEQ 
+ ( 1583.92 ) Msg[87] Ends Trans X1Q[2][2] -> [2][2]PEQ 
+               Msg[87] Response Time : 65.38 cycles   Mean Response Time : 76.77 cycles
+               Msg[87] Waiting  Time : 33.38 cycles   Mean Waiting  Time : 2.63 cycles
+ ( 1583.92 ) Msg[86] Decides in Y1Q[2][3] -> [2][3]PEQ 
+ ( 1583.92 ) Start Transmit from  Y1Q[2][3] -> [2][3]PEQ 
+ ( 1583.92 ) Msg[86] Ends Trans Y1Q[2][3] -> [2][3]PEQ 
+               Msg[86] Response Time : 95.63 cycles   Mean Response Time : 76.99 cycles
+               Msg[86] Waiting  Time : 31.63 cycles   Mean Waiting  Time : 2.96 cycles
+ ( 1583.92 ) Msg[85] Ends Trans Y2Q[2][0] -> [2][0]Y2Q
+ ( 1583.92 ) Msg[85] Decides in Y2Q[2][0] -> [2][0]PEQ 
+ ( 1583.92 ) Start Transmit from  Y2Q[2][0] -> [2][0]PEQ 
+ ( 1583.92 ) Msg[85] Ends Trans Y2Q[2][0] -> [2][0]PEQ 
+               Msg[85] Response Time : 96.00 cycles   Mean Response Time : 77.20 cycles
+               Msg[85] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 2.93 cycles
+ ( 1598.35 ) Msg[91] Ends Trans X2Q[1][1] -> [0][0]X2Q
+ ( 1598.35 ) Msg[91] Decides in X2Q[1][1] -> [0][0]X2Q 
+ ( 1598.35 ) Start Transmit from  X2Q[1][1] -> [0][1]X2Q 
+ ( 1604.38 ) Msg[94] Arrives in PEQ[1][0] -> [3][2] 
+ ( 1604.38 ) Msg[94] Decides in PEQ[1][0] -> [3][2]X1Q 
+ ( 1604.38 ) Start Transmit from  PEQ[1][0] -> [2][0]X1Q 
+ ( 1608.70 ) Msg[92] Ends Trans PEQ[2][1] -> [2][1]Y2Q
+ ( 1608.70 ) Msg[92] Decides in Y2Q[2][1] -> [2][1]PEQ 
+ ( 1608.70 ) Start Transmit from  Y2Q[2][1] -> [2][1]PEQ 
+ ( 1608.70 ) Msg[92] Ends Trans Y2Q[2][1] -> [2][1]PEQ 
+               Msg[92] Response Time : 32.00 cycles   Mean Response Time : 76.70 cycles
+               Msg[92] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 2.89 cycles
+ ( 1612.91 ) Msg[93] Ends Trans PEQ[1][0] -> [3][1]X1Q
+ ( 1612.91 ) Msg[93] Decides in X1Q[1][0] -> [3][1]Q 
+ ( 1615.92 ) Msg[89] Ends Trans PEQ[2][2] -> [3][0]X1Q
+ ( 1615.92 ) Msg[89] Decides in X1Q[2][2] -> [3][0]X1Q 
+ ( 1615.92 ) Start Transmit from  X1Q[2][2] -> [3][2]X1Q 
+ ( 1630.35 ) Msg[91] Ends Trans X2Q[0][1] -> [0][0]X2Q
+ ( 1630.35 ) Msg[91] Decides in X2Q[0][1] -> [0][0]Y2Q 
+ ( 1630.35 ) Start Transmit from  X2Q[0][1] -> [0][0]Y2Q 
+ ( 1636.38 ) Msg[94] Ends Trans PEQ[2][0] -> [3][2]X1Q
+ ( 1636.38 ) Start Transmit from  X1Q[1][0] -> [2][0]X1Q 
+ ( 1636.38 ) Msg[94] Decides in X1Q[2][0] -> [3][2]X1Q 
+ ( 1636.38 ) Start Transmit from  X1Q[2][0] -> [3][0]X1Q 
+ ( 1643.62 ) Msg[95] Arrives in PEQ[1][1] -> [2][2] 
+ ( 1643.62 ) Msg[95] Decides in PEQ[1][1] -> [2][2]X1Q 
+ ( 1643.62 ) Start Transmit from  PEQ[1][1] -> [2][1]X1Q 
+ ( 1647.92 ) Msg[89] Ends Trans X1Q[3][2] -> [3][0]X1Q
+ ( 1647.92 ) Msg[89] Decides in X1Q[3][2] -> [3][0]Y2Q 
+ ( 1647.92 ) Start Transmit from  X1Q[3][2] -> [3][1]Y2Q 
+ ( 1650.04 ) Msg[96] Arrives in PEQ[3][0] -> [1][0] 
+ ( 1650.04 ) Msg[96] Decides in PEQ[3][0] -> [1][0]X2Q 
+ ( 1650.04 ) Start Transmit from  PEQ[3][0] -> [2][0]X2Q 
+ ( 1662.35 ) Msg[91] Ends Trans X2Q[0][0] -> [0][0]Y2Q
+ ( 1662.35 ) Msg[91] Decides in Y2Q[0][0] -> [0][0]PEQ 
+ ( 1662.35 ) Start Transmit from  Y2Q[0][0] -> [0][0]PEQ 
+ ( 1662.35 ) Msg[91] Ends Trans Y2Q[0][0] -> [0][0]PEQ 
+               Msg[91] Response Time : 128.00 cycles   Mean Response Time : 77.26 cycles
+               Msg[91] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 2.86 cycles
+ ( 1667.96 ) Msg[97] Arrives in PEQ[0][2] -> [2][1] 
+ ( 1667.96 ) Msg[97] Decides in PEQ[0][2] -> [2][1]X1Q 
+ ( 1667.96 ) Start Transmit from  PEQ[0][2] -> [1][2]X1Q 
+ ( 1668.38 ) Msg[93] Ends Trans X1Q[2][0] -> [3][1]X1Q
+ ( 1668.38 ) Msg[94] Ends Trans X1Q[3][0] -> [3][2]X1Q
+ ( 1668.38 ) Msg[93] Decides in X1Q[2][0] -> [3][1]X1Q 
+ ( 1668.38 ) Start Transmit from  X1Q[2][0] -> [3][0]X1Q 
+ ( 1668.38 ) Msg[94] Decides in X1Q[3][0] -> [3][2]Y1Q 
+ ( 1668.38 ) Start Transmit from  X1Q[3][0] -> [3][1]Y1Q 
+ ( 1675.62 ) Msg[95] Ends Trans PEQ[2][1] -> [2][2]X1Q
+ ( 1675.62 ) Msg[95] Decides in X1Q[2][1] -> [2][2]Y1Q 
+ ( 1675.62 ) Start Transmit from  X1Q[2][1] -> [2][2]Y1Q 
+ ( 1679.92 ) Msg[89] Ends Trans X1Q[3][1] -> [3][0]Y2Q
+ ( 1679.92 ) Msg[89] Decides in Y2Q[3][1] -> [3][0]Y2Q 
+ ( 1679.92 ) Start Transmit from  Y2Q[3][1] -> [3][0]Y2Q 
+ ( 1682.04 ) Msg[96] Ends Trans PEQ[2][0] -> [1][0]X2Q
+ ( 1682.04 ) Msg[96] Decides in X2Q[2][0] -> [1][0]X2Q 
+ ( 1682.04 ) Start Transmit from  X2Q[2][0] -> [1][0]X2Q 
+ ( 1699.96 ) Msg[97] Ends Trans PEQ[1][2] -> [2][1]X1Q
+ ( 1699.96 ) Msg[97] Decides in X1Q[1][2] -> [2][1]X1Q 
+ ( 1699.96 ) Start Transmit from  X1Q[1][2] -> [2][2]X1Q 
+ ( 1700.38 ) Msg[93] Ends Trans X1Q[3][0] -> [3][1]X1Q
+ ( 1700.38 ) Msg[94] Ends Trans X1Q[3][1] -> [3][2]Y1Q
+ ( 1700.38 ) Msg[93] Decides in X1Q[3][0] -> [3][1]Y1Q 
+ ( 1700.38 ) Start Transmit from  X1Q[3][0] -> [3][1]Y1Q 
+ ( 1700.38 ) Msg[94] Decides in Y1Q[3][1] -> [3][2]Y1Q 
+ ( 1700.38 ) Start Transmit from  Y1Q[3][1] -> [3][2]Y1Q 
+ ( 1707.62 ) Msg[95] Ends Trans X1Q[2][2] -> [2][2]Y1Q
+ ( 1707.62 ) Msg[95] Decides in Y1Q[2][2] -> [2][2]PEQ 
+ ( 1707.62 ) Start Transmit from  Y1Q[2][2] -> [2][2]PEQ 
+ ( 1707.62 ) Msg[95] Ends Trans Y1Q[2][2] -> [2][2]PEQ 
+               Msg[95] Response Time : 64.00 cycles   Mean Response Time : 77.12 cycles
+               Msg[95] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 2.83 cycles
+ ( 1711.92 ) Msg[89] Ends Trans Y2Q[3][0] -> [3][0]Y2Q
+ ( 1711.92 ) Msg[89] Decides in Y2Q[3][0] -> [3][0]PEQ 
+ ( 1711.92 ) Start Transmit from  Y2Q[3][0] -> [3][0]PEQ 
+ ( 1711.92 ) Msg[89] Ends Trans Y2Q[3][0] -> [3][0]PEQ 
+               Msg[89] Response Time : 185.75 cycles   Mean Response Time : 78.29 cycles
+               Msg[89] Waiting  Time : 57.75 cycles   Mean Waiting  Time : 3.42 cycles
+ ( 1712.58 ) Msg[98] Arrives in PEQ[2][0] -> [1][1] 
+ ( 1712.58 ) Msg[98] Decides in PEQ[2][0] -> [1][1]Q 
+ ( 1714.04 ) Msg[96] Ends Trans X2Q[1][0] -> [1][0]X2Q
+ ( 1714.04 ) Start Transmit from  PEQ[2][0] -> [1][0]X2Q 
+ ( 1714.04 ) Msg[96] Decides in X2Q[1][0] -> [1][0]PEQ 
+ ( 1714.04 ) Start Transmit from  X2Q[1][0] -> [1][0]PEQ 
+ ( 1714.04 ) Msg[96] Ends Trans X2Q[1][0] -> [1][0]PEQ 
+               Msg[96] Response Time : 64.00 cycles   Mean Response Time : 78.14 cycles
+               Msg[96] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 3.39 cycles
+ ( 1731.96 ) Msg[97] Ends Trans X1Q[2][2] -> [2][1]X1Q
+ ( 1731.96 ) Msg[97] Decides in X1Q[2][2] -> [2][1]Y2Q 
+ ( 1731.96 ) Start Transmit from  X1Q[2][2] -> [2][1]Y2Q 
+ ( 1732.38 ) Msg[93] Ends Trans X1Q[3][1] -> [3][1]Y1Q
+ ( 1732.38 ) Msg[94] Ends Trans Y1Q[3][2] -> [3][2]Y1Q
+ ( 1732.38 ) Msg[93] Decides in Y1Q[3][1] -> [3][1]PEQ 
+ ( 1732.38 ) Start Transmit from  Y1Q[3][1] -> [3][1]PEQ 
+ ( 1732.38 ) Msg[93] Ends Trans Y1Q[3][1] -> [3][1]PEQ 
+               Msg[93] Response Time : 151.47 cycles   Mean Response Time : 78.91 cycles
+               Msg[93] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 3.35 cycles
+ ( 1732.38 ) Msg[94] Decides in Y1Q[3][2] -> [3][2]PEQ 
+ ( 1732.38 ) Start Transmit from  Y1Q[3][2] -> [3][2]PEQ 
+ ( 1732.38 ) Msg[94] Ends Trans Y1Q[3][2] -> [3][2]PEQ 
+               Msg[94] Response Time : 128.00 cycles   Mean Response Time : 79.42 cycles
+               Msg[94] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 3.32 cycles
+ ( 1743.52 ) Msg[99] Arrives in PEQ[2][2] -> [2][0] 
+ ( 1743.52 ) Msg[99] Decides in PEQ[2][2] -> [2][0]Q 
+ ( 1746.04 ) Msg[98] Ends Trans PEQ[1][0] -> [1][1]X2Q
+ ( 1746.04 ) Msg[98] Decides in X2Q[1][0] -> [1][1]Y1Q 
+ ( 1746.04 ) Start Transmit from  X2Q[1][0] -> [1][1]Y1Q 
+ ( 1752.07 ) Msg[100] Arrives in PEQ[2][0] -> [2][2] 
+ ( 1752.07 ) Msg[100] Decides in PEQ[2][0] -> [2][2]Y1Q 
+ ( 1752.07 ) Start Transmit from  PEQ[2][0] -> [2][1]Y1Q 
+ ( 1763.96 ) Msg[97] Ends Trans X1Q[2][1] -> [2][1]Y2Q
+ ( 1763.96 ) Start Transmit from  PEQ[2][2] -> [2][1]Y2Q 
+ ( 1763.96 ) Msg[97] Decides in Y2Q[2][1] -> [2][1]PEQ 
+ ( 1763.96 ) Start Transmit from  Y2Q[2][1] -> [2][1]PEQ 
+ ( 1763.96 ) Msg[97] Ends Trans Y2Q[2][1] -> [2][1]PEQ 
+               Msg[97] Response Time : 96.00 cycles   Mean Response Time : 79.59 cycles
+               Msg[97] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 3.28 cycles
+ ( 1778.04 ) Msg[98] Ends Trans X2Q[1][1] -> [1][1]Y1Q
+ ( 1778.04 ) Msg[98] Decides in Y1Q[1][1] -> [1][1]PEQ 
+ ( 1778.04 ) Start Transmit from  Y1Q[1][1] -> [1][1]PEQ 
+ ( 1778.04 ) Msg[98] Ends Trans Y1Q[1][1] -> [1][1]PEQ 
+               Msg[98] Response Time : 65.46 cycles   Mean Response Time : 79.45 cycles
+               Msg[98] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 3.25 cycles
+ ( 1784.07 ) Msg[100] Ends Trans PEQ[2][1] -> [2][2]Y1Q
+ ( 1784.07 ) Msg[100] Decides in Y1Q[2][1] -> [2][2]Y1Q 
+ ( 1784.07 ) Start Transmit from  Y1Q[2][1] -> [2][2]Y1Q 
+ ( 1785.50 ) Msg[101] Arrives in PEQ[0][0] -> [2][1] 
+ ( 1785.50 ) Msg[101] Decides in PEQ[0][0] -> [2][1]X1Q 
+ ( 1785.50 ) Start Transmit from  PEQ[0][0] -> [1][0]X1Q 
+ ( 1795.96 ) Msg[99] Ends Trans PEQ[2][1] -> [2][0]Y2Q
+ ( 1795.96 ) Msg[99] Decides in Y2Q[2][1] -> [2][0]Y2Q 
+ ( 1795.96 ) Start Transmit from  Y2Q[2][1] -> [2][0]Y2Q 
+ ( 1805.07 ) Msg[102] Arrives in PEQ[1][0] -> [0][1] 
+ ( 1805.07 ) Msg[102] Decides in PEQ[1][0] -> [0][1]X2Q 
+ ( 1805.07 ) Start Transmit from  PEQ[1][0] -> [0][0]X2Q 
+ ( 1816.07 ) Msg[100] Ends Trans Y1Q[2][2] -> [2][2]Y1Q
+ ( 1816.07 ) Msg[100] Decides in Y1Q[2][2] -> [2][2]PEQ 
+ ( 1816.07 ) Start Transmit from  Y1Q[2][2] -> [2][2]PEQ 
+ ( 1816.07 ) Msg[100] Ends Trans Y1Q[2][2] -> [2][2]PEQ 
+               Msg[100] Response Time : 64.00 cycles   Mean Response Time : 79.29 cycles
+               Msg[100] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 3.22 cycles
+ ( 1817.50 ) Msg[101] Ends Trans PEQ[1][0] -> [2][1]X1Q
+ ( 1817.50 ) Msg[101] Decides in X1Q[1][0] -> [2][1]X1Q 
+ ( 1817.50 ) Start Transmit from  X1Q[1][0] -> [2][0]X1Q 
+ ( 1820.67 ) Msg[103] Arrives in PEQ[3][1] -> [0][1] 
+ ( 1820.67 ) Msg[103] Decides in PEQ[3][1] -> [0][1]X2Q 
+ ( 1820.67 ) Start Transmit from  PEQ[3][1] -> [2][1]X2Q 
+ ( 1827.96 ) Msg[99] Ends Trans Y2Q[2][0] -> [2][0]Y2Q
+ ( 1827.96 ) Msg[99] Decides in Y2Q[2][0] -> [2][0]PEQ 
+ ( 1827.96 ) Start Transmit from  Y2Q[2][0] -> [2][0]PEQ 
+ ( 1827.96 ) Msg[99] Ends Trans Y2Q[2][0] -> [2][0]PEQ 
+               Msg[99] Response Time : 84.44 cycles   Mean Response Time : 79.34 cycles
+               Msg[99] Waiting  Time : 0.00 cycles   Mean Waiting  Time : 3.18 cycles
+
+End Of The Simulation at T= 1827.96 cycles
+Injection Rate : 300
+Number of Clients Served : 100
+The Mean Response Time : 79.34 cycles
+The Mean Waiting  Time : 3.18 cycles
+Throughput : 0.055 
