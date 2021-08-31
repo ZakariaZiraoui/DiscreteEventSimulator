@@ -1,0 +1,42 @@
+Simulation Starting Time 2021-08-31 05:29:09
+Welcome to Network-On-Chip 2D Mesh Simulator 
+This simulator was designed based on The Discrete Event Simulation.
+It's a final year project to obtain the Master Degree
+Student developer : Ziraoui Zakaria 
+Supervisor: Prof. Mohamed Ould-Khaoua
+
+Network Simulation Parameters :
+
+Topology : 8 x 8 Mesh 
+Number of Nodes  : 64 
+Routing : Dimension-ordered (DOR)
+Traffic : Uniform Random
+Message length : 32 phits
+Injection Rate : 50
+Transmission Time : 32 Cycles
+Batch Means Method : Yes
+
+Please wait, Simulation has been started...
+
+Batch N° 1 : Mean Response Time : 577.69 cycles	Mean Waiting Time : 390.29 cycles	Throughput : 0.763
+Batch N° 2 : Mean Response Time : 1243.48 cycles	Mean Waiting Time : 1046.63 cycles	Throughput : 0.852
+Batch N° 3 : Mean Response Time : 1951.53 cycles	Mean Waiting Time : 1754.10 cycles	Throughput : 0.845
+Batch N° 4 : Mean Response Time : 2666.95 cycles	Mean Waiting Time : 2468.14 cycles	Throughput : 0.839
+Batch N° 5 : Mean Response Time : 3386.42 cycles	Mean Waiting Time : 3187.11 cycles	Throughput : 0.853
+Batch N° 6 : Mean Response Time : 4055.24 cycles	Mean Waiting Time : 3857.12 cycles	Throughput : 0.813
+Batch N° 7 : Mean Response Time : 4688.44 cycles	Mean Waiting Time : 4486.27 cycles	Throughput : 0.852
+Batch N° 8 : Mean Response Time : 5373.14 cycles	Mean Waiting Time : 5179.89 cycles	Throughput : 0.859
+Batch N° 9 : Mean Response Time : 5923.49 cycles	Mean Waiting Time : 5725.24 cycles	Throughput : 0.846
+Batch N°10 : Mean Response Time : 6792.25 cycles	Mean Waiting Time : 6593.80 cycles	Throughput : 0.845
+
+End Of The Simulation at T= 23936.00 cycles
+Injection Rate : 50
+Batch Size : 2000
+Number of Batches : 10
+Number of Clients Served : 20000
+Overall Response Time : 3665.86 cycles
+Overall Waiting  Time : 3468.86 cycles
+Overall Throughput : 0.837 
+Standard Deviation Response Time : 2065.66821 cycles
+Standard Deviation Waiting  Time : 2063.86987 cycles
+Standard Deviation Throughput : 0.028794 

@@ -27,11 +27,11 @@ char destreport[52],timeStr[21];
 
 int main ( ){
     int cpt;
-    int LTab [17]= {100,10500,9200,1000,400,350,
+    int LTab [17]= {32000,10500,9200,1000,400,350,
                     300,250,200,180,160,150,100,90,80,70,50};
 
     if(Summary)SummarizeResults ();
-    for(cpt=0; cpt<1; cpt++){
+    for(cpt=0; cpt<17; cpt++){
         Lambda =LTab[cpt];
 
         Reporting ();

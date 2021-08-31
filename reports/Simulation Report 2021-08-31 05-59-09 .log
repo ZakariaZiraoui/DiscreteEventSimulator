@@ -1,0 +1,43 @@
+Simulation Starting Time 2021-08-31 05:59:09
+Welcome to Network-On-Chip ExpressCube Simulator 
+This simulator was designed based on The Discrete Event Simulation.
+It's a final year project to obtain the Master Degree
+Student developer : Ziraoui Zakaria 
+Supervisor: Prof. Mohamed Ould-Khaoua
+
+Network Simulation Parameters :
+
+Topology : 16 x 16 Express Cube with 4 Hops
+Number of Nodes  : 256 
+Routing : Dimension-ordered (DOR)
+Traffic : Uniform Random
+Message length : 32 phits
+Injection Rate : 1000
+Transmission Time Normal  Links : 32 Cycles
+Transmission Time Express Links : 32 Cycles
+Batch Means Method : Yes
+
+Please wait, Simulation has been started...
+
+Batch N° 1 : Mean Response Time : 206.31 cycles	Mean Waiting Time : 1.26 cycles	Throughput : 0.278
+Batch N° 2 : Mean Response Time : 205.79 cycles	Mean Waiting Time : 0.83 cycles	Throughput : 0.255
+Batch N° 3 : Mean Response Time : 205.78 cycles	Mean Waiting Time : 0.95 cycles	Throughput : 0.259
+Batch N° 4 : Mean Response Time : 207.84 cycles	Mean Waiting Time : 0.89 cycles	Throughput : 0.259
+Batch N° 5 : Mean Response Time : 209.38 cycles	Mean Waiting Time : 0.80 cycles	Throughput : 0.255
+Batch N° 6 : Mean Response Time : 206.45 cycles	Mean Waiting Time : 0.46 cycles	Throughput : 0.251
+Batch N° 7 : Mean Response Time : 209.44 cycles	Mean Waiting Time : 0.74 cycles	Throughput : 0.264
+Batch N° 8 : Mean Response Time : 206.74 cycles	Mean Waiting Time : 0.65 cycles	Throughput : 0.252
+Batch N° 9 : Mean Response Time : 202.48 cycles	Mean Waiting Time : 0.61 cycles	Throughput : 0.246
+Batch N°10 : Mean Response Time : 210.13 cycles	Mean Waiting Time : 0.78 cycles	Throughput : 0.255
+
+End Of The Simulation at T= 77770.61 cycles
+Injection Rate : 1000
+Batch Size : 2000
+Number of Batches : 10
+Number of Clients Served : 20000
+Overall Response Time : 207.03 cycles
+Overall Waiting  Time : 0.80 cycles
+Overall Throughput : 0.257 
+Standard Deviation Response Time : 2.27008 cycles
+Standard Deviation Waiting  Time : 0.21745 cycles
+Standard Deviation Throughput : 0.008661 

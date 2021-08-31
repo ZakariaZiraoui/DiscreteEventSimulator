@@ -1,0 +1,42 @@
+Simulation Starting Time 2021-08-31 05:55:57
+Welcome to Network-On-Chip 2D Mesh Simulator 
+This simulator was designed based on The Discrete Event Simulation.
+It's a final year project to obtain the Master Degree
+Student developer : Ziraoui Zakaria 
+Supervisor: Prof. Mohamed Ould-Khaoua
+
+Network Simulation Parameters :
+
+Topology : 16 x 16 Mesh 
+Number of Nodes  : 256 
+Routing : Dimension-ordered (DOR)
+Traffic : Uniform Random
+Message length : 32 phits
+Injection Rate : 90
+Transmission Time : 32 Cycles
+Batch Means Method : Yes
+
+Please wait, Simulation has been started...
+
+Batch N° 1 : Mean Response Time : 480.27 cycles	Mean Waiting Time : 171.34 cycles	Throughput : 1.366
+Batch N° 2 : Mean Response Time : 832.18 cycles	Mean Waiting Time : 491.60 cycles	Throughput : 1.813
+Batch N° 3 : Mean Response Time : 1119.85 cycles	Mean Waiting Time : 774.27 cycles	Throughput : 1.810
+Batch N° 4 : Mean Response Time : 1449.24 cycles	Mean Waiting Time : 1098.20 cycles	Throughput : 1.839
+Batch N° 5 : Mean Response Time : 1735.95 cycles	Mean Waiting Time : 1380.83 cycles	Throughput : 1.819
+Batch N° 6 : Mean Response Time : 2025.52 cycles	Mean Waiting Time : 1675.51 cycles	Throughput : 1.838
+Batch N° 7 : Mean Response Time : 2235.06 cycles	Mean Waiting Time : 1887.20 cycles	Throughput : 1.862
+Batch N° 8 : Mean Response Time : 2591.39 cycles	Mean Waiting Time : 2240.99 cycles	Throughput : 1.890
+Batch N° 9 : Mean Response Time : 2870.86 cycles	Mean Waiting Time : 2518.07 cycles	Throughput : 1.880
+Batch N°10 : Mean Response Time : 3101.76 cycles	Mean Waiting Time : 2745.07 cycles	Throughput : 1.877
+
+End Of The Simulation at T= 11209.33 cycles
+Injection Rate : 90
+Batch Size : 2000
+Number of Batches : 10
+Number of Clients Served : 20000
+Overall Response Time : 1844.21 cycles
+Overall Waiting  Time : 1498.31 cycles
+Overall Throughput : 1.799 
+Standard Deviation Response Time : 879.15942 cycles
+Standard Deviation Waiting  Time : 869.28973 cycles
+Standard Deviation Throughput : 0.155123 
