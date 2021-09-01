@@ -1,0 +1,42 @@
+Simulation Starting Time 2021-09-01 06:05:21
+Welcome to Network-On-Chip 2D Mesh Simulator 
+This simulator was designed based on The Discrete Event Simulation.
+It's a final year project to obtain the Master Degree
+Student developer : Ziraoui Zakaria 
+Supervisor: Prof. Mohamed Ould-Khaoua
+
+Network Simulation Parameters :
+
+Topology : 16 x 16 Mesh 
+Number of Nodes  : 256 
+Routing : Dimension-ordered (DOR)
+Traffic : Hotspot [8][8]
+Message length : 32 phits
+Injection Rate : 90
+Transmission Time : 32 Cycles
+Batch Means Method : Yes
+
+Please wait, Simulation has been started...
+
+Batch N° 1 : Mean Response Time : 481.35 cycles	Mean Waiting Time : 179.50 cycles	Throughput : 1.298
+Batch N° 2 : Mean Response Time : 850.67 cycles	Mean Waiting Time : 507.75 cycles	Throughput : 1.650
+Batch N° 3 : Mean Response Time : 1109.80 cycles	Mean Waiting Time : 770.71 cycles	Throughput : 1.690
+Batch N° 4 : Mean Response Time : 1410.40 cycles	Mean Waiting Time : 1058.56 cycles	Throughput : 1.689
+Batch N° 5 : Mean Response Time : 1691.88 cycles	Mean Waiting Time : 1339.16 cycles	Throughput : 1.670
+Batch N° 6 : Mean Response Time : 1891.85 cycles	Mean Waiting Time : 1549.40 cycles	Throughput : 1.688
+Batch N° 7 : Mean Response Time : 2119.61 cycles	Mean Waiting Time : 1778.23 cycles	Throughput : 1.640
+Batch N° 8 : Mean Response Time : 2458.75 cycles	Mean Waiting Time : 2115.24 cycles	Throughput : 1.680
+Batch N° 9 : Mean Response Time : 2590.25 cycles	Mean Waiting Time : 2242.35 cycles	Throughput : 1.692
+Batch N°10 : Mean Response Time : 2862.94 cycles	Mean Waiting Time : 2520.09 cycles	Throughput : 1.721
+
+End Of The Simulation at T= 12256.00 cycles
+Injection Rate : 90
+Batch Size : 2000
+Number of Batches : 10
+Number of Clients Served : 20000
+Overall Response Time : 1746.75 cycles
+Overall Waiting  Time : 1406.10 cycles
+Overall Throughput : 1.642 
+Standard Deviation Response Time : 785.31219 cycles
+Standard Deviation Waiting  Time : 777.65601 cycles
+Standard Deviation Throughput : 0.122971 

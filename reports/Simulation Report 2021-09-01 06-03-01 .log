@@ -1,0 +1,42 @@
+Simulation Starting Time 2021-09-01 06:03:01
+Welcome to Network-On-Chip 2D Mesh Simulator 
+This simulator was designed based on The Discrete Event Simulation.
+It's a final year project to obtain the Master Degree
+Student developer : Ziraoui Zakaria 
+Supervisor: Prof. Mohamed Ould-Khaoua
+
+Network Simulation Parameters :
+
+Topology : 8 x 8 Mesh 
+Number of Nodes  : 64 
+Routing : Dimension-ordered (DOR)
+Traffic : Hotspot [4][4]
+Message length : 32 phits
+Injection Rate : 70
+Transmission Time : 32 Cycles
+Batch Means Method : Yes
+
+Please wait, Simulation has been started...
+
+Batch N° 1 : Mean Response Time : 453.55 cycles	Mean Waiting Time : 273.67 cycles	Throughput : 0.661
+Batch N° 2 : Mean Response Time : 928.94 cycles	Mean Waiting Time : 743.86 cycles	Throughput : 0.702
+Batch N° 3 : Mean Response Time : 1365.15 cycles	Mean Waiting Time : 1178.56 cycles	Throughput : 0.708
+Batch N° 4 : Mean Response Time : 1774.06 cycles	Mean Waiting Time : 1588.47 cycles	Throughput : 0.698
+Batch N° 5 : Mean Response Time : 2103.21 cycles	Mean Waiting Time : 1913.64 cycles	Throughput : 0.697
+Batch N° 6 : Mean Response Time : 2628.18 cycles	Mean Waiting Time : 2438.30 cycles	Throughput : 0.696
+Batch N° 7 : Mean Response Time : 2939.40 cycles	Mean Waiting Time : 2753.03 cycles	Throughput : 0.700
+Batch N° 8 : Mean Response Time : 3313.84 cycles	Mean Waiting Time : 3127.98 cycles	Throughput : 0.685
+Batch N° 9 : Mean Response Time : 3893.93 cycles	Mean Waiting Time : 3705.32 cycles	Throughput : 0.696
+Batch N°10 : Mean Response Time : 4234.15 cycles	Mean Waiting Time : 4049.05 cycles	Throughput : 0.724
+
+End Of The Simulation at T= 28714.78 cycles
+Injection Rate : 70
+Batch Size : 2000
+Number of Batches : 10
+Number of Clients Served : 20000
+Overall Response Time : 2363.44 cycles
+Overall Waiting  Time : 2177.19 cycles
+Overall Throughput : 0.697 
+Standard Deviation Response Time : 1258.93140 cycles
+Standard Deviation Waiting  Time : 1257.59741 cycles
+Standard Deviation Throughput : 0.015882 

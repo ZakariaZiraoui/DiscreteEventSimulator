@@ -1,0 +1,42 @@
+Simulation Starting Time 2021-09-01 06:02:53
+Welcome to Network-On-Chip 2D Mesh Simulator 
+This simulator was designed based on The Discrete Event Simulation.
+It's a final year project to obtain the Master Degree
+Student developer : Ziraoui Zakaria 
+Supervisor: Prof. Mohamed Ould-Khaoua
+
+Network Simulation Parameters :
+
+Topology : 8 x 8 Mesh 
+Number of Nodes  : 64 
+Routing : Dimension-ordered (DOR)
+Traffic : Hotspot [4][4]
+Message length : 32 phits
+Injection Rate : 400
+Transmission Time : 32 Cycles
+Batch Means Method : Yes
+
+Please wait, Simulation has been started...
+
+Batch N° 1 : Mean Response Time : 158.86 cycles	Mean Waiting Time : 3.44 cycles	Throughput : 0.163
+Batch N° 2 : Mean Response Time : 155.09 cycles	Mean Waiting Time : 3.53 cycles	Throughput : 0.156
+Batch N° 3 : Mean Response Time : 155.81 cycles	Mean Waiting Time : 4.38 cycles	Throughput : 0.160
+Batch N° 4 : Mean Response Time : 155.50 cycles	Mean Waiting Time : 3.65 cycles	Throughput : 0.160
+Batch N° 5 : Mean Response Time : 160.08 cycles	Mean Waiting Time : 3.56 cycles	Throughput : 0.154
+Batch N° 6 : Mean Response Time : 152.75 cycles	Mean Waiting Time : 3.81 cycles	Throughput : 0.162
+Batch N° 7 : Mean Response Time : 154.48 cycles	Mean Waiting Time : 3.28 cycles	Throughput : 0.164
+Batch N° 8 : Mean Response Time : 156.84 cycles	Mean Waiting Time : 5.21 cycles	Throughput : 0.166
+Batch N° 9 : Mean Response Time : 156.70 cycles	Mean Waiting Time : 3.48 cycles	Throughput : 0.155
+Batch N°10 : Mean Response Time : 159.15 cycles	Mean Waiting Time : 5.95 cycles	Throughput : 0.158
+
+End Of The Simulation at T= 125291.97 cycles
+Injection Rate : 400
+Batch Size : 2000
+Number of Batches : 10
+Number of Clients Served : 20000
+Overall Response Time : 156.53 cycles
+Overall Waiting  Time : 4.03 cycles
+Overall Throughput : 0.160 
+Standard Deviation Response Time : 2.29090 cycles
+Standard Deviation Waiting  Time : 0.88425 cycles
+Standard Deviation Throughput : 0.004239 

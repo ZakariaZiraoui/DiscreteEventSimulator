@@ -1,0 +1,43 @@
+Simulation Starting Time 2021-09-01 06:07:47
+Welcome to Network-On-Chip ExpressCube Simulator 
+This simulator was designed based on The Discrete Event Simulation.
+It's a final year project to obtain the Master Degree
+Student developer : Ziraoui Zakaria 
+Supervisor: Prof. Mohamed Ould-Khaoua
+
+Network Simulation Parameters :
+
+Topology : 16 x 16 Express Cube with 4 Hops
+Number of Nodes  : 256 
+Routing : Dimension-ordered (DOR)
+Traffic : Hotspot [8][8]
+Message length : 32 phits
+Injection Rate : 100
+Transmission Time Normal  Links : 32 Cycles
+Transmission Time Express Links : 32 Cycles
+Batch Means Method : Yes
+
+Please wait, Simulation has been started...
+
+Batch N° 1 : Mean Response Time : 259.40 cycles	Mean Waiting Time : 54.11 cycles	Throughput : 1.736
+Batch N° 2 : Mean Response Time : 374.12 cycles	Mean Waiting Time : 155.98 cycles	Throughput : 2.003
+Batch N° 3 : Mean Response Time : 457.58 cycles	Mean Waiting Time : 235.21 cycles	Throughput : 2.067
+Batch N° 4 : Mean Response Time : 529.06 cycles	Mean Waiting Time : 305.73 cycles	Throughput : 1.976
+Batch N° 5 : Mean Response Time : 602.79 cycles	Mean Waiting Time : 375.67 cycles	Throughput : 1.999
+Batch N° 6 : Mean Response Time : 660.90 cycles	Mean Waiting Time : 438.45 cycles	Throughput : 1.999
+Batch N° 7 : Mean Response Time : 721.13 cycles	Mean Waiting Time : 497.45 cycles	Throughput : 2.045
+Batch N° 8 : Mean Response Time : 830.37 cycles	Mean Waiting Time : 604.06 cycles	Throughput : 1.986
+Batch N° 9 : Mean Response Time : 854.46 cycles	Mean Waiting Time : 634.02 cycles	Throughput : 1.955
+Batch N°10 : Mean Response Time : 932.71 cycles	Mean Waiting Time : 713.54 cycles	Throughput : 2.010
+
+End Of The Simulation at T= 10134.74 cycles
+Injection Rate : 100
+Batch Size : 2000
+Number of Batches : 10
+Number of Clients Served : 20000
+Overall Response Time : 622.25 cycles
+Overall Waiting  Time : 401.42 cycles
+Overall Throughput : 1.978 
+Standard Deviation Response Time : 219.66983 cycles
+Standard Deviation Waiting  Time : 216.40889 cycles
+Standard Deviation Throughput : 0.090640 

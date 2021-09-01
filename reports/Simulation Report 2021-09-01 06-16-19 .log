@@ -1,0 +1,42 @@
+Simulation Starting Time 2021-09-01 06:16:19
+Welcome to Network-On-Chip 2D Mesh Simulator 
+This simulator was designed based on The Discrete Event Simulation.
+It's a final year project to obtain the Master Degree
+Student developer : Ziraoui Zakaria 
+Supervisor: Prof. Mohamed Ould-Khaoua
+
+Network Simulation Parameters :
+
+Topology : 32 x 32 Mesh 
+Number of Nodes  : 1024 
+Routing : Dimension-ordered (DOR)
+Traffic : Hotspot [16][16]
+Message length : 32 phits
+Injection Rate : 100
+Transmission Time : 32 Cycles
+Batch Means Method : Yes
+
+Please wait, Simulation has been started...
+
+Batch N° 1 : Mean Response Time : 466.40 cycles	Mean Waiting Time : 78.93 cycles	Throughput : 1.999
+Batch N° 2 : Mean Response Time : 795.58 cycles	Mean Waiting Time : 251.42 cycles	Throughput : 3.489
+Batch N° 3 : Mean Response Time : 1012.73 cycles	Mean Waiting Time : 444.47 cycles	Throughput : 3.506
+Batch N° 4 : Mean Response Time : 1236.68 cycles	Mean Waiting Time : 648.68 cycles	Throughput : 3.802
+Batch N° 5 : Mean Response Time : 1398.33 cycles	Mean Waiting Time : 805.22 cycles	Throughput : 3.774
+Batch N° 6 : Mean Response Time : 1544.35 cycles	Mean Waiting Time : 955.32 cycles	Throughput : 3.676
+Batch N° 7 : Mean Response Time : 1730.93 cycles	Mean Waiting Time : 1140.98 cycles	Throughput : 3.906
+Batch N° 8 : Mean Response Time : 1942.35 cycles	Mean Waiting Time : 1348.70 cycles	Throughput : 3.676
+Batch N° 9 : Mean Response Time : 2086.87 cycles	Mean Waiting Time : 1502.95 cycles	Throughput : 3.837
+Batch N°10 : Mean Response Time : 2296.13 cycles	Mean Waiting Time : 1710.00 cycles	Throughput : 3.740
+
+End Of The Simulation at T= 5856.00 cycles
+Injection Rate : 100
+Batch Size : 2000
+Number of Batches : 10
+Number of Clients Served : 20000
+Overall Response Time : 1451.03 cycles
+Overall Waiting  Time : 888.67 cycles
+Overall Throughput : 3.541 
+Standard Deviation Response Time : 585.65009 cycles
+Standard Deviation Waiting  Time : 543.17047 cycles
+Standard Deviation Throughput : 0.557861 

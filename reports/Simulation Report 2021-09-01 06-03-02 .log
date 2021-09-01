@@ -1,0 +1,42 @@
+Simulation Starting Time 2021-09-01 06:03:02
+Welcome to Network-On-Chip 2D Mesh Simulator 
+This simulator was designed based on The Discrete Event Simulation.
+It's a final year project to obtain the Master Degree
+Student developer : Ziraoui Zakaria 
+Supervisor: Prof. Mohamed Ould-Khaoua
+
+Network Simulation Parameters :
+
+Topology : 8 x 8 Mesh 
+Number of Nodes  : 64 
+Routing : Dimension-ordered (DOR)
+Traffic : Hotspot [4][4]
+Message length : 32 phits
+Injection Rate : 50
+Transmission Time : 32 Cycles
+Batch Means Method : Yes
+
+Please wait, Simulation has been started...
+
+Batch N° 1 : Mean Response Time : 590.02 cycles	Mean Waiting Time : 408.35 cycles	Throughput : 0.702
+Batch N° 2 : Mean Response Time : 1353.92 cycles	Mean Waiting Time : 1167.54 cycles	Throughput : 0.794
+Batch N° 3 : Mean Response Time : 2006.78 cycles	Mean Waiting Time : 1819.99 cycles	Throughput : 0.782
+Batch N° 4 : Mean Response Time : 2799.23 cycles	Mean Waiting Time : 2609.03 cycles	Throughput : 0.759
+Batch N° 5 : Mean Response Time : 3459.54 cycles	Mean Waiting Time : 3268.30 cycles	Throughput : 0.791
+Batch N° 6 : Mean Response Time : 4045.86 cycles	Mean Waiting Time : 3859.63 cycles	Throughput : 0.786
+Batch N° 7 : Mean Response Time : 4865.42 cycles	Mean Waiting Time : 4673.37 cycles	Throughput : 0.796
+Batch N° 8 : Mean Response Time : 5515.02 cycles	Mean Waiting Time : 5325.05 cycles	Throughput : 0.773
+Batch N° 9 : Mean Response Time : 6232.49 cycles	Mean Waiting Time : 6045.27 cycles	Throughput : 0.770
+Batch N°10 : Mean Response Time : 6849.53 cycles	Mean Waiting Time : 6660.84 cycles	Throughput : 0.780
+
+End Of The Simulation at T= 25891.04 cycles
+Injection Rate : 50
+Batch Size : 2000
+Number of Batches : 10
+Number of Clients Served : 20000
+Overall Response Time : 3771.78 cycles
+Overall Waiting  Time : 3583.74 cycles
+Overall Throughput : 0.773 
+Standard Deviation Response Time : 2107.28687 cycles
+Standard Deviation Waiting  Time : 2105.67139 cycles
+Standard Deviation Throughput : 0.027530 

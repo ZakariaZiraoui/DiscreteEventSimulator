@@ -1,0 +1,42 @@
+Simulation Starting Time 2021-09-01 06:05:26
+Welcome to Network-On-Chip 2D Mesh Simulator 
+This simulator was designed based on The Discrete Event Simulation.
+It's a final year project to obtain the Master Degree
+Student developer : Ziraoui Zakaria 
+Supervisor: Prof. Mohamed Ould-Khaoua
+
+Network Simulation Parameters :
+
+Topology : 16 x 16 Mesh 
+Number of Nodes  : 256 
+Routing : Dimension-ordered (DOR)
+Traffic : Hotspot [8][8]
+Message length : 32 phits
+Injection Rate : 80
+Transmission Time : 32 Cycles
+Batch Means Method : Yes
+
+Please wait, Simulation has been started...
+
+Batch N° 1 : Mean Response Time : 470.54 cycles	Mean Waiting Time : 171.33 cycles	Throughput : 1.330
+Batch N° 2 : Mean Response Time : 818.88 cycles	Mean Waiting Time : 484.63 cycles	Throughput : 1.719
+Batch N° 3 : Mean Response Time : 1141.18 cycles	Mean Waiting Time : 805.67 cycles	Throughput : 1.716
+Batch N° 4 : Mean Response Time : 1416.75 cycles	Mean Waiting Time : 1071.82 cycles	Throughput : 1.726
+Batch N° 5 : Mean Response Time : 1667.81 cycles	Mean Waiting Time : 1328.92 cycles	Throughput : 1.661
+Batch N° 6 : Mean Response Time : 2057.06 cycles	Mean Waiting Time : 1711.55 cycles	Throughput : 1.726
+Batch N° 7 : Mean Response Time : 2280.25 cycles	Mean Waiting Time : 1935.29 cycles	Throughput : 1.736
+Batch N° 8 : Mean Response Time : 2615.31 cycles	Mean Waiting Time : 2273.05 cycles	Throughput : 1.699
+Batch N° 9 : Mean Response Time : 2885.51 cycles	Mean Waiting Time : 2546.41 cycles	Throughput : 1.755
+Batch N°10 : Mean Response Time : 3088.24 cycles	Mean Waiting Time : 2751.04 cycles	Throughput : 1.735
+
+End Of The Simulation at T= 11976.91 cycles
+Injection Rate : 80
+Batch Size : 2000
+Number of Batches : 10
+Number of Clients Served : 20000
+Overall Response Time : 1844.15 cycles
+Overall Waiting  Time : 1507.97 cycles
+Overall Throughput : 1.680 
+Standard Deviation Response Time : 888.71307 cycles
+Standard Deviation Waiting  Time : 880.80273 cycles
+Standard Deviation Throughput : 0.125698 

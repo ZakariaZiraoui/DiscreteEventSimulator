@@ -1,0 +1,42 @@
+Simulation Starting Time 2021-09-01 06:05:35
+Welcome to Network-On-Chip 2D Mesh Simulator 
+This simulator was designed based on The Discrete Event Simulation.
+It's a final year project to obtain the Master Degree
+Student developer : Ziraoui Zakaria 
+Supervisor: Prof. Mohamed Ould-Khaoua
+
+Network Simulation Parameters :
+
+Topology : 16 x 16 Mesh 
+Number of Nodes  : 256 
+Routing : Dimension-ordered (DOR)
+Traffic : Hotspot [8][8]
+Message length : 32 phits
+Injection Rate : 50
+Transmission Time : 32 Cycles
+Batch Means Method : Yes
+
+Please wait, Simulation has been started...
+
+Batch N° 1 : Mean Response Time : 513.79 cycles	Mean Waiting Time : 226.42 cycles	Throughput : 1.389
+Batch N° 2 : Mean Response Time : 997.99 cycles	Mean Waiting Time : 681.03 cycles	Throughput : 1.786
+Batch N° 3 : Mean Response Time : 1460.59 cycles	Mean Waiting Time : 1135.09 cycles	Throughput : 1.838
+Batch N° 4 : Mean Response Time : 1853.93 cycles	Mean Waiting Time : 1527.79 cycles	Throughput : 1.786
+Batch N° 5 : Mean Response Time : 2308.56 cycles	Mean Waiting Time : 1976.64 cycles	Throughput : 1.800
+Batch N° 6 : Mean Response Time : 2662.95 cycles	Mean Waiting Time : 2336.09 cycles	Throughput : 1.772
+Batch N° 7 : Mean Response Time : 3054.39 cycles	Mean Waiting Time : 2731.85 cycles	Throughput : 1.894
+Batch N° 8 : Mean Response Time : 3515.11 cycles	Mean Waiting Time : 3183.73 cycles	Throughput : 1.815
+Batch N° 9 : Mean Response Time : 3847.25 cycles	Mean Waiting Time : 3518.51 cycles	Throughput : 1.919
+Batch N°10 : Mean Response Time : 4251.80 cycles	Mean Waiting Time : 3923.99 cycles	Throughput : 1.838
+
+End Of The Simulation at T= 11296.00 cycles
+Injection Rate : 50
+Batch Size : 2000
+Number of Batches : 10
+Number of Clients Served : 20000
+Overall Response Time : 2446.64 cycles
+Overall Waiting  Time : 2124.11 cycles
+Overall Throughput : 1.784 
+Standard Deviation Response Time : 1245.22473 cycles
+Standard Deviation Waiting  Time : 1236.49329 cycles
+Standard Deviation Throughput : 0.146691 

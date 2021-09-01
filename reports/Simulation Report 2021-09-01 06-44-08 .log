@@ -1,0 +1,43 @@
+Simulation Starting Time 2021-09-01 06:44:08
+Welcome to Network-On-Chip ExpressCube Simulator 
+This simulator was designed based on The Discrete Event Simulation.
+It's a final year project to obtain the Master Degree
+Student developer : Ziraoui Zakaria 
+Supervisor: Prof. Mohamed Ould-Khaoua
+
+Network Simulation Parameters :
+
+Topology : 32 x 32 Express Cube with 8 Hops
+Number of Nodes  : 1024 
+Routing : Dimension-ordered (DOR)
+Traffic : Hotspot [16][16]
+Message length : 32 phits
+Injection Rate : 80
+Transmission Time Normal  Links : 32 Cycles
+Transmission Time Express Links : 32 Cycles
+Batch Means Method : Yes
+
+Please wait, Simulation has been started...
+
+Batch N° 1 : Mean Response Time : 298.63 cycles	Mean Waiting Time : 38.83 cycles	Throughput : 3.353
+Batch N° 2 : Mean Response Time : 456.63 cycles	Mean Waiting Time : 122.18 cycles	Throughput : 6.034
+Batch N° 3 : Mean Response Time : 549.99 cycles	Mean Waiting Time : 201.47 cycles	Throughput : 6.218
+Batch N° 4 : Mean Response Time : 634.11 cycles	Mean Waiting Time : 274.18 cycles	Throughput : 6.282
+Batch N° 5 : Mean Response Time : 711.11 cycles	Mean Waiting Time : 350.17 cycles	Throughput : 6.508
+Batch N° 6 : Mean Response Time : 797.72 cycles	Mean Waiting Time : 433.10 cycles	Throughput : 6.454
+Batch N° 7 : Mean Response Time : 859.70 cycles	Mean Waiting Time : 490.46 cycles	Throughput : 6.699
+Batch N° 8 : Mean Response Time : 914.14 cycles	Mean Waiting Time : 548.38 cycles	Throughput : 6.267
+Batch N° 9 : Mean Response Time : 995.80 cycles	Mean Waiting Time : 629.42 cycles	Throughput : 6.643
+Batch N°10 : Mean Response Time : 1048.94 cycles	Mean Waiting Time : 685.49 cycles	Throughput : 6.686
+
+End Of The Simulation at T= 3403.13 cycles
+Injection Rate : 80
+Batch Size : 2000
+Number of Batches : 10
+Number of Clients Served : 20000
+Overall Response Time : 726.68 cycles
+Overall Waiting  Time : 377.37 cycles
+Overall Throughput : 6.114 
+Standard Deviation Response Time : 242.74919 cycles
+Standard Deviation Waiting  Time : 217.47800 cycles
+Standard Deviation Throughput : 0.995211 

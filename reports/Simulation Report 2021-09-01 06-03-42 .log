@@ -1,0 +1,43 @@
+Simulation Starting Time 2021-09-01 06:03:42
+Welcome to Network-On-Chip ExpressCube Simulator 
+This simulator was designed based on The Discrete Event Simulation.
+It's a final year project to obtain the Master Degree
+Student developer : Ziraoui Zakaria 
+Supervisor: Prof. Mohamed Ould-Khaoua
+
+Network Simulation Parameters :
+
+Topology : 8 x 8 Express Cube with 2 Hops
+Number of Nodes  : 64 
+Routing : Dimension-ordered (DOR)
+Traffic : Hotspot [4][4]
+Message length : 32 phits
+Injection Rate : 50
+Transmission Time Normal  Links : 32 Cycles
+Transmission Time Express Links : 32 Cycles
+Batch Means Method : Yes
+
+Please wait, Simulation has been started...
+
+Batch N° 1 : Mean Response Time : 350.10 cycles	Mean Waiting Time : 208.89 cycles	Throughput : 0.925
+Batch N° 2 : Mean Response Time : 602.35 cycles	Mean Waiting Time : 459.14 cycles	Throughput : 1.002
+Batch N° 3 : Mean Response Time : 818.17 cycles	Mean Waiting Time : 674.31 cycles	Throughput : 1.003
+Batch N° 4 : Mean Response Time : 1063.96 cycles	Mean Waiting Time : 920.96 cycles	Throughput : 1.004
+Batch N° 5 : Mean Response Time : 1273.47 cycles	Mean Waiting Time : 1129.67 cycles	Throughput : 0.991
+Batch N° 6 : Mean Response Time : 1488.66 cycles	Mean Waiting Time : 1343.15 cycles	Throughput : 1.011
+Batch N° 7 : Mean Response Time : 1678.88 cycles	Mean Waiting Time : 1533.04 cycles	Throughput : 1.012
+Batch N° 8 : Mean Response Time : 1999.46 cycles	Mean Waiting Time : 1853.28 cycles	Throughput : 1.012
+Batch N° 9 : Mean Response Time : 2029.17 cycles	Mean Waiting Time : 1877.85 cycles	Throughput : 1.004
+Batch N°10 : Mean Response Time : 2290.80 cycles	Mean Waiting Time : 2148.55 cycles	Throughput : 1.025
+
+End Of The Simulation at T= 20039.24 cycles
+Injection Rate : 50
+Batch Size : 2000
+Number of Batches : 10
+Number of Clients Served : 20000
+Overall Response Time : 1359.50 cycles
+Overall Waiting  Time : 1214.89 cycles
+Overall Throughput : 0.999 
+Standard Deviation Response Time : 651.83325 cycles
+Standard Deviation Waiting  Time : 650.25879 cycles
+Standard Deviation Throughput : 0.027622 

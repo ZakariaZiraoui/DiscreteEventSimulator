@@ -1,0 +1,42 @@
+Simulation Starting Time 2021-09-01 06:05:29
+Welcome to Network-On-Chip 2D Mesh Simulator 
+This simulator was designed based on The Discrete Event Simulation.
+It's a final year project to obtain the Master Degree
+Student developer : Ziraoui Zakaria 
+Supervisor: Prof. Mohamed Ould-Khaoua
+
+Network Simulation Parameters :
+
+Topology : 16 x 16 Mesh 
+Number of Nodes  : 256 
+Routing : Dimension-ordered (DOR)
+Traffic : Hotspot [8][8]
+Message length : 32 phits
+Injection Rate : 70
+Transmission Time : 32 Cycles
+Batch Means Method : Yes
+
+Please wait, Simulation has been started...
+
+Batch N° 1 : Mean Response Time : 470.20 cycles	Mean Waiting Time : 182.65 cycles	Throughput : 1.359
+Batch N° 2 : Mean Response Time : 872.47 cycles	Mean Waiting Time : 543.29 cycles	Throughput : 1.736
+Batch N° 3 : Mean Response Time : 1219.19 cycles	Mean Waiting Time : 880.00 cycles	Throughput : 1.731
+Batch N° 4 : Mean Response Time : 1485.48 cycles	Mean Waiting Time : 1149.37 cycles	Throughput : 1.791
+Batch N° 5 : Mean Response Time : 1752.61 cycles	Mean Waiting Time : 1430.02 cycles	Throughput : 1.784
+Batch N° 6 : Mean Response Time : 2050.21 cycles	Mean Waiting Time : 1715.52 cycles	Throughput : 1.741
+Batch N° 7 : Mean Response Time : 2328.41 cycles	Mean Waiting Time : 1994.56 cycles	Throughput : 1.856
+Batch N° 8 : Mean Response Time : 2754.93 cycles	Mean Waiting Time : 2418.15 cycles	Throughput : 1.817
+Batch N° 9 : Mean Response Time : 2863.93 cycles	Mean Waiting Time : 2528.65 cycles	Throughput : 1.838
+Batch N°10 : Mean Response Time : 3206.09 cycles	Mean Waiting Time : 2870.41 cycles	Throughput : 1.838
+
+End Of The Simulation at T= 11520.00 cycles
+Injection Rate : 70
+Batch Size : 2000
+Number of Batches : 10
+Number of Clients Served : 20000
+Overall Response Time : 1900.35 cycles
+Overall Waiting  Time : 1571.26 cycles
+Overall Throughput : 1.749 
+Standard Deviation Response Time : 902.41998 cycles
+Standard Deviation Waiting  Time : 893.33032 cycles
+Standard Deviation Throughput : 0.144499 

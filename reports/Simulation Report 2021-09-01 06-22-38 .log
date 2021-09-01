@@ -1,0 +1,42 @@
+Simulation Starting Time 2021-09-01 06:22:38
+Welcome to Network-On-Chip 2D Mesh Simulator 
+This simulator was designed based on The Discrete Event Simulation.
+It's a final year project to obtain the Master Degree
+Student developer : Ziraoui Zakaria 
+Supervisor: Prof. Mohamed Ould-Khaoua
+
+Network Simulation Parameters :
+
+Topology : 32 x 32 Mesh 
+Number of Nodes  : 1024 
+Routing : Dimension-ordered (DOR)
+Traffic : Hotspot [16][16]
+Message length : 32 phits
+Injection Rate : 50
+Transmission Time : 32 Cycles
+Batch Means Method : Yes
+
+Please wait, Simulation has been started...
+
+Batch N° 1 : Mean Response Time : 450.21 cycles	Mean Waiting Time : 105.30 cycles	Throughput : 2.155
+Batch N° 2 : Mean Response Time : 839.45 cycles	Mean Waiting Time : 344.84 cycles	Throughput : 3.457
+Batch N° 3 : Mean Response Time : 1102.25 cycles	Mean Waiting Time : 595.17 cycles	Throughput : 3.693
+Batch N° 4 : Mean Response Time : 1363.32 cycles	Mean Waiting Time : 845.84 cycles	Throughput : 3.906
+Batch N° 5 : Mean Response Time : 1605.10 cycles	Mean Waiting Time : 1080.39 cycles	Throughput : 3.906
+Batch N° 6 : Mean Response Time : 1831.48 cycles	Mean Waiting Time : 1316.33 cycles	Throughput : 3.906
+Batch N° 7 : Mean Response Time : 2051.78 cycles	Mean Waiting Time : 1526.13 cycles	Throughput : 3.906
+Batch N° 8 : Mean Response Time : 2305.00 cycles	Mean Waiting Time : 1773.81 cycles	Throughput : 3.929
+Batch N° 9 : Mean Response Time : 2510.85 cycles	Mean Waiting Time : 1980.35 cycles	Throughput : 3.919
+Batch N°10 : Mean Response Time : 2767.41 cycles	Mean Waiting Time : 2233.22 cycles	Throughput : 4.126
+
+End Of The Simulation at T= 5600.00 cycles
+Injection Rate : 50
+Batch Size : 2000
+Number of Batches : 10
+Number of Clients Served : 20000
+Overall Response Time : 1682.69 cycles
+Overall Waiting  Time : 1180.14 cycles
+Overall Throughput : 3.691 
+Standard Deviation Response Time : 751.52509 cycles
+Standard Deviation Waiting  Time : 711.56378 cycles
+Standard Deviation Throughput : 0.567350 
