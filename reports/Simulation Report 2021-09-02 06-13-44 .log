@@ -1,0 +1,42 @@
+Simulation Starting Time 2021-09-02 06:13:44
+Welcome to Network-On-Chip 2D Mesh Simulator 
+This simulator was designed based on The Discrete Event Simulation.
+It's a final year project to obtain the Master Degree
+Student developer : Ziraoui Zakaria 
+Supervisor: Prof. Mohamed Ould-Khaoua
+
+Network Simulation Parameters :
+
+Topology : 16 x 16 Mesh 
+Number of Nodes  : 256 
+Routing : Dimension-ordered (DOR)
+Traffic : Uniform Random
+Message length : 32 phits
+Injection Rate : 100
+Transmission Time : 32 Cycles
+Batch Means Method : Yes
+
+Please wait, Simulation has been started...
+
+Batch N° 1 : Mean Response Time : 464.90 cycles	Mean Waiting Time : 154.78 cycles	Throughput : 1.389
+Batch N° 2 : Mean Response Time : 785.75 cycles	Mean Waiting Time : 435.99 cycles	Throughput : 1.741
+Batch N° 3 : Mean Response Time : 1053.89 cycles	Mean Waiting Time : 701.59 cycles	Throughput : 1.749
+Batch N° 4 : Mean Response Time : 1360.35 cycles	Mean Waiting Time : 1002.02 cycles	Throughput : 1.812
+Batch N° 5 : Mean Response Time : 1581.43 cycles	Mean Waiting Time : 1227.92 cycles	Throughput : 1.854
+Batch N° 6 : Mean Response Time : 1833.49 cycles	Mean Waiting Time : 1473.76 cycles	Throughput : 1.778
+Batch N° 7 : Mean Response Time : 2047.00 cycles	Mean Waiting Time : 1694.12 cycles	Throughput : 1.851
+Batch N° 8 : Mean Response Time : 2267.90 cycles	Mean Waiting Time : 1908.73 cycles	Throughput : 1.853
+Batch N° 9 : Mean Response Time : 2511.09 cycles	Mean Waiting Time : 2155.71 cycles	Throughput : 1.871
+Batch N°10 : Mean Response Time : 2758.92 cycles	Mean Waiting Time : 2400.14 cycles	Throughput : 1.832
+
+End Of The Simulation at T= 11360.00 cycles
+Injection Rate : 100
+Batch Size : 2000
+Number of Batches : 10
+Number of Clients Served : 20000
+Overall Response Time : 1666.47 cycles
+Overall Waiting  Time : 1315.48 cycles
+Overall Throughput : 1.773 
+Standard Deviation Response Time : 755.49042 cycles
+Standard Deviation Waiting  Time : 745.82831 cycles
+Standard Deviation Throughput : 0.142556 

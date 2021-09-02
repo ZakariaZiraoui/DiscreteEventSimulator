@@ -1,0 +1,42 @@
+Simulation Starting Time 2021-09-02 05:19:52
+Welcome to Network-On-Chip 2D Mesh Simulator 
+This simulator was designed based on The Discrete Event Simulation.
+It's a final year project to obtain the Master Degree
+Student developer : Ziraoui Zakaria 
+Supervisor: Prof. Mohamed Ould-Khaoua
+
+Network Simulation Parameters :
+
+Topology : 8 x 8 Mesh 
+Number of Nodes  : 64 
+Routing : Dimension-ordered (DOR)
+Traffic : Uniform Random
+Message length : 32 phits
+Injection Rate : 50
+Transmission Time : 32 Cycles
+Batch Means Method : Yes
+
+Please wait, Simulation has been started...
+
+Batch N° 1 : Mean Response Time : 578.29 cycles	Mean Waiting Time : 394.29 cycles	Throughput : 0.753
+Batch N° 2 : Mean Response Time : 1369.53 cycles	Mean Waiting Time : 1177.43 cycles	Throughput : 0.829
+Batch N° 3 : Mean Response Time : 2057.67 cycles	Mean Waiting Time : 1859.37 cycles	Throughput : 0.822
+Batch N° 4 : Mean Response Time : 2775.91 cycles	Mean Waiting Time : 2576.81 cycles	Throughput : 0.840
+Batch N° 5 : Mean Response Time : 3351.10 cycles	Mean Waiting Time : 3152.82 cycles	Throughput : 0.867
+Batch N° 6 : Mean Response Time : 4095.05 cycles	Mean Waiting Time : 3895.51 cycles	Throughput : 0.839
+Batch N° 7 : Mean Response Time : 4708.27 cycles	Mean Waiting Time : 4511.34 cycles	Throughput : 0.846
+Batch N° 8 : Mean Response Time : 5375.86 cycles	Mean Waiting Time : 5175.01 cycles	Throughput : 0.837
+Batch N° 9 : Mean Response Time : 5938.62 cycles	Mean Waiting Time : 5741.74 cycles	Throughput : 0.857
+Batch N°10 : Mean Response Time : 6674.58 cycles	Mean Waiting Time : 6476.04 cycles	Throughput : 0.840
+
+End Of The Simulation at T= 24041.27 cycles
+Injection Rate : 50
+Batch Size : 2000
+Number of Batches : 10
+Number of Clients Served : 20000
+Overall Response Time : 3692.49 cycles
+Overall Waiting  Time : 3496.04 cycles
+Overall Throughput : 0.833 
+Standard Deviation Response Time : 2019.05444 cycles
+Standard Deviation Waiting  Time : 2015.80591 cycles
+Standard Deviation Throughput : 0.030936 

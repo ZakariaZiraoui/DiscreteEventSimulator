@@ -1,0 +1,42 @@
+Simulation Starting Time 2021-09-02 06:28:14
+Welcome to Network-On-Chip 2D Mesh Simulator 
+This simulator was designed based on The Discrete Event Simulation.
+It's a final year project to obtain the Master Degree
+Student developer : Ziraoui Zakaria 
+Supervisor: Prof. Mohamed Ould-Khaoua
+
+Network Simulation Parameters :
+
+Topology : 32 x 32 Mesh 
+Number of Nodes  : 1024 
+Routing : Dimension-ordered (DOR)
+Traffic : Uniform Random
+Message length : 32 phits
+Injection Rate : 150
+Transmission Time : 32 Cycles
+Batch Means Method : Yes
+
+Please wait, Simulation has been started...
+
+Batch N° 1 : Mean Response Time : 481.81 cycles	Mean Waiting Time : 65.81 cycles	Throughput : 1.953
+Batch N° 2 : Mean Response Time : 807.98 cycles	Mean Waiting Time : 227.79 cycles	Throughput : 3.545
+Batch N° 3 : Mean Response Time : 1017.07 cycles	Mean Waiting Time : 402.00 cycles	Throughput : 3.818
+Batch N° 4 : Mean Response Time : 1198.40 cycles	Mean Waiting Time : 567.69 cycles	Throughput : 3.700
+Batch N° 5 : Mean Response Time : 1358.20 cycles	Mean Waiting Time : 726.19 cycles	Throughput : 3.705
+Batch N° 6 : Mean Response Time : 1543.13 cycles	Mean Waiting Time : 914.36 cycles	Throughput : 3.877
+Batch N° 7 : Mean Response Time : 1691.94 cycles	Mean Waiting Time : 1059.10 cycles	Throughput : 3.918
+Batch N° 8 : Mean Response Time : 1883.92 cycles	Mean Waiting Time : 1240.74 cycles	Throughput : 3.867
+Batch N° 9 : Mean Response Time : 2025.62 cycles	Mean Waiting Time : 1380.56 cycles	Throughput : 3.906
+Batch N°10 : Mean Response Time : 2196.37 cycles	Mean Waiting Time : 1550.53 cycles	Throughput : 3.906
+
+End Of The Simulation at T= 5760.00 cycles
+Injection Rate : 150
+Batch Size : 2000
+Number of Batches : 10
+Number of Clients Served : 20000
+Overall Response Time : 1420.45 cycles
+Overall Waiting  Time : 813.48 cycles
+Overall Throughput : 3.619 
+Standard Deviation Response Time : 552.15790 cycles
+Standard Deviation Waiting  Time : 500.80603 cycles
+Standard Deviation Throughput : 0.597789 

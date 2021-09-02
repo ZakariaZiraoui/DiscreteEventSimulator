@@ -6,10 +6,10 @@
 #define N 32    //Number of Nodes in X Dimension
 #define M 32     //Number of Nodes in Y Dimension
 #define Hops 8  //Number of Hops Only For ExpressCube
-#define TR 32   //Transmission Time Normal Links
-#define TRE 32  //Transmission Time Express Links
+#define TR 160   //Transmission Time Normal Links
+#define TRE 160  //Transmission Time Express Links
 
-#define Traffic 1 // 0 For UNIFORM 1 For HOTSPOT
+#define Traffic 0 // 0 For UNIFORM 1 For HOTSPOT
 #define P 0.1   //Probability of sending to The Hotspot
 #define HotX N/2 //Place of the Hotspot Node
 #define HotY M/2 //Place of the Hotspot Node

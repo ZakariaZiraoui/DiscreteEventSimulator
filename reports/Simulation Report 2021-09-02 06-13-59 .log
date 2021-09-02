@@ -1,0 +1,42 @@
+Simulation Starting Time 2021-09-02 06:13:59
+Welcome to Network-On-Chip 2D Mesh Simulator 
+This simulator was designed based on The Discrete Event Simulation.
+It's a final year project to obtain the Master Degree
+Student developer : Ziraoui Zakaria 
+Supervisor: Prof. Mohamed Ould-Khaoua
+
+Network Simulation Parameters :
+
+Topology : 16 x 16 Mesh 
+Number of Nodes  : 256 
+Routing : Dimension-ordered (DOR)
+Traffic : Uniform Random
+Message length : 32 phits
+Injection Rate : 70
+Transmission Time : 32 Cycles
+Batch Means Method : Yes
+
+Please wait, Simulation has been started...
+
+Batch N° 1 : Mean Response Time : 484.82 cycles	Mean Waiting Time : 187.27 cycles	Throughput : 1.429
+Batch N° 2 : Mean Response Time : 881.86 cycles	Mean Waiting Time : 552.64 cycles	Throughput : 1.868
+Batch N° 3 : Mean Response Time : 1215.94 cycles	Mean Waiting Time : 880.87 cycles	Throughput : 1.867
+Batch N° 4 : Mean Response Time : 1549.01 cycles	Mean Waiting Time : 1208.25 cycles	Throughput : 1.891
+Batch N° 5 : Mean Response Time : 1887.88 cycles	Mean Waiting Time : 1547.07 cycles	Throughput : 1.928
+Batch N° 6 : Mean Response Time : 2214.96 cycles	Mean Waiting Time : 1880.89 cycles	Throughput : 1.902
+Batch N° 7 : Mean Response Time : 2455.85 cycles	Mean Waiting Time : 2123.61 cycles	Throughput : 1.988
+Batch N° 8 : Mean Response Time : 2823.28 cycles	Mean Waiting Time : 2484.15 cycles	Throughput : 1.930
+Batch N° 9 : Mean Response Time : 3204.83 cycles	Mean Waiting Time : 2861.31 cycles	Throughput : 1.914
+Batch N°10 : Mean Response Time : 3411.10 cycles	Mean Waiting Time : 3075.41 cycles	Throughput : 1.915
+
+End Of The Simulation at T= 10819.82 cycles
+Injection Rate : 70
+Batch Size : 2000
+Number of Batches : 10
+Number of Clients Served : 20000
+Overall Response Time : 2012.95 cycles
+Overall Waiting  Time : 1680.15 cycles
+Overall Throughput : 1.863 
+Standard Deviation Response Time : 985.99359 cycles
+Standard Deviation Waiting  Time : 977.78119 cycles
+Standard Deviation Throughput : 0.156405 
