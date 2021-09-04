@@ -1,0 +1,42 @@
+Simulation Starting Time 2021-09-04 04:17:59
+Welcome to Network-On-Chip 2D Mesh Simulator 
+This simulator was designed based on The Discrete Event Simulation.
+It's a final year project to obtain the Master Degree
+Student developer : Ziraoui Zakaria 
+Supervisor: Prof. Mohamed Ould-Khaoua
+
+Network Simulation Parameters :
+
+Topology : 16 x 16 Mesh 
+Number of Nodes  : 256 
+Routing : Dimension-ordered (DOR)
+Traffic : Hotspot [8][8]
+Message length : 32 phits
+Injection Rate : 100
+Transmission Time : 32 Cycles
+Batch Means Method : Yes
+
+Please wait, Simulation has been started...
+
+Batch N° 1 : Mean Response Time : 462.41 cycles	Mean Waiting Time : 160.32 cycles	Throughput : 1.302
+Batch N° 2 : Mean Response Time : 797.44 cycles	Mean Waiting Time : 455.51 cycles	Throughput : 1.567
+Batch N° 3 : Mean Response Time : 1052.43 cycles	Mean Waiting Time : 708.08 cycles	Throughput : 1.597
+Batch N° 4 : Mean Response Time : 1310.94 cycles	Mean Waiting Time : 971.27 cycles	Throughput : 1.688
+Batch N° 5 : Mean Response Time : 1536.74 cycles	Mean Waiting Time : 1192.36 cycles	Throughput : 1.574
+Batch N° 6 : Mean Response Time : 1800.72 cycles	Mean Waiting Time : 1461.38 cycles	Throughput : 1.557
+Batch N° 7 : Mean Response Time : 2167.86 cycles	Mean Waiting Time : 1814.20 cycles	Throughput : 1.586
+Batch N° 8 : Mean Response Time : 2361.25 cycles	Mean Waiting Time : 2013.02 cycles	Throughput : 1.625
+Batch N° 9 : Mean Response Time : 2698.73 cycles	Mean Waiting Time : 2350.15 cycles	Throughput : 1.593
+Batch N°10 : Mean Response Time : 2853.76 cycles	Mean Waiting Time : 2510.75 cycles	Throughput : 1.634
+
+End Of The Simulation at T= 12775.54 cycles
+Injection Rate : 100
+Batch Size : 2000
+Number of Batches : 10
+Number of Clients Served : 20000
+Overall Response Time : 1704.23 cycles
+Overall Waiting  Time : 1363.70 cycles
+Overall Throughput : 1.572 
+Standard Deviation Response Time : 812.29065 cycles
+Standard Deviation Waiting  Time : 803.39850 cycles
+Standard Deviation Throughput : 0.102491 

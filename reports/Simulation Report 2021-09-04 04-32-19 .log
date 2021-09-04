@@ -1,0 +1,42 @@
+Simulation Starting Time 2021-09-04 04:32:19
+Welcome to Network-On-Chip 2D Mesh Simulator 
+This simulator was designed based on The Discrete Event Simulation.
+It's a final year project to obtain the Master Degree
+Student developer : Ziraoui Zakaria 
+Supervisor: Prof. Mohamed Ould-Khaoua
+
+Network Simulation Parameters :
+
+Topology : 32 x 32 Mesh 
+Number of Nodes  : 1024 
+Routing : Dimension-ordered (DOR)
+Traffic : Hotspot [16][16]
+Message length : 32 phits
+Injection Rate : 100
+Transmission Time : 32 Cycles
+Batch Means Method : Yes
+
+Please wait, Simulation has been started...
+
+Batch N° 1 : Mean Response Time : 479.45 cycles	Mean Waiting Time : 76.43 cycles	Throughput : 1.953
+Batch N° 2 : Mean Response Time : 811.20 cycles	Mean Waiting Time : 258.74 cycles	Throughput : 3.289
+Batch N° 3 : Mean Response Time : 1035.74 cycles	Mean Waiting Time : 462.57 cycles	Throughput : 3.676
+Batch N° 4 : Mean Response Time : 1241.16 cycles	Mean Waiting Time : 660.14 cycles	Throughput : 3.676
+Batch N° 5 : Mean Response Time : 1431.91 cycles	Mean Waiting Time : 842.36 cycles	Throughput : 3.676
+Batch N° 6 : Mean Response Time : 1607.72 cycles	Mean Waiting Time : 1021.10 cycles	Throughput : 3.756
+Batch N° 7 : Mean Response Time : 1779.73 cycles	Mean Waiting Time : 1193.15 cycles	Throughput : 3.815
+Batch N° 8 : Mean Response Time : 1944.21 cycles	Mean Waiting Time : 1350.81 cycles	Throughput : 3.740
+Batch N° 9 : Mean Response Time : 2133.20 cycles	Mean Waiting Time : 1540.10 cycles	Throughput : 3.828
+Batch N°10 : Mean Response Time : 2308.96 cycles	Mean Waiting Time : 1710.78 cycles	Throughput : 3.900
+
+End Of The Simulation at T= 5890.95 cycles
+Injection Rate : 100
+Batch Size : 2000
+Number of Batches : 10
+Number of Clients Served : 20000
+Overall Response Time : 1477.33 cycles
+Overall Waiting  Time : 911.62 cycles
+Overall Throughput : 3.531 
+Standard Deviation Response Time : 590.71802 cycles
+Standard Deviation Waiting  Time : 548.86206 cycles
+Standard Deviation Throughput : 0.578339 

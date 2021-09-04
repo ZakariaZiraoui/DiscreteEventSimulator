@@ -1,0 +1,42 @@
+Simulation Starting Time 2021-09-04 04:13:01
+Welcome to Network-On-Chip 2D Mesh Simulator 
+This simulator was designed based on The Discrete Event Simulation.
+It's a final year project to obtain the Master Degree
+Student developer : Ziraoui Zakaria 
+Supervisor: Prof. Mohamed Ould-Khaoua
+
+Network Simulation Parameters :
+
+Topology : 8 x 8 Mesh 
+Number of Nodes  : 64 
+Routing : Dimension-ordered (DOR)
+Traffic : Hotspot [4][4]
+Message length : 32 phits
+Injection Rate : 50
+Transmission Time : 32 Cycles
+Batch Means Method : Yes
+
+Please wait, Simulation has been started...
+
+Batch N° 1 : Mean Response Time : 622.42 cycles	Mean Waiting Time : 437.84 cycles	Throughput : 0.720
+Batch N° 2 : Mean Response Time : 1451.99 cycles	Mean Waiting Time : 1259.99 cycles	Throughput : 0.781
+Batch N° 3 : Mean Response Time : 2125.45 cycles	Mean Waiting Time : 1931.48 cycles	Throughput : 0.784
+Batch N° 4 : Mean Response Time : 2857.78 cycles	Mean Waiting Time : 2668.13 cycles	Throughput : 0.774
+Batch N° 5 : Mean Response Time : 3466.68 cycles	Mean Waiting Time : 3278.35 cycles	Throughput : 0.788
+Batch N° 6 : Mean Response Time : 4245.04 cycles	Mean Waiting Time : 4053.58 cycles	Throughput : 0.778
+Batch N° 7 : Mean Response Time : 5057.45 cycles	Mean Waiting Time : 4865.88 cycles	Throughput : 0.775
+Batch N° 8 : Mean Response Time : 5797.04 cycles	Mean Waiting Time : 5604.13 cycles	Throughput : 0.786
+Batch N° 9 : Mean Response Time : 6520.39 cycles	Mean Waiting Time : 6328.92 cycles	Throughput : 0.800
+Batch N°10 : Mean Response Time : 7098.76 cycles	Mean Waiting Time : 6905.93 cycles	Throughput : 0.799
+
+End Of The Simulation at T= 25705.95 cycles
+Injection Rate : 50
+Batch Size : 2000
+Number of Batches : 10
+Number of Clients Served : 20000
+Overall Response Time : 3924.30 cycles
+Overall Waiting  Time : 3733.42 cycles
+Overall Throughput : 0.779 
+Standard Deviation Response Time : 2193.63892 cycles
+Standard Deviation Waiting  Time : 2192.25049 cycles
+Standard Deviation Throughput : 0.022366 

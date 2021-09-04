@@ -1,0 +1,42 @@
+Simulation Starting Time 2021-09-04 04:31:20
+Welcome to Network-On-Chip 2D Mesh Simulator 
+This simulator was designed based on The Discrete Event Simulation.
+It's a final year project to obtain the Master Degree
+Student developer : Ziraoui Zakaria 
+Supervisor: Prof. Mohamed Ould-Khaoua
+
+Network Simulation Parameters :
+
+Topology : 32 x 32 Mesh 
+Number of Nodes  : 1024 
+Routing : Dimension-ordered (DOR)
+Traffic : Hotspot [16][16]
+Message length : 32 phits
+Injection Rate : 150
+Transmission Time : 32 Cycles
+Batch Means Method : Yes
+
+Please wait, Simulation has been started...
+
+Batch N° 1 : Mean Response Time : 509.16 cycles	Mean Waiting Time : 70.30 cycles	Throughput : 1.838
+Batch N° 2 : Mean Response Time : 839.33 cycles	Mean Waiting Time : 234.13 cycles	Throughput : 3.289
+Batch N° 3 : Mean Response Time : 1022.90 cycles	Mean Waiting Time : 400.10 cycles	Throughput : 3.456
+Batch N° 4 : Mean Response Time : 1166.72 cycles	Mean Waiting Time : 535.61 cycles	Throughput : 3.318
+Batch N° 5 : Mean Response Time : 1355.02 cycles	Mean Waiting Time : 722.51 cycles	Throughput : 3.458
+Batch N° 6 : Mean Response Time : 1490.82 cycles	Mean Waiting Time : 848.90 cycles	Throughput : 3.472
+Batch N° 7 : Mean Response Time : 1677.78 cycles	Mean Waiting Time : 1030.95 cycles	Throughput : 3.526
+Batch N° 8 : Mean Response Time : 1810.61 cycles	Mean Waiting Time : 1174.50 cycles	Throughput : 3.618
+Batch N° 9 : Mean Response Time : 1923.11 cycles	Mean Waiting Time : 1291.19 cycles	Throughput : 3.472
+Batch N°10 : Mean Response Time : 2091.74 cycles	Mean Waiting Time : 1449.90 cycles	Throughput : 3.472
+
+End Of The Simulation at T= 6304.00 cycles
+Injection Rate : 150
+Batch Size : 2000
+Number of Batches : 10
+Number of Clients Served : 20000
+Overall Response Time : 1388.72 cycles
+Overall Waiting  Time : 775.81 cycles
+Overall Throughput : 3.292 
+Standard Deviation Response Time : 506.78439 cycles
+Standard Deviation Waiting  Time : 464.55206 cycles
+Standard Deviation Throughput : 0.519279 

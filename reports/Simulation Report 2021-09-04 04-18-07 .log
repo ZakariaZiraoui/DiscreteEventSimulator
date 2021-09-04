@@ -1,0 +1,42 @@
+Simulation Starting Time 2021-09-04 04:18:07
+Welcome to Network-On-Chip 2D Mesh Simulator 
+This simulator was designed based on The Discrete Event Simulation.
+It's a final year project to obtain the Master Degree
+Student developer : Ziraoui Zakaria 
+Supervisor: Prof. Mohamed Ould-Khaoua
+
+Network Simulation Parameters :
+
+Topology : 16 x 16 Mesh 
+Number of Nodes  : 256 
+Routing : Dimension-ordered (DOR)
+Traffic : Hotspot [8][8]
+Message length : 32 phits
+Injection Rate : 50
+Transmission Time : 32 Cycles
+Batch Means Method : Yes
+
+Please wait, Simulation has been started...
+
+Batch N° 1 : Mean Response Time : 505.06 cycles	Mean Waiting Time : 215.29 cycles	Throughput : 1.389
+Batch N° 2 : Mean Response Time : 1007.98 cycles	Mean Waiting Time : 680.59 cycles	Throughput : 1.786
+Batch N° 3 : Mean Response Time : 1459.90 cycles	Mean Waiting Time : 1132.08 cycles	Throughput : 1.862
+Batch N° 4 : Mean Response Time : 1854.63 cycles	Mean Waiting Time : 1529.68 cycles	Throughput : 1.843
+Batch N° 5 : Mean Response Time : 2234.00 cycles	Mean Waiting Time : 1913.41 cycles	Throughput : 1.865
+Batch N° 6 : Mean Response Time : 2653.15 cycles	Mean Waiting Time : 2322.85 cycles	Throughput : 1.786
+Batch N° 7 : Mean Response Time : 3052.28 cycles	Mean Waiting Time : 2725.29 cycles	Throughput : 1.820
+Batch N° 8 : Mean Response Time : 3504.73 cycles	Mean Waiting Time : 3173.22 cycles	Throughput : 1.857
+Batch N° 9 : Mean Response Time : 3888.75 cycles	Mean Waiting Time : 3556.56 cycles	Throughput : 1.840
+Batch N°10 : Mean Response Time : 4214.04 cycles	Mean Waiting Time : 3888.19 cycles	Throughput : 1.952
+
+End Of The Simulation at T= 11200.00 cycles
+Injection Rate : 50
+Batch Size : 2000
+Number of Batches : 10
+Number of Clients Served : 20000
+Overall Response Time : 2437.45 cycles
+Overall Waiting  Time : 2113.72 cycles
+Overall Throughput : 1.800 
+Standard Deviation Response Time : 1244.55859 cycles
+Standard Deviation Waiting  Time : 1237.09143 cycles
+Standard Deviation Throughput : 0.151844 

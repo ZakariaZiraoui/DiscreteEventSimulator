@@ -1,0 +1,42 @@
+Simulation Starting Time 2021-09-04 04:38:49
+Welcome to Network-On-Chip 2D Mesh Simulator 
+This simulator was designed based on The Discrete Event Simulation.
+It's a final year project to obtain the Master Degree
+Student developer : Ziraoui Zakaria 
+Supervisor: Prof. Mohamed Ould-Khaoua
+
+Network Simulation Parameters :
+
+Topology : 32 x 32 Mesh 
+Number of Nodes  : 1024 
+Routing : Dimension-ordered (DOR)
+Traffic : Hotspot [16][16]
+Message length : 32 phits
+Injection Rate : 50
+Transmission Time : 32 Cycles
+Batch Means Method : Yes
+
+Please wait, Simulation has been started...
+
+Batch N° 1 : Mean Response Time : 459.62 cycles	Mean Waiting Time : 110.60 cycles	Throughput : 2.083
+Batch N° 2 : Mean Response Time : 831.69 cycles	Mean Waiting Time : 340.50 cycles	Throughput : 3.676
+Batch N° 3 : Mean Response Time : 1093.27 cycles	Mean Waiting Time : 583.64 cycles	Throughput : 3.676
+Batch N° 4 : Mean Response Time : 1354.62 cycles	Mean Waiting Time : 832.78 cycles	Throughput : 3.906
+Batch N° 5 : Mean Response Time : 1603.90 cycles	Mean Waiting Time : 1084.00 cycles	Throughput : 3.705
+Batch N° 6 : Mean Response Time : 1800.31 cycles	Mean Waiting Time : 1288.51 cycles	Throughput : 3.963
+Batch N° 7 : Mean Response Time : 2059.95 cycles	Mean Waiting Time : 1542.67 cycles	Throughput : 4.068
+Batch N° 8 : Mean Response Time : 2337.48 cycles	Mean Waiting Time : 1808.48 cycles	Throughput : 3.906
+Batch N° 9 : Mean Response Time : 2486.86 cycles	Mean Waiting Time : 1962.83 cycles	Throughput : 3.906
+Batch N°10 : Mean Response Time : 2722.32 cycles	Mean Waiting Time : 2189.00 cycles	Throughput : 3.906
+
+End Of The Simulation at T= 5632.00 cycles
+Injection Rate : 50
+Batch Size : 2000
+Number of Batches : 10
+Number of Clients Served : 20000
+Overall Response Time : 1675.00 cycles
+Overall Waiting  Time : 1174.30 cycles
+Overall Throughput : 3.680 
+Standard Deviation Response Time : 744.84863 cycles
+Standard Deviation Waiting  Time : 707.31604 cycles
+Standard Deviation Throughput : 0.575978 

@@ -1,0 +1,43 @@
+Simulation Starting Time 2021-09-04 04:16:28
+Welcome to Network-On-Chip ExpressCube Simulator 
+This simulator was designed based on The Discrete Event Simulation.
+It's a final year project to obtain the Master Degree
+Student developer : Ziraoui Zakaria 
+Supervisor: Prof. Mohamed Ould-Khaoua
+
+Network Simulation Parameters :
+
+Topology : 8 x 8 Express Cube with 4 Hops
+Number of Nodes  : 64 
+Routing : Dimension-ordered (DOR)
+Traffic : Hotspot [4][4]
+Message length : 32 phits
+Injection Rate : 10500
+Transmission Time Normal  Links : 96 Cycles
+Transmission Time Express Links : 96 Cycles
+Batch Means Method : Yes
+
+Please wait, Simulation has been started...
+
+Batch N° 1 : Mean Response Time : 388.69 cycles	Mean Waiting Time : 1.25 cycles	Throughput : 0.006
+Batch N° 2 : Mean Response Time : 397.47 cycles	Mean Waiting Time : 0.78 cycles	Throughput : 0.006
+Batch N° 3 : Mean Response Time : 398.54 cycles	Mean Waiting Time : 0.70 cycles	Throughput : 0.006
+Batch N° 4 : Mean Response Time : 401.19 cycles	Mean Waiting Time : 0.63 cycles	Throughput : 0.006
+Batch N° 5 : Mean Response Time : 397.19 cycles	Mean Waiting Time : 0.57 cycles	Throughput : 0.006
+Batch N° 6 : Mean Response Time : 397.16 cycles	Mean Waiting Time : 0.68 cycles	Throughput : 0.006
+Batch N° 7 : Mean Response Time : 400.62 cycles	Mean Waiting Time : 0.65 cycles	Throughput : 0.006
+Batch N° 8 : Mean Response Time : 393.26 cycles	Mean Waiting Time : 0.56 cycles	Throughput : 0.006
+Batch N° 9 : Mean Response Time : 391.48 cycles	Mean Waiting Time : 0.59 cycles	Throughput : 0.006
+Batch N°10 : Mean Response Time : 393.35 cycles	Mean Waiting Time : 0.49 cycles	Throughput : 0.006
+
+End Of The Simulation at T= 3268258.00 cycles
+Injection Rate : 10500
+Batch Size : 2000
+Number of Batches : 10
+Number of Clients Served : 20000
+Overall Response Time : 395.89 cycles
+Overall Waiting  Time : 0.69 cycles
+Overall Throughput : 0.006 
+Standard Deviation Response Time : 4.05475 cycles
+Standard Deviation Waiting  Time : 0.21321 cycles
+Standard Deviation Throughput : 0.000077 

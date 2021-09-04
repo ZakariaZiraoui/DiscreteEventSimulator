@@ -1,0 +1,42 @@
+Simulation Starting Time 2021-09-04 04:37:18
+Welcome to Network-On-Chip 2D Mesh Simulator 
+This simulator was designed based on The Discrete Event Simulation.
+It's a final year project to obtain the Master Degree
+Student developer : Ziraoui Zakaria 
+Supervisor: Prof. Mohamed Ould-Khaoua
+
+Network Simulation Parameters :
+
+Topology : 32 x 32 Mesh 
+Number of Nodes  : 1024 
+Routing : Dimension-ordered (DOR)
+Traffic : Hotspot [16][16]
+Message length : 32 phits
+Injection Rate : 70
+Transmission Time : 32 Cycles
+Batch Means Method : Yes
+
+Please wait, Simulation has been started...
+
+Batch N° 1 : Mean Response Time : 459.41 cycles	Mean Waiting Time : 92.64 cycles	Throughput : 2.016
+Batch N° 2 : Mean Response Time : 797.20 cycles	Mean Waiting Time : 291.83 cycles	Throughput : 3.570
+Batch N° 3 : Mean Response Time : 1043.20 cycles	Mean Waiting Time : 505.57 cycles	Throughput : 3.692
+Batch N° 4 : Mean Response Time : 1242.83 cycles	Mean Waiting Time : 704.50 cycles	Throughput : 3.811
+Batch N° 5 : Mean Response Time : 1481.80 cycles	Mean Waiting Time : 933.47 cycles	Throughput : 3.867
+Batch N° 6 : Mean Response Time : 1599.30 cycles	Mean Waiting Time : 1073.30 cycles	Throughput : 3.906
+Batch N° 7 : Mean Response Time : 1896.61 cycles	Mean Waiting Time : 1339.85 cycles	Throughput : 3.906
+Batch N° 8 : Mean Response Time : 2070.74 cycles	Mean Waiting Time : 1517.47 cycles	Throughput : 3.906
+Batch N° 9 : Mean Response Time : 2255.76 cycles	Mean Waiting Time : 1707.16 cycles	Throughput : 3.906
+Batch N°10 : Mean Response Time : 2430.17 cycles	Mean Waiting Time : 1886.50 cycles	Throughput : 4.128
+
+End Of The Simulation at T= 5668.52 cycles
+Injection Rate : 70
+Batch Size : 2000
+Number of Batches : 10
+Number of Clients Served : 20000
+Overall Response Time : 1527.70 cycles
+Overall Waiting  Time : 1005.23 cycles
+Overall Throughput : 3.671 
+Standard Deviation Response Time : 647.51733 cycles
+Standard Deviation Waiting  Time : 608.76245 cycles
+Standard Deviation Throughput : 0.599746 

@@ -1,0 +1,42 @@
+Simulation Starting Time 2021-09-04 04:18:05
+Welcome to Network-On-Chip 2D Mesh Simulator 
+This simulator was designed based on The Discrete Event Simulation.
+It's a final year project to obtain the Master Degree
+Student developer : Ziraoui Zakaria 
+Supervisor: Prof. Mohamed Ould-Khaoua
+
+Network Simulation Parameters :
+
+Topology : 16 x 16 Mesh 
+Number of Nodes  : 256 
+Routing : Dimension-ordered (DOR)
+Traffic : Hotspot [8][8]
+Message length : 32 phits
+Injection Rate : 70
+Transmission Time : 32 Cycles
+Batch Means Method : Yes
+
+Please wait, Simulation has been started...
+
+Batch N° 1 : Mean Response Time : 501.74 cycles	Mean Waiting Time : 201.43 cycles	Throughput : 1.359
+Batch N° 2 : Mean Response Time : 896.73 cycles	Mean Waiting Time : 562.55 cycles	Throughput : 1.683
+Batch N° 3 : Mean Response Time : 1261.29 cycles	Mean Waiting Time : 924.28 cycles	Throughput : 1.697
+Batch N° 4 : Mean Response Time : 1581.16 cycles	Mean Waiting Time : 1241.93 cycles	Throughput : 1.784
+Batch N° 5 : Mean Response Time : 1940.00 cycles	Mean Waiting Time : 1601.21 cycles	Throughput : 1.786
+Batch N° 6 : Mean Response Time : 2198.91 cycles	Mean Waiting Time : 1858.78 cycles	Throughput : 1.779
+Batch N° 7 : Mean Response Time : 2473.32 cycles	Mean Waiting Time : 2138.36 cycles	Throughput : 1.760
+Batch N° 8 : Mean Response Time : 2732.76 cycles	Mean Waiting Time : 2392.99 cycles	Throughput : 1.788
+Batch N° 9 : Mean Response Time : 3081.26 cycles	Mean Waiting Time : 2739.73 cycles	Throughput : 1.782
+Batch N°10 : Mean Response Time : 3456.41 cycles	Mean Waiting Time : 3105.86 cycles	Throughput : 1.820
+
+End Of The Simulation at T= 11680.61 cycles
+Injection Rate : 70
+Batch Size : 2000
+Number of Batches : 10
+Number of Clients Served : 20000
+Overall Response Time : 2012.36 cycles
+Overall Waiting  Time : 1676.71 cycles
+Overall Throughput : 1.724 
+Standard Deviation Response Time : 958.93347 cycles
+Standard Deviation Waiting  Time : 949.29639 cycles
+Standard Deviation Throughput : 0.135064 

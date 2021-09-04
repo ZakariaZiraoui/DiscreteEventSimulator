@@ -1,0 +1,42 @@
+Simulation Starting Time 2021-09-04 04:18:01
+Welcome to Network-On-Chip 2D Mesh Simulator 
+This simulator was designed based on The Discrete Event Simulation.
+It's a final year project to obtain the Master Degree
+Student developer : Ziraoui Zakaria 
+Supervisor: Prof. Mohamed Ould-Khaoua
+
+Network Simulation Parameters :
+
+Topology : 16 x 16 Mesh 
+Number of Nodes  : 256 
+Routing : Dimension-ordered (DOR)
+Traffic : Hotspot [8][8]
+Message length : 32 phits
+Injection Rate : 90
+Transmission Time : 32 Cycles
+Batch Means Method : Yes
+
+Please wait, Simulation has been started...
+
+Batch N° 1 : Mean Response Time : 473.53 cycles	Mean Waiting Time : 168.12 cycles	Throughput : 1.297
+Batch N° 2 : Mean Response Time : 828.43 cycles	Mean Waiting Time : 488.55 cycles	Throughput : 1.642
+Batch N° 3 : Mean Response Time : 1076.21 cycles	Mean Waiting Time : 742.29 cycles	Throughput : 1.702
+Batch N° 4 : Mean Response Time : 1340.85 cycles	Mean Waiting Time : 1001.46 cycles	Throughput : 1.653
+Batch N° 5 : Mean Response Time : 1638.54 cycles	Mean Waiting Time : 1294.47 cycles	Throughput : 1.634
+Batch N° 6 : Mean Response Time : 1854.24 cycles	Mean Waiting Time : 1512.93 cycles	Throughput : 1.693
+Batch N° 7 : Mean Response Time : 2154.57 cycles	Mean Waiting Time : 1812.16 cycles	Throughput : 1.679
+Batch N° 8 : Mean Response Time : 2516.95 cycles	Mean Waiting Time : 2167.61 cycles	Throughput : 1.707
+Batch N° 9 : Mean Response Time : 2665.83 cycles	Mean Waiting Time : 2316.93 cycles	Throughput : 1.708
+Batch N°10 : Mean Response Time : 3001.97 cycles	Mean Waiting Time : 2654.23 cycles	Throughput : 1.682
+
+End Of The Simulation at T= 12274.74 cycles
+Injection Rate : 90
+Batch Size : 2000
+Number of Batches : 10
+Number of Clients Served : 20000
+Overall Response Time : 1755.11 cycles
+Overall Waiting  Time : 1415.88 cycles
+Overall Throughput : 1.640 
+Standard Deviation Response Time : 835.40710 cycles
+Standard Deviation Waiting  Time : 825.56390 cycles
+Standard Deviation Throughput : 0.123366 
